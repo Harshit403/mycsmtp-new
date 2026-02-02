@@ -486,6 +486,41 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     }
 
     .package-features {
+        margin-bottom: 20px;
+    }
+
+    .package-feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--text);
+        font-weight: 400;
+    }
+
+    .package-feature i {
+        color: var(--primary);
+    }
+
+    .package-info.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .package-info h3 {
+        color: var(--primary-dark);
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 1.25rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .package-features {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 12px;
@@ -1096,11 +1131,7 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
             <div class="package-info" id="package-info">
                 <h3 id="package-name">Package Name</h3>
                 <div class="package-features" id="package-features"></div>
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-                    <div>
-                        <span class="package-price" id="package-price">₹0</span>
-                        <span id="package-duration" style="color: var(--text-light);"></span>
-                    </div>
+                <div style="display: flex; align-items: center; justify-content: flex-end;">
                     <a href="#" id="package-link" class="btn btn-primary">
                         View Test Series <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1420,14 +1451,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if(!empty($fetchedTypes)){
             foreach($fetchedTypes as $type){
                 $levelId = $type['level_id'] ?? 0;
+                $typeId = $type['type_id'] ?? 0;
                 if(!isset($packagesByLevel[$levelId])){
                     $packagesByLevel[$levelId] = [];
                 }
                 $packagesByLevel[$levelId][] = [
                     'name' => substr($type['type_name'] ?? 'Package', 0, 50),
-                    'price' => '₹' . number_format((float)($type['type_price'] ?? 0)),
-                    'duration' => '/ ' . ($type['level_name'] ?? 'course'),
-                    'url' => base_url('type/subject/'.$type['type_id']),
+                    'url' => base_url('level/type/'.$levelId.'/subject/'.$typeId),
                     'features' => [
                         $type['type_more_details'] ?? 'Complete test series access',
                         'Detailed evaluation',
@@ -1479,8 +1509,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updatePackageInfo(pkg) {
         document.getElementById('package-name').textContent = pkg.name;
-        document.getElementById('package-price').textContent = pkg.price;
-        document.getElementById('package-duration').textContent = pkg.duration;
         document.getElementById('package-link').href = pkg.url;
         
         const featuresHtml = pkg.features.map(f => 
