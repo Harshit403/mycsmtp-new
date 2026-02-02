@@ -1077,9 +1077,11 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                     <label>1. Select Course Level</label>
                     <select id="course-level" class="selector-select">
                         <option value="">-- Choose Course --</option>
-                        <option value="cseet">CSEET</option>
-                        <option value="executive">CS Executive</option>
-                        <option value="professional">CS Professional</option>
+                        <?php if(!empty($fetchLevels)): ?>
+                            <?php foreach($fetchLevels as $level): ?>
+                                <option value="<?=$level['level_id']?>"><?=htmlspecialchars($level['level_name'])?></option>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </select>
                 </div>
                 
@@ -1096,8 +1098,8 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                 <div class="package-features" id="package-features"></div>
                 <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
                     <div>
-                        <span class="package-price" id="package-price">₹2,999</span>
-                        <span id="package-duration" style="color: var(--text-light);">/ module</span>
+                        <span class="package-price" id="package-price">₹0</span>
+                        <span id="package-duration" style="color: var(--text-light);"></span>
                     </div>
                     <a href="#" id="package-link" class="btn btn-primary">
                         View Test Series <i class="fas fa-arrow-right"></i>
@@ -1413,32 +1415,37 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const coursePackages = {
-        cseet: [{
-            name: "CSEET Complete Package",
-            price: "₹2,999",
-            duration: "/ module",
-            url: "https://mycsmtp.com/level/type/11",
-            features: ["8 Unit Tests + 2 Full Papers", "Strictly as per ICSI Pattern", "Revision Notes", "Scheduled/Unscheduled Option", "Detailed Evaluation"]
-        }],
-        executive: [
-            {name: "Chapter Wise Tests (Executive)", price: "₹2,499", duration: "/ module", url: "https://mycsmtp.com/type/subject/38", features: ["8 Unit Tests + 2 Full Papers", "As per ICSI Pattern", "Notes for Theory Subjects", "Scheduled/Unscheduled", "Detailed Evaluation"]},
-            {name: "Detailed Test Series (Executive)", price: "₹1,999", duration: "/ module", url: "https://mycsmtp.com/type/subject/39", features: ["4 Unit Tests + 1 Full Paper", "Strictly as per ICSI Pattern", "Revision Notes", "Scheduled Option", "Detailed Evaluation"]},
-            {name: "Full Syllabus Tests (Executive)", price: "₹999", duration: "/ all modules", url: "https://mycsmtp.com/type/subject/40", features: ["1 Full Syllabus Test", "As per ICSI Pattern", "Unscheduled Only", "Detailed Evaluation", "Model Answers"]}
-        ],
-        professional: [
-            {name: "Chapter Wise Tests (Professional)", price: "₹2,999", duration: "/ module", url: "https://mycsmtp.com/type/subject/41", features: ["8 Unit Tests + 2 Full Papers", "Strictly as per ICSI Pattern", "Revision Notes", "Scheduled/Unscheduled", "Expert Evaluation"]},
-            {name: "Detailed Test Series (Professional)", price: "₹2,499", duration: "/ module", url: "https://mycsmtp.com/type/subject/42", features: ["4 Unit Tests + 1 Full Paper", "As per ICSI Pattern", "Revision Notes", "Detailed Evaluation", "Professional Feedback"]},
-            {name: "Full Syllabus Tests (Professional)", price: "₹1,299", duration: "/ all modules", url: "https://mycsmtp.com/type/subject/43", features: ["1 Full Syllabus Test", "Unscheduled Only", "Expert Evaluation", "Model Drafts", "Professional Feedback"]}
-        ]
-    };
+    const coursePackages = <?php
+        $packagesByLevel = [];
+        if(!empty($fetchedTypes)){
+            foreach($fetchedTypes as $type){
+                $levelId = $type['level_id'] ?? 0;
+                if(!isset($packagesByLevel[$levelId])){
+                    $packagesByLevel[$levelId] = [];
+                }
+                $packagesByLevel[$levelId][] = [
+                    'name' => substr($type['type_name'] ?? 'Package', 0, 50),
+                    'price' => '₹' . number_format((float)($type['type_price'] ?? 0)),
+                    'duration' => '/ ' . ($type['level_name'] ?? 'course'),
+                    'url' => base_url('type/subject/'.$type['type_id']),
+                    'features' => [
+                        $type['type_more_details'] ?? 'Complete test series access',
+                        'Detailed evaluation',
+                        'Expert feedback',
+                        'Suggested answers'
+                    ]
+                ];
+            }
+        }
+        echo json_encode($packagesByLevel);
+    ?>;
 
     const courseSelect = document.getElementById('course-level');
     const packageSelect = document.getElementById('package');
     const packageInfo = document.getElementById('package-info');
 
     courseSelect.addEventListener('change', function() {
-        if (this.value) {
+        if (this.value && coursePackages[this.value]) {
             packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
             packageSelect.disabled = false;
             
@@ -1449,8 +1456,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 packageSelect.appendChild(option);
             });
             
-            if (this.value === 'cseet') {
-                updatePackageInfo(coursePackages.cseet[0]);
+            if (coursePackages[this.value].length === 1) {
+                updatePackageInfo(coursePackages[this.value][0]);
             }
         } else {
             packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
@@ -1460,9 +1467,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     packageSelect.addEventListener('change', function() {
-        if (this.value !== "") {
+        if (this.value !== "" && coursePackages[courseSelect.value]) {
             const packages = coursePackages[courseSelect.value];
-            updatePackageInfo(packages[this.value]);
+            if(packages[this.value]) {
+                updatePackageInfo(packages[this.value]);
+            }
         } else {
             packageInfo.classList.remove('active');
         }
