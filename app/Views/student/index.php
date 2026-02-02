@@ -1483,8 +1483,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     courseSelect.addEventListener('change', function() {
         const selectedLevel = this.value;
-        console.log('Level selected:', selectedLevel);
-        console.log('Available types:', allTypes[selectedLevel]);
         
         if (selectedLevel && allTypes[selectedLevel] && allTypes[selectedLevel].length > 0) {
             packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
@@ -1500,18 +1498,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 packageSelect.appendChild(option);
             });
             
-            packageInfo.classList.remove('active');
+            document.getElementById('package-info').classList.remove('active');
         } else {
             packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
             packageSelect.disabled = true;
-            packageInfo.classList.remove('active');
+            document.getElementById('package-info').classList.remove('active');
         }
     });
 
     packageSelect.addEventListener('change', function() {
         const selectedType = this.value;
         const selectedLevel = courseSelect.value;
-        console.log('Type selected:', selectedType);
         
         if (selectedType && selectedLevel) {
             const option = this.options[this.selectedIndex];
@@ -1535,9 +1532,9 @@ document.addEventListener('DOMContentLoaded', function() {
             ).join('');
             document.getElementById('package-features').innerHTML = featuresHtml;
             
-            packageInfo.classList.add('active');
+            document.getElementById('package-info').classList.add('active');
         } else {
-            packageInfo.classList.remove('active');
+            document.getElementById('package-info').classList.remove('active');
         }
     });
 
