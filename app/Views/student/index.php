@@ -746,35 +746,45 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
     .blog-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 24px;
-        max-width: 1100px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
     .blog-card {
         background: var(--white);
         border: 1px solid var(--border);
-        border-radius: 16px;
+        border-radius: 12px;
         overflow: hidden;
         transition: all 0.3s ease;
     }
 
     .blog-card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-4px);
         box-shadow: var(--shadow-lg);
+        border-color: var(--primary);
     }
 
     .blog-image {
-        height: 200px;
-        background: #e2e8f0;
+        height: 160px;
+        background: #f1f5f9;
         overflow: hidden;
+        position: relative;
+    }
+
+    .blog-image::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.03));
     }
 
     .blog-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
         transition: transform 0.3s ease;
     }
 
@@ -783,41 +793,49 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     }
 
     .blog-content {
-        padding: 24px;
+        padding: 16px;
     }
 
     .blog-date {
         display: inline-block;
         background: var(--primary-light);
         color: var(--primary-dark);
-        padding: 4px 12px;
-        border-radius: 50px;
-        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 11px;
         font-weight: 600;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
 
     .blog-content h3 {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
         color: var(--secondary);
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         line-height: 1.4;
-        font-weight: 700;
+        font-weight: 600;
         font-family: 'Plus Jakarta Sans', sans-serif;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .blog-content p {
         color: var(--text-light);
-        font-size: 14px;
-        margin-bottom: 16px;
-        line-height: 1.6;
+        font-size: 13px;
+        margin-bottom: 12px;
+        line-height: 1.5;
         font-weight: 400;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .blog-link {
         color: var(--primary);
         font-weight: 600;
-        font-size: 14px;
+        font-size: 13px;
         display: inline-flex;
         align-items: center;
         gap: 6px;
@@ -826,6 +844,19 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
     .blog-link:hover {
         gap: 10px;
+    }
+
+    @media (max-width: 1024px) {
+        .blog-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .blog-grid {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+        }
     }
 
     .cta {
@@ -1322,9 +1353,10 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         </div>
         
         <div class="blog-grid">
-            <?php if(!empty($blog_items)): ?>
-                <?php foreach ($blog_items as $value): ?>
-                    <?php
+            <?php
+            $latestBlogs = !empty($blog_items) ? array_slice($blog_items, 0, 4) : [];
+            if(!empty($latestBlogs)):
+                foreach ($latestBlogs as $value):
                     $image_path = '';
                     if (!empty($value->blog_temp_image) && file_exists(FCPATH . $value->blog_temp_image)) {
                         $image_path = base_url($value->blog_temp_image);
@@ -1332,19 +1364,18 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                         $image_path = base_url('design_assets/images/blog-1.jpg');
                     }
                     ?>
-                    <div class="blog-card">
+                    <a href="<?= base_url('blog/'.$value->blog_id) ?>" class="blog-card">
                         <div class="blog-image">
                             <img src="<?= $image_path ?>" alt="<?= htmlspecialchars($value->blog_heading) ?>" onerror="this.src='<?= base_url('design_assets/images/blog-1.jpg') ?>'">
                         </div>
                         <div class="blog-content">
-                            <span class="blog-date"><?= date('F j, Y', strtotime($value->created_date)) ?></span>
+                            <span class="blog-date"><?= date('M j, Y', strtotime($value->created_date)) ?></span>
                             <h3><?= htmlspecialchars($value->blog_heading) ?></h3>
-                            <p><?= htmlspecialchars(substr(strip_tags($value->blog_text ?? ''), 0, 100)) ?>...</p>
-                            <a href="<?= base_url('blog/'.$value->blog_id) ?>" class="blog-link">
+                            <span class="blog-link">
                                 Read More <i class="fas fa-arrow-right"></i>
-                            </a>
+                            </span>
                         </div>
-                    </div>
+                    </a>
                 <?php endforeach; ?>
             <?php else: ?>
                 <div class="blog-card">
@@ -1352,19 +1383,18 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                         <img src="<?= base_url('design_assets/images/blog-1.jpg') ?>" alt="CS Exam Preparation">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-date">June 15, 2023</span>
+                        <span class="blog-date">June 2023</span>
                         <h3>5 Strategies to Ace Your CS Executive Exams</h3>
-                        <p>Discover proven techniques to maximize your score in the upcoming CS Executive exams.</p>
-                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             <?php endif; ?>
         </div>
         
-        <?php if(!empty($blog_items)): ?>
-        <div style="text-align: center; margin-top: 40px;">
+        <?php if(!empty($blog_items) && count($blog_items) > 4): ?>
+        <div style="text-align: center; margin-top: 32px;">
             <a href="<?= base_url('blogs') ?>" class="btn btn-outline">
-                Browse More Articles <i class="fas fa-arrow-right"></i>
+                View All Articles <i class="fas fa-arrow-right"></i>
             </a>
         </div>
         <?php endif; ?>
