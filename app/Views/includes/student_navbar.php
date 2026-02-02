@@ -4,6 +4,16 @@ $uri = current_url(true);
 $base_url = base_url();
 $segments = explode('/',str_replace($base_url,'',$uri));
 ?>
+<style>
+body {
+    padding-top: 72px;
+}
+@media (max-width: 480px) {
+    body {
+        padding-top: 64px;
+    }
+}
+</style>
 <header class="pro-header" data-header>
     <div class="pro-container">
         <a href="<?=base_url()?>" class="pro-logo">
