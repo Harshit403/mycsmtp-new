@@ -429,6 +429,10 @@ body {
     color: #059669;
 }
 
+.pro-menu-toggle.active i::before {
+    content: '\f00d';
+}
+
 .pro-mobile-nav {
     position: fixed;
     top: 0;
@@ -438,12 +442,14 @@ body {
     height: 100vh;
     background: #ffffff;
     z-index: 10000;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 .pro-mobile-nav.active {
     left: 0;
+    box-shadow: 10px 0 40px rgba(0, 0, 0, 0.2);
 }
 
 .pro-mobile-header {
@@ -452,11 +458,18 @@ body {
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 1;
 }
 
 .pro-mobile-close {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #f8fafc;
     border: none;
     border-radius: 10px;
@@ -469,6 +482,11 @@ body {
 .pro-mobile-close:hover {
     background: #fee2e2;
     color: #dc2626;
+}
+
+.pro-mobile-close i {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
 }
 
 .pro-mobile-list {
@@ -494,6 +512,7 @@ body {
 .pro-mobile-list > li > a:hover,
 .pro-mobile-list > li > a.active {
     color: #059669;
+    padding-left: 8px;
 }
 
 .pro-mobile-group {
@@ -520,7 +539,8 @@ body {
 }
 
 .pro-mobile-group-toggle i {
-    transition: transform 0.2s ease;
+    font-size: 12px;
+    transition: transform 0.3s ease;
 }
 
 .pro-mobile-group-toggle.active i {
@@ -548,6 +568,7 @@ body {
 
 .pro-mobile-group-menu li a:hover {
     color: #059669;
+    padding-left: 8px;
 }
 
 .pro-mobile-cta {
@@ -560,12 +581,20 @@ body {
     font-weight: 600;
     text-align: center;
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.pro-mobile-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(5, 150, 105, 0.35);
+    padding-left: 24px;
 }
 
 .pro-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
     z-index: 9998;
     opacity: 0;
     visibility: hidden;
@@ -584,6 +613,8 @@ body {
     
     .pro-menu-toggle {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -607,12 +638,21 @@ body {
         height: 40px;
         font-size: 16px;
     }
+    
+    .pro-mobile-nav {
+        max-width: 280px;
+    }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.pro-header');
+    const menuToggle = document.querySelector('.pro-menu-toggle');
+    const mobileNav = document.querySelector('.pro-mobile-nav');
+    const overlay = document.querySelector('.pro-overlay');
+    const mobileClose = document.querySelector('.pro-mobile-close');
+    const body = document.body;
     
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -622,12 +662,51 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    function openMobileNav() {
+        mobileNav.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+    }
+    
+    function closeMobileNav() {
+        mobileNav.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    }
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', openMobileNav);
+    }
+    
+    if (mobileClose) {
+        mobileClose.addEventListener('click', closeMobileNav);
+    }
+    
+    if (overlay) {
+        overlay.addEventListener('click', closeMobileNav);
+    }
+    
     const mobileGroupToggles = document.querySelectorAll('.pro-mobile-group-toggle');
     mobileGroupToggles.forEach(toggle => {
         toggle.addEventListener('click', function() {
             this.classList.toggle('active');
             this.nextElementSibling.classList.toggle('active');
         });
+    });
+    
+    const mobileLinks = document.querySelectorAll('.pro-mobile-list a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (!this.classList.contains('pro-mobile-group-toggle')) {
+                closeMobileNav();
+            }
+        });
+    });
+    
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+            closeMobileNav();
+        }
     });
 });
 </script>
