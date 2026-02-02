@@ -502,6 +502,10 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         color: var(--primary);
     }
 
+    .package-info .btn {
+        min-width: 160px;
+    }
+
     .package-info.active {
         display: block;
         animation: fadeIn 0.3s ease;
