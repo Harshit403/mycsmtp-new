@@ -23,17 +23,9 @@ class StudentController extends BaseController{
 		$data['fetchNotice'] = $this->common->getInfo('notice_table','row',array(),'notice_id desc');
 		$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
 		$fetchedTypes = $this->studentModel->fetchtypeModel();
-		$existArray = array();
-		$data['fetchedTypes'] = array();
-		foreach ($fetchedTypes as $value) {
-			if (!in_array($value['level_id'], $existArray) && (count($data['fetchedTypes']) < 3)) {
-				array_push($existArray, $value['level_id']);
-				array_push($data['fetchedTypes'], $value);
-			}
-		}
+		$data['fetchedTypes'] = $fetchedTypes;
 		$cartDetails = json_decode($this->getCartDetails());
 		$data['cartCount'] = count($cartDetails);
-		// $data['blog_items'] = $this->common->getInfo('blog_table','',array('deleted'=>0,'active'=>1));
 		$data['blog_items'] = $this->studentModel->fetchBlogList(3);
 		return view('student/index',$data);
 	}

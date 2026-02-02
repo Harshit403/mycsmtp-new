@@ -1482,11 +1482,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const packageInfo = document.getElementById('package-info');
 
     courseSelect.addEventListener('change', function() {
-        if (this.value && allTypes[this.value]) {
+        const selectedLevel = this.value;
+        console.log('Level selected:', selectedLevel);
+        console.log('Available types:', allTypes[selectedLevel]);
+        
+        if (selectedLevel && allTypes[selectedLevel] && allTypes[selectedLevel].length > 0) {
             packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
             packageSelect.disabled = false;
             
-            allTypes[this.value].forEach((pkg) => {
+            allTypes[selectedLevel].forEach((pkg) => {
                 const option = document.createElement('option');
                 option.value = pkg.id;
                 option.textContent = pkg.name;
@@ -1495,6 +1499,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 option.dataset.features = JSON.stringify(pkg.features);
                 packageSelect.appendChild(option);
             });
+            
+            packageInfo.classList.remove('active');
         } else {
             packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
             packageSelect.disabled = true;
@@ -1503,7 +1509,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     packageSelect.addEventListener('change', function() {
-        if (this.value && courseSelect.value) {
+        const selectedType = this.value;
+        const selectedLevel = courseSelect.value;
+        console.log('Type selected:', selectedType);
+        
+        if (selectedType && selectedLevel) {
             const option = this.options[this.selectedIndex];
             const typeId = this.value;
             const levelId = courseSelect.value;
