@@ -312,9 +312,9 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
     .course-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 16px;
-        max-width: 800px;
+        max-width: 700px;
         margin: 0 auto;
     }
 
@@ -327,6 +327,20 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         transition: all 0.3s ease;
         position: relative;
         cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .course-grid {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 500px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .course-grid {
+            grid-template-columns: 1fr;
+            max-width: 300px;
+        }
     }
 
     .course-card:hover {
@@ -586,18 +600,30 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
     .testimonial-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        gap: 24px;
-        max-width: 1100px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
     .testimonial-card {
         background: var(--white);
-        border-radius: 16px;
-        padding: 28px;
+        border-radius: 12px;
+        padding: 20px;
         box-shadow: var(--shadow);
         border: 1px solid var(--border);
+    }
+
+    @media (max-width: 1024px) {
+        .testimonial-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .testimonial-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     .testimonial-header {
