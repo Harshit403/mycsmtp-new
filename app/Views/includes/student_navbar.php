@@ -8,10 +8,286 @@ $segments = explode('/',str_replace($base_url,'',$uri));
 body {
     padding-top: 72px;
 }
-@media (max-width: 480px) {
-    body {
-        padding-top: 64px;
+/* Checkout Modal Styles */
+.bootbox.modal {
+    z-index: 99999 !important;
+    backdrop-filter: blur(5px);
+}
+
+.bootbox .modal-dialog {
+    max-width: 95%;
+    width: 500px;
+    margin: 1.75rem auto;
+}
+
+.bootbox .modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.bootbox .modal-header {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: #ffffff;
+    padding: 20px 24px;
+    border: none;
+}
+
+.bootbox .modal-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bootbox .btn-close {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+.bootbox .btn-close:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.bootbox .modal-body {
+    padding: 24px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.bootbox .modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.bootbox .table {
+    margin-bottom: 16px;
+}
+
+.bootbox .table th,
+.bootbox .table td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.bootbox .table td {
+    border-color: #f1f5f9;
+}
+
+.bootbox .table .font-weight-bold {
+    font-weight: 600 !important;
+    color: #1e293b;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.bootbox .promocodeContainer {
+    display: flex;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.bootbox .promocodeContainer:focus-within {
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.bootbox .promocodeContainer input {
+    border: none;
+    padding: 12px 16px;
+    font-size: 14px;
+    outline: none;
+}
+
+.bootbox .promocodeContainer .btn {
+    border: none;
+    border-radius: 0;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.bootbox .promocodeError {
+    font-size: 13px;
+    min-height: 20px;
+}
+
+.bootbox .text-right {
+    font-family: 'Inter', sans-serif;
+}
+
+.bootbox .modal-backdrop {
+    z-index: 99998 !important;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* Responsive Modal Styles */
+@media (max-width: 768px) {
+    .bootbox .modal-dialog {
+        width: 95%;
+        margin: 1rem auto;
     }
+    
+    .bootbox .modal-header {
+        padding: 16px 20px;
+    }
+    
+    .bootbox .modal-title {
+        font-size: 1.1rem;
+    }
+    
+    .bootbox .modal-body {
+        padding: 16px;
+    }
+    
+    .bootbox .table th,
+    .bootbox .table td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+    
+    .bootbox .table td:first-child {
+        max-width: 180px;
+    }
+    
+    .bootbox .promocodeContainer {
+        width: 100% !important;
+    }
+    
+    .bootbox .modal-footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+    
+    .bootbox .modal-footer .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bootbox .modal-dialog {
+        width: 98%;
+        margin: 0.5rem auto;
+    }
+    
+    .bootbox .modal-header {
+        padding: 14px 16px;
+    }
+    
+    .bootbox .modal-title {
+        font-size: 1rem;
+    }
+    
+    .bootbox .modal-body {
+        padding: 12px;
+        max-height: 65vh;
+    }
+    
+    .bootbox .table td {
+        font-size: 12px;
+    }
+    
+    .bootbox .table td:first-child {
+        max-width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .bootbox .font-weight-bold {
+        font-size: 13px;
+    }
+    
+    .bootbox .row {
+        margin: 0 -4px;
+    }
+    
+    .bootbox .col-md-9,
+    .bootbox .col-md-3 {
+        padding: 4px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .bootbox .modal-body {
+        padding: 10px;
+    }
+    
+    .bootbox .table td:first-child {
+        max-width: 120px;
+    }
+    
+    .bootbox .modal-footer {
+        padding: 12px 10px;
+    }
+    
+    .bootbox .modal-footer .btn {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+/* All Bootbox Modals - Universal Fix */
+.bootbox.modal.fade.show {
+    z-index: 99999 !important;
+}
+
+.bootbox.modal.fade.show .modal-dialog {
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Small confirmation dialogs */
+.bootbox.modal.fade .modal-dialog.modal-sm {
+    max-width: 400px;
+}
+
+.bootbox .modal-body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Scrollbar styling for modal content */
+.bootbox .modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.bootbox .modal-body::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.bootbox .modal-body::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.bootbox .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
 }
 </style>
 <header class="pro-header" data-header>
