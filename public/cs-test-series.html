@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best CS Test Series for ICSI Exams - Comprehensive practice tests for CS Executive & Professional programs with detailed feedback and performance analysis">
+    <meta name="keywords" content="CS Test Series, CS Executive Test Series, CS Professional Test Series, CS Exams, ICSI Exam, Company Secretary Test Series, CS Exam Preparation">
+    <meta name="author" content="CS Test Series">
+    <title>CS Test Series | Best Test Series for CS Executive & Professional Exams | ICSI Exam Preparation</title>
+    <link rel="canonical" href="https://www.cstestseries.com/" />
+    <style>
+        :root {
+            --primary-color: #11ab79;
+            --secondary-color: #0d8a60;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --gray-color: #777;
+            --executive-color: #2c6ecb;
+            --professional-color: #7d5ec2;
+            --discount-color: #ff6b6b;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 32px;
+            color: var(--dark-color);
+        }
+        
+        .plans {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .plan-tab {
+            padding: 10px 25px;
+            background-color: white;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        
+        .plan-tab.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .course-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            color: white;
+        }
+        
+        .badge-executive {
+            background-color: var(--executive-color);
+        }
+        
+        .badge-professional {
+            background-color: var(--professional-color);
+        }
+        
+        .module-name {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .plan-name {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-top: 5px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        .course-section {
+            margin-bottom: 60px;
+        }
+        
+        .course-section h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 26px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .course-section h3::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            border: 1px solid #eee;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .product-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .product-header h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            position: relative;
+            color: white;
+        }
+        
+        .product-header p {
+            font-size: 14px;
+            opacity: 0.9;
+            position: relative;
+            color: white;
+        }
+        
+        .product-body {
+            padding: 25px;
+            position: relative;
+        }
+        
+        .price-container {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .original-price {
+            font-size: 18px;
+            color: var(--gray-color);
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: inline-block;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background-color: var(--discount-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .features li::before {
+            content: "✓";
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 25px 25px;
+        }
+        
+        .btn-buy {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            order: 2;
+        }
+        
+        .btn-buy:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn-download {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+            order: 1;
+        }
+        
+        .btn-download:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-download i {
+            margin-right: 8px;
+        }
+        
+        .razorpay-payment-button {
+            background-color: var(--primary-color) !important;
+            color: white !important;
+            border: none !important;
+            padding: 12px 25px !important;
+            border-radius: 5px !important;
+            cursor: pointer !important;
+            font-weight: 600 !important;
+            font-size: 16px !important;
+            width: 100% !important;
+            text-align: center !important;
+            transition: background-color 0.3s !important;
+            margin-top: 10px !important;
+        }
+        
+        .razorpay-payment-button:hover {
+            background-color: var(--secondary-color) !important;
+        }
+        
+        .razorpay-payment-button[disabled] {
+            opacity: 0.5 !important;
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+        }
+        
+        .payment-button-container {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+            animation: modalFadeIn 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 0;
+            animation: confetti-fall 5s ease-out forwards;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(500px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-header h3 {
+            font-size: 22px;
+            color: var(--primary-color);
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gray-color);
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: var(--dark-color);
+        }
+        
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cart-total {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
+            text-align: right;
+        }
+        
+        .terms-checkbox {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .terms-checkbox input {
+            margin-right: 10px;
+        }
+        
+        .btn-payment {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-payment:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .terms-note {
+            color: var(--gray-color);
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .validation-message {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff6b6b;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        
+        .validation-message::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #ff6b6b transparent transparent transparent;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .confirm-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .confirm-content {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            padding: 25px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .confirm-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .confirm-content p {
+            margin-bottom: 20px;
+        }
+        
+        .confirm-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .confirm-btn {
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .confirm-cancel {
+            background-color: #f1f1f1;
+            color: var(--dark-color);
+            border: none;
+        }
+        
+        .confirm-cancel:hover {
+            background-color: #e1e1e1;
+        }
+        
+        .confirm-proceed {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
+        
+        .confirm-proceed:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .content-section {
+            background-color: white;
+            padding: 50px 0;
+            margin-bottom: 60px;
+        }
+        
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .content-container h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .content-container h3 {
+            color: var(--secondary-color);
+            margin: 25px 0 15px;
+            font-size: 22px;
+        }
+        
+        .content-container p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .content-container ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .content-container ul li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .faq-section {
+            margin-top: 50px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .order-summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .order-summary-label {
+            font-weight: 600;
+        }
+        
+        .order-summary-value {
+            text-align: right;
+        }
+        
+        .order-summary-divider {
+            border-top: 1px dashed #ddd;
+            margin: 15px 0;
+        }
+        
+        .celebration-circle {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 2s ease-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.7;
+            }
+            70% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+        }
+        
+        .btn-payment-disabled {
+            background-color: #cccccc !important;
+            cursor: not-allowed !important;
+        }
+        
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">CS Test Series</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Test Series</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Best CS Test Series for Executive & Professional Exams</h1>
+            <p>Comprehensive practice tests designed experts to help you ace your Company Secretary exams. Get detailed feedback, suggested answers, and performance analysis for CS Executive and CS Professional modules.</p>
+            <a href="#products" class="btn">Explore Test Series</a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <h2 class="section-title" id="products">CS Test Series for Dec 2025</h2>
+        
+        <div class="plans">
+            <div class="plan-tab active" onclick="filterCourses('executive')">CS Executive</div>
+            <div class="plan-tab" onclick="filterCourses('professional')">CS Professional</div>
+        </div>
+        
+        <div id="products-container">
+            <!-- CS Executive Section -->
+            <div class="course-section" id="executive-section">
+                <h3>CS Executive Test Series</h3>
+                <div class="products">
+                    <!-- Module 1 Plan -->
+                    <div class="product-card" data-course="executive" data-module="module1">
+                        <div class="product-header">
+                            <span class="course-badge badge-executive">CS Executive</span>
+                            <span class="module-name">Module 1</span>
+                            <h3>Detailed Test Series</h3>
+                            <p class="plan-name">Comprehensive Preparation</p>
+                        </div>
+                        <div class="product-body">
+                            <div class="price-container">
+                                <span class="original-price">₹2,399</span>
+                                <span class="price">₹1,049</span>
+                                <span class="discount-badge">56% OFF</span>
+                            </div>
+                            <ul class="features">
+                                <li>4 Unit Papers (25-45 marks each)</li>
+                                <li>1 Full Syllabus Paper (100 marks)</li>
+                                <li>Comprehensive Notes for Theory</li>
+                                <li>Detailed Feedback & Evaluation</li>
+                                <li>Suggested Answers</li>
+                                <li>Performance Analysis & Improvement Tips</li>
+                            
+                            </ul>
+                            <div class="product-footer">
+                                <button class="btn-download" onclick="window.open('https://drive.google.com/file/d/1NoYQShHO4yfBxIs8dCu5GVupWJR1Rd3e/view?usp=drivesdk')"><i class="fas fa-file-pdf"></i> Schedule</button>
+                                <button class="btn-buy" onclick="showOrderSummary('CS Executive - Module 1 Detailed Test Series', '1049', '2399', 'exec-mod1-detailed')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 2 Plan -->
+                    <div class="product-card" data-course="executive" data-module="module2">
+                        <div class="product-header">
+                            <span class="course-badge badge-executive">CS Executive</span>
+                            <span class="module-name">Module 2</span>
+                            <h3>Detailed Test Series</h3>
+                            <p class="plan-name">Comprehensive Preparation</p>
+                        </div>
+                        <div class="product-body">
+                            <div class="price-container">
+                                <span class="original-price">₹1,799</span>
+                                <span class="price">₹799</span>
+                                <span class="discount-badge">55% OFF</span>
+                            </div>
+                            <ul class="features">
+                                <li>4 Unit Papers (25-45 marks each)</li>
+                                <li>1 Full Syllabus Paper (100 marks)</li>
+                                <li>Comprehensive Notes for Theory</li>
+                                <li>Detailed Feedback & Evaluation</li>
+                                <li>Suggested Answer</li>
+                                <li>Performance Analysis & Improvement Tips</li>
+                               
+                            </ul>
+                            <div class="product-footer">
+                                <button class="btn-download" onclick="window.open('https://drive.google.com/file/d/1NoYQShHO4yfBxIs8dCu5GVupWJR1Rd3e/view?usp=drivesdk')"><i class="fas fa-file-pdf"></i> Schedule</button>
+                                <button class="btn-buy" onclick="showOrderSummary('CS Executive - Module 2 Detailed Test Series', '799', '1799', 'exec-mod2-detailed')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Both Modules Plan -->
+                    <div class="product-card" data-course="executive" data-module="both">
+                        <div class="product-header">
+                            <span class="course-badge badge-executive">CS Executive</span>
+                            <span class="module-name">Both Modules</span>
+                            <h3>Complete Test Series</h3>
+                            <p class="plan-name">Full Preparation Package</p>
+                        </div>
+                        <div class="product-body">
+                            <div class="price-container">
+                                <span class="original-price">₹2,799</span>
+                                <span class="price">₹1,848</span>
+                                <span class="discount-badge">34% OFF</span>
+                            </div>
+                            <ul class="features">
+                                <li>4 Unit Papers (20-45 marks each)</li>
+                                <li>2 Full Syllabus Papers (100 marks each)</li>
+                                <li>Comprehensive Notes for theory Subjects</li>
+                                <li>Detailed Feedback & Evaluation</li>
+                                <li>Suggested Answers</li>
+                              
+                               
+                               
+                            </ul>
+                            <div class="product-footer">
+                                <button class="btn-download" onclick="window.open('https://drive.google.com/file/d/1NoYQShHO4yfBxIs8dCu5GVupWJR1Rd3e/view?usp=drivesdk')"><i class="fas fa-file-pdf"></i> Schedule</button>
+                                <button class="btn-buy" onclick="showOrderSummary('CS Executive - Both Modules Complete Test Series', '1848', '2799', 'exec-both-detailed')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CS Professional Section -->
+            <div class="course-section" id="professional-section" style="display: none;">
+                <h3>CS Professional Test Series</h3>
+                <div class="products">
+                    <!-- Module 1 Plan -->
+                    <div class="product-card" data-course="professional" data-module="module1">
+                        <div class="product-header">
+                            <span class="course-badge badge-professional">CS Professional</span>
+                            <span class="module-name">Module 1</span>
+                            <h3>Detailed Test Series</h3>
+                            <p class="plan-name">Comprehensive Preparation</p>
+                        </div>
+                        <div class="product-body">
+                            <div class="price-container">
+                                <span class="original-price">₹1,799</span>
+                                <span class="price">₹1049</span>
+                                <span class="discount-badge">44% OFF</span>
+                            </div>
+                            <ul class="features">
+                                <li>4 Unit Papers (25-45 marks each)</li>
+                                <li>1 Full Syllabus Paper (100 marks)</li>
+                                <li>Comprehensive Notes for Theory</li>
+                                <li>Detailed Feedback & Evaluation</li>
+                                <li>Suggested Answers</li>
+                                <li>Performance Analysis & Improvement Tips</li>
+                               
+                                <li>Does not include elective papers</li>
+                            </ul>
+                            <div class="product-footer">
+                                <button class="btn-download" onclick="window.open('https://drive.google.com/file/d/1NlNup012HdCrx5Cp1Q1OvgFcRZZ7_JNr/view?usp=drivesdk')"><i class="fas fa-file-pdf"></i> Schedule</button>
+                                <button class="btn-buy" onclick="showOrderSummary('CS Professional - Module 1 Detailed Test Series', '1049', '1799', 'prof-mod1-detailed')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 2 Plan -->
+                    <div class="product-card" data-course="professional" data-module="module2">
+                        <div class="product-header">
+                            <span class="course-badge badge-professional">CS Professional</span>
+                            <span class="module-name">Module 2</span>
+                            <h3>Detailed Test Series</h3>
+                            <p class="plan-name">Comprehensive Preparation</p>
+                        </div>
+                        <div class="product-body">
+                            <div class="price-container">
+                                <span class="original-price">₹1,199</span>
+                                <span class="price">₹599</span>
+                                <span class="discount-badge">50% OFF</span>
+                            </div>
+                            <ul class="features">
+                                <li>4 Unit Papers (25-45 marks each)</li>
+                                <li>1 Full Syllabus Paper (100 marks)</li>
+                                <li>Comprehensive Notes for Theory</li>
+                                <li>Detailed Feedback & Evaluation</li>
+                                <li>Suggested Answers</li>
+                                <li>Performance Analysis & Improvement Tips</li>
+                              
+                                <li>Does not include elective papers</li>
+                            </ul>
+                            <div class="product-footer">
+                                <button class="btn-download" onclick="window.open('https://drive.google.com/file/d/1NlNup012HdCrx5Cp1Q1OvgFcRZZ7_JNr/view?usp=drivesdk')"><i class="fas fa-file-pdf"></i> Schedule</button>
+                                <button class="btn-buy" onclick="showOrderSummary('CS Professional - Module 2 Detailed Test Series', '599', '1199', 'prof-mod2-detailed')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Both Modules Plan -->
+                    <div class="product-card" data-course="professional" data-module="both">
+                        <div class="product-header">
+                            <span class="course-badge badge-professional">CS Professional</span>
+                            <span class="module-name">Both Modules</span>
+                            <h3>Complete Test Series</h3>
+                            <p class="plan-name">Full Preparation Package</p>
+                        </div>
+                        <div class="product-body">
+                            <div class="price-container">
+                                <span class="original-price">₹2,999</span>
+                                <span class="price">₹1,598</span>
+                                <span class="discount-badge">47% OFF</span>
+                            </div>
+                            <ul class="features">
+                                <li>4 Unit Papers (25-45 marks each)</li>
+                                <li>2 Full Syllabus Papers (100 marks each)</li>
+                                <li>Comprehensive Notes for theory Subjects</li>
+                                <li>Detailed Feedback & Evaluation</li>
+                                <li>Suggested Answers</li>
+                               
+
+                               
+                                <li>Does not include elective papers</li>
+                            </ul>
+                            <div class="product-footer">
+                                <button class="btn-download" onclick="window.open('https://drive.google.com/file/d/1NlNup012HdCrx5Cp1Q1OvgFcRZZ7_JNr/view?usp=drivesdk')"><i class="fas fa-file-pdf"></i> Schedule</button>
+                                <button class="btn-buy" onclick="showOrderSummary('CS Professional - Both Modules Complete Test Series', '1598', '2999', 'prof-both-detailed')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Order Summary Modal -->
+    <div class="modal" id="orderSummaryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Order Summary</h3>
+                <button class="close-modal" onclick="confirmCloseOrderSummary()">&times;</button>
+            </div>
+            <div id="orderSummaryContent">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+            <div class="terms-checkbox">
+                <input type="checkbox" id="termsCheckbox">
+                <label for="termsCheckbox">I agree to the terms and conditions, privacy policy and disclaimer</label>
+            </div>
+            <div id="razorpayButtonContainer">
+                <!-- Razorpay button will be inserted here -->
+            </div>
+            <div class="terms-note">By proceeding, you agree to our refund policy and terms of service</div>
+            <div class="validation-message" id="termsValidation">Please agree to the terms and conditions</div>
+        </div>
+    </div>
+    
+    <!-- Confirm Close Modal -->
+    <div class="confirm-modal" id="confirmCloseModal">
+        <div class="confirm-content">
+            <h3>Are you sure you want to cancel?</h3>
+            <p id="discountLossMessage">You will lose your discount of ₹500 on this order.</p>
+            <div class="confirm-buttons">
+                <button class="confirm-btn confirm-cancel" onclick="closeModal('confirmCloseModal')">No, Continue</button>
+                <button class="confirm-btn confirm-proceed" onclick="closeOrderSummary()">Yes, Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- SEO Content Section -->
+    <section class="content-section" id="about">
+        <div class="content-container">
+            <h2>Why Choose Our CS Test Series for ICSI Exams?</h2>
+            
+            <p>Preparing for the CS Executive or CS Professional exams conducted by ICSI (Institute of Company Secretaries of India) requires rigorous practice and thorough understanding of concepts. Our <strong>CS Test Series</strong> is designed by experienced professionals who understand the exam pattern and marking scheme of <strong>ICSI exams</strong>.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4>Exam Pattern Familiarity</h4>
+                    <p>Our <strong>CS Executive Test Series</strong> and <strong>CS Professional Test Series</strong> follow the exact pattern of ICSI exams, helping you get comfortable with the question format and time management.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>Comprehensive Coverage</h4>
+                    <p>We cover all modules and subjects as per the latest ICSI syllabus for both <strong>CS Executive</strong> and <strong>CS Professional</strong> levels, ensuring you don't miss any important topics.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>Performance Analysis</h4>
+                    <p>Get detailed analytics on your strengths and weaknesses to focus your preparation effectively for the <strong>CS exams</strong>.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4>Expert Evaluation</h4>
+                    <p>All tests are evaluated by qualified professionals who provide constructive feedback to improve your answers for the <strong>ICSI exam</strong>.</p>
+                </div>
+            </div>
+            
+            <h3>How Our CS Test Series Helps You Crack ICSI Exams</h3>
+            
+            <p>Our <strong>CS Test Series</strong> is more than just practice papers - it's a complete preparation system designed to maximize your performance in the <strong>Company Secretary exams</strong>:</p>
+            
+            <ul>
+                <li><strong>Structured Learning Path:</strong> From chapterwise tests to full syllabus mock exams, our test series provides a gradual progression in difficulty level.</li>
+                <li><strong>Time Management Skills:</strong> Regular practice with timed tests helps you develop the crucial skill of completing your <strong>CS exam</strong> papers within the allotted time.</li>
+                <li><strong>Answer Writing Practice:</strong> Many students struggle with presenting their answers effectively. Our detailed feedback helps you improve your answer writing technique.</li>
+                <li><strong>Updated Content:</strong> All our test papers are regularly updated to reflect changes in the <strong>ICSI syllabus</strong> and exam patterns.</li>
+                <li><strong>Flexible Learning:</strong> Access our <strong>CS Executive Test Series</strong> and <strong>CS Professional Test Series</strong> anytime, anywhere to fit your study schedule.</li>
+            </ul>
+            
+            <h3>What Makes Our CS Test Series Different?</h3>
+            
+            <p>While there are many test series available for <strong>CS exams</strong>, ours stands out because:</p>
+            
+            <ul>
+                <li>We focus on <strong>conceptual clarity</strong> rather than rote learning</li>
+                <li>Our <strong>CS Professional Test Series</strong> includes case-study based questions that reflect real-world scenarios</li>
+                <li>The <strong>CS Executive Test Series</strong> emphasizes building strong fundamentals</li>
+                <li>We provide <strong>detailed explanations</strong> for all answers, not just solutions</li>
+                <li>Our performance tracking helps you <strong>measure improvement</strong> over time</li>
+            </ul>
+            
+            <div class="faq-section">
+                <h3>Frequently Asked Questions About CS Test Series</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">1. Does the CS Professional test series include elective papers?</div>
+                    <p>No, our <strong>CS Professional Test Series</strong> does not include elective papers. It covers all compulsory papers for Modules 1 and 2 as per the ICSI syllabus.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">2. How soon will I get my evaluated answer sheets?</div>
+                    <p>We typically return evaluated answer sheets within 72 hours for our <strong>CS Executive Test Series</strong> and <strong>CS Professional Test Series</strong>. During peak exam seasons, we may extend this to 96 hours to ensure quality feedback.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">3. Are these test papers similar to actual ICSI exams?</div>
+                    <p>Yes, our team of experts carefully designs each paper in our <strong>CS Test Series</strong> to match the difficulty level and pattern of actual <strong>CS exams</strong>. We analyze previous years' papers and current trends to ensure our tests provide authentic practice.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">4. Can I access the test series on mobile devices?</div>
+                    <p>Absolutely! Our <strong>CS Test Series</strong> platform is fully responsive and works on all devices - smartphones, tablets, and computers. This allows you to practice for your <strong>Company Secretary exams</strong> anytime, anywhere.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">5. How many attempts do I get for each test?</div>
+                    <p>Each test in our <strong>CS Executive Test Series</strong> and <strong>CS Professional Test Series</strong> can be attempted twice. We recommend using the first attempt as a diagnostic tool and the second attempt after you've worked on your weak areas.</p>
+                </div>
+            </div>
+            
+            <h3>Start Your CS Exam Preparation Today</h3>
+            
+            <p>Don't leave your <strong>CS Executive</strong> or <strong>CS Professional</strong> exam preparation to chance. Our scientifically designed <strong>CS Test Series</strong> gives you the practice, feedback, and confidence you need to excel in your <strong>ICSI exams</strong>. Choose the test package that matches your needs and start your journey to becoming a Company Secretary today!</p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CS Test Series</h3>
+                    <p>Quality test preparation for Company Secretary students.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Test Series</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> mycsmtp.com@gmail.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +91 9540097210</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 CS Test Series. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Store current order details
+        let currentOrder = {
+            productName: '',
+            price: '',
+            originalPrice: '',
+            productId: ''
+        };
+        
+        // Track if terms are accepted
+        let termsAccepted = false;
+        
+        // Filter products by course type
+        function filterCourses(course) {
+            document.querySelectorAll('.plan-tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.textContent.toLowerCase().includes(course)) {
+                    tab.classList.add('active');
+                }
+            });
+            
+            if (course === 'executive') {
+                document.getElementById('executive-section').style.display = 'block';
+                document.getElementById('professional-section').style.display = 'none';
+            } else if (course === 'professional') {
+                document.getElementById('executive-section').style.display = 'none';
+                document.getElementById('professional-section').style.display = 'block';
+            }
+        }
+        
+        // Show order summary modal
+        function showOrderSummary(productName, price, originalPrice, productId) {
+            const modal = document.getElementById('orderSummaryModal');
+            const content = document.getElementById('orderSummaryContent');
+            
+            // Store current order details
+            currentOrder = {
+                productName,
+                price,
+                originalPrice,
+                productId
+            };
+            
+            // Reset terms checkbox
+            const termsCheckbox = document.getElementById('termsCheckbox');
+            termsCheckbox.checked = false;
+            termsAccepted = false;
+            
+            // Create order summary content
+            content.innerHTML = `
+                <div class="order-summary-item">
+                    <span class="order-summary-label">Product:</span>
+                    <span class="order-summary-value">${productName}</span>
+                </div>
+                <div class="order-summary-item">
+                    <span class="order-summary-label">Original Price:</span>
+                    <span class="order-summary-value">₹${originalPrice}</span>
+                </div>
+                <div class="order-summary-item">
+                    <span class="order-summary-label">Discount:</span>
+                    <span class="order-summary-value">-₹${originalPrice - price}</span>
+                </div>
+                <div class="order-summary-divider"></div>
+                <div class="order-summary-item">
+                    <span class="order-summary-label">Total Amount:</span>
+                    <span class="order-summary-value">₹${price}</span>
+                </div>
+            `;
+            
+            // Clear previous Razorpay button if any
+            const razorpayContainer = document.getElementById('razorpayButtonContainer');
+            razorpayContainer.innerHTML = '';
+            
+            // Create new Razorpay button
+            const form = document.createElement('form');
+            form.id = 'razorpayForm';
+            const script = document.createElement('script');
+            script.src = 'https://checkout.razorpay.com/v1/payment-button.js';
+            script.setAttribute('data-payment_button_id', 'pl_' + getRazorpayPlanId(productId));
+            script.async = true;
+            script.dataset.disabled = 'true'; // Initially disabled
+            form.appendChild(script);
+            razorpayContainer.appendChild(form);
+            
+            // Create celebration effect
+            createCelebrationEffect();
+            
+            // Show modal
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Add event listener for Razorpay button load
+            script.onload = function() {
+                disableRazorpayButton();
+            };
+        }
+        
+        // Function to disable Razorpay button
+        function disableRazorpayButton() {
+            const razorpayButton = document.querySelector('.razorpay-payment-button');
+            if (razorpayButton) {
+                razorpayButton.style.opacity = '0.5';
+                razorpayButton.style.pointerEvents = 'none';
+                razorpayButton.style.cursor = 'not-allowed';
+                razorpayButton.disabled = true;
+            }
+        }
+        
+        // Function to enable Razorpay button
+        function enableRazorpayButton() {
+            const razorpayButton = document.querySelector('.razorpay-payment-button');
+            if (razorpayButton) {
+                razorpayButton.style.opacity = '1';
+                razorpayButton.style.pointerEvents = 'auto';
+                razorpayButton.style.cursor = 'pointer';
+                razorpayButton.disabled = false;
+            }
+        }
+        
+        // Create celebration effect
+        function createCelebrationEffect() {
+            const modalContent = document.querySelector('.modal-content');
+            
+            // Create multiple celebration circles
+            for (let i = 0; i < 5; i++) {
+                const circle = document.createElement('div');
+                circle.className = 'celebration-circle';
+                
+                // Random position
+                const posX = Math.random() * 80 + 10;
+                const posY = Math.random() * 80 + 10;
+                
+                circle.style.left = `${posX}%`;
+                circle.style.top = `${posY}%`;
+                
+                // Random delay
+                circle.style.animationDelay = `${i * 0.2}s`;
+                
+                modalContent.appendChild(circle);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    circle.remove();
+                }, 2000);
+            }
+        }
+        
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Confirm before closing order summary
+        function confirmCloseOrderSummary() {
+            const discountAmount = currentOrder.originalPrice - currentOrder.price;
+            document.getElementById('discountLossMessage').textContent = 
+                `You will lose your discount of ₹${discountAmount} on this order.`;
+            document.getElementById('confirmCloseModal').style.display = 'flex';
+        }
+        
+        // Close order summary after confirmation
+        function closeOrderSummary() {
+            closeModal('confirmCloseModal');
+            closeModal('orderSummaryModal');
+        }
+        
+        // Initialize with Executive tests shown by default
+        document.addEventListener('DOMContentLoaded', function() {
+            filterCourses('executive');
+            
+            // Handle terms checkbox change
+            document.getElementById('termsCheckbox').addEventListener('change', function() {
+                const checkbox = this;
+                const validationMessage = document.getElementById('termsValidation');
+                
+                if (checkbox.checked) {
+                    termsAccepted = true;
+                    validationMessage.style.display = 'none';
+                    enableRazorpayButton();
+                } else {
+                    termsAccepted = false;
+                    validationMessage.style.display = 'block';
+                    disableRazorpayButton();
+                }
+            });
+            
+            // Prevent form submission when terms are not accepted
+            document.getElementById('razorpayButtonContainer').addEventListener('submit', function(e) {
+                if (!termsAccepted) {
+                    e.preventDefault();
+                    document.getElementById('termsValidation').style.display = 'block';
+                }
+            });
+        });
+        
+        // Helper function to get Razorpay plan ID based on product ID
+        function getRazorpayPlanId(productId) {
+            const planIds = {
+                'exec-mod1-detailed': 'QbeOYZ5zMQnqNN',
+                'exec-mod2-detailed': 'QiQVLd3GHM2VLS',
+                'exec-both-detailed': 'MjUzNjU0M2Q1S',
+                'prof-mod1-detailed': 'QbeOYZ5zMQnqNN',
+                'prof-mod2-detailed': 'Qk1iEgIUjnEFpi',
+                'prof-both-detailed': 'MjUzNjU0M2Q1J'
+            };
+            
+            return planIds[productId] || '';
+        }
+    </script>
+</body>
+</html>

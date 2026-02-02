@@ -1,0 +1,89 @@
+.btn-class {
+    margin: 0px;
+    padding: 4px 15px !important;
+    font-size: 13px !important;
+    font-weight: 500;
+    border: none;
+    color: #fff;
+    letter-spacing: 2;
+}
+.btn-class:hover{
+    color: #fff;
+}
+
+section {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+}
+
+footer {
+    background: #090023;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+#home_section .navItem{
+    height: 100px;
+    border-right: 1px solid #333;
+}
+:root{
+    --main-background: linear-gradient(to right, #0D6EFD, #D63384);
+}
+
+.dropdown-item{
+    font-weight: 500 !important;
+}
+.dropdown > ul {
+    padding-top: 0;
+}
+.cartContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-badge{
+    position: absolute;
+    right: 0 !important;
+    top: -10px !important;
+}
+
+.productRow .productColumn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+footer a:hover{
+    color: #fff !important;
+}
+@media only screen and (max-width: 768px) {
+    .navItem{
+        display: none;
+    }
+    .animate-charcter{
+        font-size: 40px;
+    }
+    .office_image_container{
+        display: none !important;
+    }
+    .owl-carousel .owl-item .card {
+        left: 4rem !important;
+    }
+}

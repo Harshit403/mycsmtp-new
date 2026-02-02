@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best CS Executive Test Series for ICSI exams. High-quality practice tests, free notes, and comprehensive preparation for CS Executive, CSEET, and CS Professional exams.">
+    <meta name="keywords" content="cs test series, company secretary, icsi, icsi exams, cs executive, cseet, free notes, icsi test series">
+    <title>CS Executive Test Series</title>
+    <style>
+        :root {
+            --primary-color: #1ab79c;
+            --primary-dark: #148f7a;
+            --primary-light: #e0f5f1;
+            --text-color: #333333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--text-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .auth-buttons a {
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        
+        .login-btn {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        .login-btn:hover {
+            background-color: var(--primary-light);
+        }
+        
+        .register-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .register-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light), var(--white));
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        
+        .cta-buttons a {
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .primary-cta {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .primary-cta:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .secondary-cta {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        .secondary-cta:hover {
+            background-color: var(--primary-light);
+        }
+        
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .course-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .course-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-img {
+            height: 180px;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 50px;
+        }
+        
+        .course-content {
+            padding: 25px;
+        }
+        
+        .course-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .course-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .course-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .course-link:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            text-align: center;
+        }
+        
+        .about-content h3 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: var(--primary-dark);
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+        
+        .about-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .about-content ul li {
+            margin-bottom: 10px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 30px;
+        }
+        
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .feature-item p {
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+            }
+            
+            .auth-buttons {
+                margin-top: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .cta-buttons a {
+                display: block;
+                margin: 10px auto;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">CS<span>Executive</span></a>
+            <nav>
+                <ul>
+                    <li><a href="https://mycsmtp.com/">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="https://mycsmtp.com/sign-in" class="login-btn">Login</a>
+                <a href="https://mycsmtp.com/register" class="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Ace Your <span>CS Executive</span> Exams with Our Test Series</h1>
+            <p>Comprehensive test series designed by experts to help you prepare for ICSI exams. Get access to high-quality practice tests, free notes, and performance analytics.</p>
+            <div class="cta-buttons">
+                <a href="https://schedule.mycsmtp.com/" class="primary-cta">Schedule</a>
+                <a href="https://mycsmtp.com/testimonial" class="secondary-cta">Students feedbacks</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our CS Test Series</h2>
+                <p>Choose from our comprehensive test series designed for different levels of Company Secretary exams conducted by ICSI.</p>
+            </div>
+            <div class="course-cards">
+                <div class="course-card">
+                    <div class="course-img">
+                        <i>📚</i>
+                    </div>
+                    <div class="course-content">
+                        <h3>CSEET Test Series</h3>
+                        <p>Complete preparation package for CS Executive Entrance Test covering all subjects with detailed solutions and performance tracking.</p>
+                        <a href="https://mycsmtp.com/level/type/11" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <i>📚</i>
+                    </div>
+                    <div class="course-content">
+                        <h3>CS Executive Test Series</h3>
+                        <p>Comprehensive test series for CS Executive program with module-wise tests, mock exams, and previous year question papers.</p>
+                        <a href="https://mycsmtp.com/level/type/12" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-img">
+                        <i>📚</i>
+                    </div>
+                    <div class="course-content">
+                        <h3>CS Professional Test Series</h3>
+                        <p>Advanced test series for CS Professional program with case-study based questions and expert evaluation for final stage preparation.</p>
+                        <a href="https://mycsmtp.com/level/type/13" class="course-link">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Comprehensive Guide to CS Executive Test Series</h2>
+                
+                <h3>Introduction to CS Executive Examination</h3>
+                <p>The CS Executive exam conducted by the Institute of Company Secretaries of India (ICSI) is a crucial professional examination that tests candidates on various aspects of corporate laws, governance, and management. This intermediate stage of the Company Secretary course bridges the gap between the foundational CSEET and advanced CS Professional levels. Our CS Executive Test Series is meticulously designed to help aspirants navigate this challenging phase with confidence and competence.</p>
+                
+                <h3>Understanding the CS Executive Program Structure</h3>
+                <p>The CS Executive program is divided into two modules, each containing four papers that comprehensively test different aspects of corporate governance and management:</p>
+                
+                <p><strong>Module I:</strong></p>
+                <ul>
+                    <li>Jurisprudence, Interpretation and General Laws</li>
+                    <li>Company Law</li>
+                    <li>Setting up of Business Entities and Closure</li>
+                    <li>Tax Laws</li>
+                </ul>
+                
+                <p><strong>Module II:</strong></p>
+                <ul>
+                    <li>Corporate and Management Accounting</li>
+                    <li>Securities Laws and Capital Markets</li>
+                    <li>Economic, Business and Commercial Laws</li>
+                    <li>Financial and Strategic Management</li>
+                </ul>
+                
+                <h3>Why Our CS Executive Test Series is Essential</h3>
+                <p>Our test series provides targeted preparation for all these subjects through:</p>
+                <ul>
+                    <li><strong>Comprehensive Coverage:</strong> Every topic from both modules is thoroughly covered through multiple tests</li>
+                    <li><strong>ICSI Exam Pattern Alignment:</strong> Questions follow the exact format and difficulty level of actual ICSI exams</li>
+                    <li><strong>Progressive Difficulty:</strong> Tests progress from basic to advanced level questions</li>
+                    <li><strong>Performance Tracking:</strong> Detailed analytics help identify strengths and weaknesses</li>
+                    <li><strong>Updated Content:</strong> Regular updates reflecting latest syllabus changes and amendments</li>
+                </ul>
+                
+                <h3>Detailed Features of Our Test Series</h3>
+                <p>Our CS Executive Test Series stands out through its unique features designed specifically for ICSI exam success:</p>
+                
+                <p><strong>1. Module-Wise Test Structure</strong><br>
+                The test series is divided according to the ICSI module structure, allowing focused preparation. Each module contains:</p>
+                <ul>
+                    <li>Subject-wise sectional tests</li>
+                    <li>Combined module tests</li>
+                    <li>Full-length mock exams</li>
+                    <li>Previous year question papers with solutions</li>
+                </ul>
+                
+                <p><strong>2. Question Quality and Variety</strong><br>
+                Our question bank includes:</p>
+                <ul>
+                    <li>Conceptual questions testing fundamental understanding</li>
+                    <li>Application-based problems mirroring real corporate scenarios</li>
+                    <li>Case studies similar to those in actual exams</li>
+                    <li>Previous year question patterns</li>
+                    <li>Current amendments and recent developments</li>
+                </ul>
+                
+                <p><strong>3. Performance Analytics System</strong><br>
+                Our advanced analytics provide:</p>
+                <ul>
+                    <li>Topic-wise performance breakdown</li>
+                    <li>Time management analysis</li>
+                    <li>Comparison with topper performance</li>
+                    <li>Progress tracking over time</li>
+                    <li>Customized improvement suggestions</li>
+                </ul>
+                
+                <h3>Benefits of Joining Our CS Executive Test Series</h3>
+                
+                <p><strong>1. Structured Preparation Approach</strong><br>
+                Our test series provides a systematic preparation roadmap:</p>
+                <ul>
+                    <li>Begin with diagnostic tests to assess current level</li>
+                    <li>Progress through topic-wise tests for focused learning</li>
+                    <li>Advance to combined subject tests for integration</li>
+                    <li>Conclude with full-length mock exams for final preparation</li>
+                </ul>
+                
+                <p><strong>2. Development of Examination Skills</strong><br>
+                Regular test practice helps develop crucial exam skills:</p>
+                <ul>
+                    <li>Time management during exams</li>
+                    <li>Effective answer presentation techniques</li>
+                    <li>Question interpretation and analysis</li>
+                    <li>Stress management during tests</li>
+                </ul>
+                
+                <p><strong>3. Comprehensive Learning Resources</strong><br>
+                Along with tests, you get access to:</p>
+                <ul>
+                    <li>Detailed solutions with explanations</li>
+                    <li>Concept summaries for quick revision</li>
+                    <li>Legal provision references</li>
+                    <li>Free notes and study materials</li>
+                    <li>Important formula sheets</li>
+                </ul>
+                
+                <h3>Success Strategies with Our Test Series</h3>
+                <p>To maximize benefits from our CS Executive Test Series, we recommend:</p>
+                
+                <p><strong>1. Create a Structured Study Plan</strong><br>
+                Allocate specific time slots for:</p>
+                <ul>
+                    <li>Taking regular tests</li>
+                    <li>Reviewing solutions and explanations</li>
+                    <li>Analyzing performance reports</li>
+                    <li>Revising weak areas identified</li>
+                </ul>
+                
+                <p><strong>2. Thorough Performance Analysis</strong><br>
+                After each test:</p>
+                <ul>
+                    <li>Review all incorrect answers carefully</li>
+                    <li>Understand the reasoning behind correct solutions</li>
+                    <li>Note recurring mistakes to avoid in future</li>
+                    <li>Compare your answers with model answers</li>
+                </ul>
+                
+                <p><strong>3. Focused Improvement</strong><br>
+                Use analytics to:</p>
+                <ul>
+                    <li>Identify weak topics needing more attention</li>
+                    <li>Track improvement over time</li>
+                    <li>Adjust study focus accordingly</li>
+                    <li>Celebrate progress in strong areas</li>
+                </ul>
+                
+                <p><strong>4. Simulate Exam Conditions</strong><br>
+                For full-length mocks:</p>
+                <ul>
+                    <li>Create a quiet, distraction-free environment</li>
+                    <li>Strictly adhere to time limits</li>
+                    <li>Use only permitted materials</li>
+                    <li>Practice proper answer formatting</li>
+                </ul>
+                
+                <h3>Additional Resources and Support</h3>
+                <p>Our test series platform also provides:</p>
+                <ul>
+                    <li>Doubt clarification forums with expert faculty</li>
+                    <li>Regular webinars on important topics</li>
+                    <li>Study planning tools and templates</li>
+                    <li>Motivational content for exam preparation</li>
+                    <li>Updates on ICSI notifications and changes</li>
+                </ul>
+                
+                <p>With comprehensive coverage, expert-designed content, and powerful analytics, our CS Executive Test Series provides everything you need to excel in your ICSI examinations. Join thousands of successful CS aspirants who have trusted our platform for their exam preparation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our CS Test Series?</h2>
+                <p>We provide the most comprehensive and effective test preparation platform for ICSI exams.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📝</div>
+                    <h3>Quality Questions</h3>
+                    <p>Curated by CS experts to match ICSI exam standards and difficulty levels.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Detailed Analytics</h3>
+                    <p>Get insights into your strengths and weaknesses with comprehensive performance reports.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Exam Simulation</h3>
+                    <p>Timed tests that replicate actual exam conditions for better preparation.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📚</div>
+                    <h3>Free Notes</h3>
+                    <p>Access to high-quality study materials and revision notes for all subjects.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <h3>Expert Solutions</h3>
+                    <p>Detailed explanations for all questions prepared by experienced CS professionals.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Regular Updates</h3>
+                    <p>Content is regularly updated to reflect the latest ICSI syllabus and exam patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>CS Executive</h3>
+                    <p>Best test series for Company Secretary exams conducted by ICSI. Quality preparation materials for CSEET, CS Executive, and CS Professional programs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://mycsmtp.com/">Home</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="https://mycsmtp.com/level/type/11">CSEET Test Series</a></li>
+                        <li><a href="https://mycsmtp.com/level/type/12">CS Executive Test Series</a></li>
+                        <li><a href="https://mycsmtp.com/level/type/13">CS Professional Test Series</a></li>
+                        <li><a href="#">Free Notes</a></li>
+                        <li><a href="#">Study Materials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: mycsmtp.com@gmail.com</li>
+                        <li>WhatsApp: +91 9540097210</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Mycsmtp Test Series. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

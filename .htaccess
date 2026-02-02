@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+# block everything except /public/
+RewriteRule !^public/ - [F,NC]

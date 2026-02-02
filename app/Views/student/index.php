@@ -1,0 +1,1582 @@
+<?= $this->extend('layout/student_layout') ?>
+<?= $this->section('title') ?>
+CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
+<?= $this->endSection() ?>
+<?= $this->section('seoSection') ?>
+<link rel="canonical" href="https://mycsmtp.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="My CS MTP CS Test Series is the most trusted and reliable CS Test Series For CS Executive and CS Professional exams. Prepare with expert-crafted mock tests.">
+<meta name="keywords" content="CS Test Series, CS Executive Test Series, icsi test series, Company Secretary, online test series, cseet, cs exams, cs online test series, my cs mtp, cs test series for june 2026, best test series for cs executive">
+<meta name="robots" content="index, follow" />
+<?= $this->endSection() ?>
+<?= $this->section('content') ?>
+<style>
+    :root {
+        --primary: #059669;
+        --primary-dark: #047857;
+        --primary-light: #d1fae5;
+        --secondary: #1e293b;
+        --accent: #0ea5e9;
+        --text: #334155;
+        --text-light: #64748b;
+        --bg: #f8fafc;
+        --white: #ffffff;
+        --border: #e2e8f0;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: var(--text);
+        line-height: 1.6;
+        background: var(--bg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        gap: 8px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: 0.01em;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+        border: 2px solid var(--primary);
+    }
+
+    .btn-primary:hover {
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+        background: var(--primary);
+        color: var(--white);
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+        font-size: 2.25rem;
+        color: var(--secondary);
+        margin-bottom: 12px;
+        font-weight: 800;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    .section-title p {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 0 auto;
+        font-weight: 400;
+    }
+
+    .material-text h4 {
+        font-size: 15px;
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 6px 14px;
+        background: var(--primary-light);
+        color: var(--primary-dark);
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .hero {
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
+        padding: 80px 0 100px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: url('https://mycsmtp.com/images/hero-section-image.webp') center/cover;
+        opacity: 0.08;
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero-content {
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+        color: #1e293b;
+        margin-bottom: 20px;
+        line-height: 1.15;
+        font-weight: 800;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.03em;
+    }
+
+    .hero h1 span {
+        color: #059669;
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: url('https://mycsmtp.com/images/hero-section-image.webp') center/cover;
+        opacity: 0.3;
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .hero-content {
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+        color: #ffffff;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        font-weight: 800;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.03em;
+    }
+
+    .hero h1 span {
+        color: #059669;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+        color: var(--secondary);
+        margin-bottom: 20px;
+        line-height: 1.15;
+        font-weight: 800;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.03em;
+    }
+
+    .hero h1 span {
+        color: var(--primary);
+        background: linear-gradient(135deg, var(--primary) 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .hero p {
+        font-size: 1.15rem;
+        color: #64748b;
+        margin-bottom: 32px;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .hero-features {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-feature {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        background: #ffffff;
+        border-radius: 10px;
+        border-left: 3px solid #059669;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-feature-icon {
+        width: 24px;
+        height: 24px;
+        background: #059669;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 12px;
+        flex-shrink: 0;
+    }
+
+    .hero-feature span {
+        color: #1e293b;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .stats {
+        background: var(--white);
+        padding: 40px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 4px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+        font-size: 14px;
+        color: var(--text-light);
+    }
+
+    .courses {
+        padding: 80px 0;
+        background: var(--white);
+    }
+
+    .course-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .course-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .course-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--primary);
+    }
+
+    .course-icon {
+        width: 72px;
+        height: 72px;
+        background: var(--primary-light);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        color: var(--primary);
+        font-size: 28px;
+        transition: all 0.3s ease;
+    }
+
+    .course-card:hover .course-icon {
+        background: var(--primary);
+        color: var(--white);
+    }
+
+    .course-card h3 {
+        font-size: 1.25rem;
+        color: var(--secondary);
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .selector-header h2 {
+        font-size: 1.75rem;
+        color: var(--secondary);
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .course-card p {
+        color: var(--text-light);
+        font-size: 14px;
+    }
+
+    .selector {
+        padding: 80px 0;
+        background: var(--bg);
+    }
+
+    .selector-card {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: var(--shadow);
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .selector-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .selector-header h2 {
+        font-size: 1.75rem;
+        color: var(--secondary);
+        margin-bottom: 8px;
+    }
+
+    .selector-header p {
+        color: var(--text-light);
+        font-weight: 400;
+    }
+
+    .selector-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .selector-step {
+        background: var(--bg);
+        border-radius: 12px;
+        padding: 24px;
+        border: 1px solid var(--border);
+    }
+
+    .selector-step label {
+        display: block;
+        font-weight: 600;
+        color: var(--secondary);
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .selector-select {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        font-size: 15px;
+        color: var(--text);
+        background: var(--white);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .selector-select:focus {
+        outline: none;
+        border-color: var(--primary);
+    }
+
+    .package-info {
+        margin-top: 30px;
+        padding: 24px;
+        background: var(--primary-light);
+        border-radius: 12px;
+        display: none;
+    }
+
+    .package-info.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .package-info h3 {
+        color: var(--primary-dark);
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 1.25rem;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .package-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .package-feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--text);
+        font-weight: 400;
+    }
+
+    .package-feature i {
+        color: var(--primary);
+    }
+
+    .package-price {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--primary-dark);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    .sample-materials {
+        padding: 80px 0;
+        background: var(--secondary);
+        color: var(--white);
+    }
+
+    .sample-materials .section-title h2,
+    .sample-materials .section-title p {
+        color: var(--white);
+    }
+
+    .material-list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .material-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 24px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s ease;
+    }
+
+    .material-item:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateX(8px);
+    }
+
+    .material-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .material-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--primary);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 18px;
+    }
+
+    .material-text h4 {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .material-text p {
+        font-size: 13px;
+        color: #94a3b8;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: var(--white);
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .download-btn:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+    }
+
+    .testimonials {
+        padding: 80px 0;
+        background: var(--bg);
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .testimonial-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+    }
+
+    .testimonial-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .testimonial-avatar {
+        width: 52px;
+        height: 52px;
+        background: var(--primary-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .testimonial-meta h4 {
+        font-size: 16px;
+        color: var(--secondary);
+        margin-bottom: 2px;
+        font-weight: 600;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .testimonial-meta p {
+        font-size: 13px;
+        color: var(--text-light);
+    }
+
+    .testimonial-rating {
+        color: #fbbf24;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .testimonial-text {
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.7;
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .pricing {
+        padding: 80px 0;
+        background: var(--white);
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .pricing-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 32px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .pricing-card.popular {
+        border-color: var(--primary);
+        border-width: 2px;
+    }
+
+    .popular-badge {
+        position: absolute;
+        top: -12px;
+        left: 24px;
+        background: var(--primary);
+        color: var(--white);
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.25rem;
+        color: var(--secondary);
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .pricing-card .level {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .pricing-features {
+        margin-bottom: 24px;
+    }
+
+    .pricing-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: var(--text);
+        font-weight: 400;
+    }
+
+    .pricing-features i {
+        color: var(--primary);
+        margin-top: 3px;
+    }
+
+    .pricing-card .btn {
+        width: 100%;
+    }
+
+    .faq {
+        padding: 80px 0;
+        background: var(--bg);
+    }
+
+    .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .faq-item {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        margin-bottom: 12px;
+        overflow: hidden;
+    }
+
+    .faq-question {
+        width: 100%;
+        padding: 20px 24px;
+        background: none;
+        border: none;
+        text-align: left;
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--secondary);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.2s ease;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .faq-question:hover {
+        background: var(--bg);
+    }
+
+    .faq-question i {
+        transition: transform 0.3s ease;
+        color: var(--primary);
+    }
+
+    .faq-item.active .faq-question i {
+        transform: rotate(180deg);
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 300px;
+    }
+
+    .faq-answer-content {
+        padding: 0 24px 20px;
+        color: var(--text-light);
+        font-size: 14px;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+
+    .blog {
+        padding: 80px 0;
+        background: var(--white);
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .blog-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .blog-image {
+        height: 200px;
+        background: #e2e8f0;
+        overflow: hidden;
+    }
+
+    .blog-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover .blog-image img {
+        transform: scale(1.05);
+    }
+
+    .blog-content {
+        padding: 24px;
+    }
+
+    .blog-date {
+        display: inline-block;
+        background: var(--primary-light);
+        color: var(--primary-dark);
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    .blog-content h3 {
+        font-size: 1.1rem;
+        color: var(--secondary);
+        margin-bottom: 10px;
+        line-height: 1.4;
+        font-weight: 700;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .blog-content p {
+        color: var(--text-light);
+        font-size: 14px;
+        margin-bottom: 16px;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+
+    .blog-link {
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s ease;
+    }
+
+    .blog-link:hover {
+        gap: 10px;
+    }
+
+    .cta {
+        padding: 80px 0;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        text-align: center;
+        color: var(--white);
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+        margin-bottom: 12px;
+        font-weight: 800;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        letter-spacing: -0.02em;
+    }
+
+    .cta p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 32px;
+        font-weight: 400;
+    }
+
+    .cta .btn {
+        background: var(--white);
+        color: var(--primary);
+        border-color: var(--white);
+    }
+
+    .cta .btn:hover {
+        background: var(--secondary);
+        color: var(--white);
+    }
+
+    .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--primary);
+        z-index: 9999;
+        transition: width 0.1s ease;
+    }
+
+    @media (max-width: 992px) {
+        .hero::before {
+            width: 100%;
+            opacity: 0.08;
+            clip-path: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0 80px;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .hero-features {
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero h1 {
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .selector-card {
+            padding: 30px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .stats-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .hero-features {
+            display: none;
+        }
+    }
+</style>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Clear Your <span>CS Exams</span> With Most Trusted CS Test Series</h1>
+            <p>Get access to the most comprehensive CS test series designed by experts to match the Latest ICSI exam pattern and relevant amendments.</p>
+            
+            <div class="hero-buttons">
+                <a href="<?=base_url()?>register" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Register
+                </a>
+                <a href="<?=base_url()?>sign-in" class="btn btn-outline">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+            </div>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <span>Unique & Amended Questions as per ICSI pattern</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span>Detailed Performance feedback & Tracking</span>
+                </div>
+                <div class="hero-feature">
+                    <div class="hero-feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <span>Expert Feedback & Presentation Tips</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Students Enrolled</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Mock Tests</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Expert Faculty</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="courses" id="test-series">
+    <div class="container">
+        <div class="section-title">
+            <h2>Choose Your CS Test Series</h2>
+            <p>Select your course level and start preparing with our comprehensive test series</p>
+        </div>
+        
+        <div class="course-grid">
+            <?php
+            if(!empty($fetchLevels)){
+                $icons = ["fas fa-gem", "fas fa-briefcase", "fas fa-user-tie"];
+                $i = 0;
+                foreach ($fetchLevels as $level) {
+                    $icon = $icons[$i] ?? "fas fa-book";
+                    $i = ($i + 1) % 3;
+                    ?>
+                    <a href="javascript:void(0)" class="course-card levelBtn" data-level-id="<?=$level['level_id']?>">
+                        <div class="course-icon">
+                            <i class="<?=$icon?>"></i>
+                        </div>
+                        <h3><?=htmlspecialchars($level['level_name'])?></h3>
+                        <p>Comprehensive test series for complete preparation</p>
+                    </a>
+                    <?php
+                }
+            }
+            ?>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="<?=base_url()?>/level/cs-test-series" class="btn btn-outline">
+                View All Courses <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="selector">
+    <div class="container">
+        <div class="selector-card">
+            <div class="selector-header">
+                <h2>Select Your Package</h2>
+                <p>Choose course level and package to view details</p>
+            </div>
+            
+            <div class="selector-steps">
+                <div class="selector-step">
+                    <label>1. Select Course Level</label>
+                    <select id="course-level" class="selector-select">
+                        <option value="">-- Choose Course --</option>
+                        <option value="cseet">CSEET</option>
+                        <option value="executive">CS Executive</option>
+                        <option value="professional">CS Professional</option>
+                    </select>
+                </div>
+                
+                <div class="selector-step">
+                    <label>2. Select Package</label>
+                    <select id="package" class="selector-select" disabled>
+                        <option value="">-- Choose Package --</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="package-info" id="package-info">
+                <h3 id="package-name">Package Name</h3>
+                <div class="package-features" id="package-features"></div>
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                    <div>
+                        <span class="package-price" id="package-price">₹2,999</span>
+                        <span id="package-duration" style="color: var(--text-light);">/ module</span>
+                    </div>
+                    <a href="#" id="package-link" class="btn btn-primary">
+                        View Test Series <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sample-materials" id="sample-materials">
+    <div class="container">
+        <div class="section-title">
+            <h2>Free Sample Answersheets</h2>
+            <p>Download sample evaluated answer sheets to experience our quality</p>
+        </div>
+        
+        <div class="material-list">
+            <div class="material-item">
+                <div class="material-info">
+                    <div class="material-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="material-text">
+                        <h4>Sample Answersheet - 1</h4>
+                        <p>PDF • 1.2 MB</p>
+                    </div>
+                </div>
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-1.pdf" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+            
+            <div class="material-item">
+                <div class="material-info">
+                    <div class="material-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="material-text">
+                        <h4>Sample Answersheet - 2</h4>
+                        <p>PDF • 1.5 MB</p>
+                    </div>
+                </div>
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-2.pdf" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+            
+            <div class="material-item">
+                <div class="material-info">
+                    <div class="material-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="material-text">
+                        <h4>Sample Answersheet - 3</h4>
+                        <p>PDF • 1.8 MB</p>
+                    </div>
+                </div>
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-3.pdf" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+            
+            <div class="material-item">
+                <div class="material-info">
+                    <div class="material-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="material-text">
+                        <h4>CS Executive Sample Paper - Tax Laws</h4>
+                        <p>PDF • 1.3 MB</p>
+                    </div>
+                </div>
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-4.pdf" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Our Students Say</h2>
+            <p>Trusted by thousands of CS students across India</p>
+        </div>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">ZS</div>
+                    <div class="testimonial-meta">
+                        <h4>Zara Siddiqui</h4>
+                        <p>CS Professional</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"One of the best test series for CS Aspirants at a reasonable price. They are humble and always ready to assist. Highly recommended!"</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">SG</div>
+                    <div class="testimonial-meta">
+                        <h4>Snaha Gurrani</h4>
+                        <p>CS Executive</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Loved the test series! The facility to submit when students feel ready is amazing. It helped me learn perfectly. Thank you for the support!"</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">TS</div>
+                    <div class="testimonial-meta">
+                        <h4>Tejal Soni</h4>
+                        <p>CS Executive</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Test papers were amazing! While writing, I felt like writing ICSI questions only. The evaluation quality was best. Thank you for your guidance!"</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">RK</div>
+                    <div class="testimonial-meta">
+                        <h4>Reshma Krishna</h4>
+                        <p>CS Executive</p>
+                    </div>
+                </div>
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-text">"Happy to share that I cleared Group 2! Thank you My CS MTP team for the amazing support throughout my preparation journey."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+    <div class="container">
+        <div class="section-title">
+            <h2>Flexible Pricing Plans</h2>
+            <p>Choose the perfect plan that fits your preparation needs</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <?php
+            if(!empty($fetchedTypes)){
+                $badges = ["Most Popular", "Best Value", ""];
+                $i = 0;
+                foreach ($fetchedTypes as $type) {
+                    $badge = $badges[$i] ?? '';
+                    $i = ($i + 1) % 3;
+                    ?>
+                    <div class="pricing-card <?= $badge ? 'popular' : '' ?>">
+                        <?php if($badge): ?>
+                        <span class="popular-badge"><?=$badge?></span>
+                        <?php endif; ?>
+                        <h3><?=htmlspecialchars(substr($type['type_name'], 0, 28))?><?=strlen($type['type_name']) > 28 ? '...' : ''?></h3>
+                        <p class="level"><?=$type['level_name'] ?? ''?></p>
+                        <ul class="pricing-features">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span><?=$type['type_more_details'] ?? 'Complete test series access'?></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Detailed evaluation</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Expert feedback</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Suggested answers</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:void(0)" class="btn btn-primary typeBtn" data-type-id="<?=$type['type_id'] ?? ''?>">
+                            View Subjects
+                        </a>
+                    </div>
+                    <?php
+                }
+            }
+            ?>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to common questions about our test series</p>
+        </div>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Why Should I Choose MY CS MTP?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>At MY CS MTP, we're dedicated to being your ultimate partner on the path to academic excellence. Our test series features expert crafted papers, wide topic coverage, real exam simulation, improvement ideas, flexibility, and expert guidance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How many times can I submit answersheets for evaluation?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>You will get access to submit answersheet only one time per test.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    After how much time will I get evaluated answersheets?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>You'll get evaluated answersheet within 2-3 working days, but in unusual circumstances it may delay.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is there a validity period for accessing the test series?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Your purchase will expire on conclusion of attempt you are enrolling for or 6 months, whichever is earlier.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Can I access the tests on any device?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes, you can access tests on any device including Android, Windows, and iOS.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I get support?
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>You can reach us through chat on our website, WhatsApp at +91-9540097210, or email at support@mycsmtp.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="section-title">
+            <h2>Latest From Our Blog</h2>
+            <p>Get insights, tips and updates about CS exams and preparation</p>
+        </div>
+        
+        <div class="blog-grid">
+            <?php if(!empty($blog_items)): ?>
+                <?php foreach ($blog_items as $value): ?>
+                    <?php
+                    $image_path = '';
+                    if (!empty($value->blog_temp_image) && file_exists(FCPATH . $value->blog_temp_image)) {
+                        $image_path = base_url($value->blog_temp_image);
+                    } else {
+                        $image_path = base_url('design_assets/images/blog-1.jpg');
+                    }
+                    ?>
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="<?= $image_path ?>" alt="<?= htmlspecialchars($value->blog_heading) ?>" onerror="this.src='<?= base_url('design_assets/images/blog-1.jpg') ?>'">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date"><?= date('F j, Y', strtotime($value->created_date)) ?></span>
+                            <h3><?= htmlspecialchars($value->blog_heading) ?></h3>
+                            <p><?= htmlspecialchars(substr(strip_tags($value->blog_text ?? ''), 0, 100)) ?>...</p>
+                            <a href="<?= base_url('blog/'.$value->blog_id) ?>" class="blog-link">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="<?= base_url('design_assets/images/blog-1.jpg') ?>" alt="CS Exam Preparation">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">June 15, 2023</span>
+                        <h3>5 Strategies to Ace Your CS Executive Exams</h3>
+                        <p>Discover proven techniques to maximize your score in the upcoming CS Executive exams.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+        
+        <?php if(!empty($blog_items)): ?>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="<?= base_url('blogs') ?>" class="btn btn-outline">
+                Browse More Articles <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <?php endif; ?>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Clear Your CS Exams?</h2>
+        <p>Join thousands of successful students who cleared their exams with My CS MTP</p>
+        <a href="<?=base_url()?>register" class="btn">
+            Get Started Now <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const coursePackages = {
+        cseet: [{
+            name: "CSEET Complete Package",
+            price: "₹2,999",
+            duration: "/ module",
+            url: "https://mycsmtp.com/level/type/11",
+            features: ["8 Unit Tests + 2 Full Papers", "Strictly as per ICSI Pattern", "Revision Notes", "Scheduled/Unscheduled Option", "Detailed Evaluation"]
+        }],
+        executive: [
+            {name: "Chapter Wise Tests (Executive)", price: "₹2,499", duration: "/ module", url: "https://mycsmtp.com/type/subject/38", features: ["8 Unit Tests + 2 Full Papers", "As per ICSI Pattern", "Notes for Theory Subjects", "Scheduled/Unscheduled", "Detailed Evaluation"]},
+            {name: "Detailed Test Series (Executive)", price: "₹1,999", duration: "/ module", url: "https://mycsmtp.com/type/subject/39", features: ["4 Unit Tests + 1 Full Paper", "Strictly as per ICSI Pattern", "Revision Notes", "Scheduled Option", "Detailed Evaluation"]},
+            {name: "Full Syllabus Tests (Executive)", price: "₹999", duration: "/ all modules", url: "https://mycsmtp.com/type/subject/40", features: ["1 Full Syllabus Test", "As per ICSI Pattern", "Unscheduled Only", "Detailed Evaluation", "Model Answers"]}
+        ],
+        professional: [
+            {name: "Chapter Wise Tests (Professional)", price: "₹2,999", duration: "/ module", url: "https://mycsmtp.com/type/subject/41", features: ["8 Unit Tests + 2 Full Papers", "Strictly as per ICSI Pattern", "Revision Notes", "Scheduled/Unscheduled", "Expert Evaluation"]},
+            {name: "Detailed Test Series (Professional)", price: "₹2,499", duration: "/ module", url: "https://mycsmtp.com/type/subject/42", features: ["4 Unit Tests + 1 Full Paper", "As per ICSI Pattern", "Revision Notes", "Detailed Evaluation", "Professional Feedback"]},
+            {name: "Full Syllabus Tests (Professional)", price: "₹1,299", duration: "/ all modules", url: "https://mycsmtp.com/type/subject/43", features: ["1 Full Syllabus Test", "Unscheduled Only", "Expert Evaluation", "Model Drafts", "Professional Feedback"]}
+        ]
+    };
+
+    const courseSelect = document.getElementById('course-level');
+    const packageSelect = document.getElementById('package');
+    const packageInfo = document.getElementById('package-info');
+
+    courseSelect.addEventListener('change', function() {
+        if (this.value) {
+            packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
+            packageSelect.disabled = false;
+            
+            coursePackages[this.value].forEach((pkg, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = pkg.name;
+                packageSelect.appendChild(option);
+            });
+            
+            if (this.value === 'cseet') {
+                updatePackageInfo(coursePackages.cseet[0]);
+            }
+        } else {
+            packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
+            packageSelect.disabled = true;
+            packageInfo.classList.remove('active');
+        }
+    });
+
+    packageSelect.addEventListener('change', function() {
+        if (this.value !== "") {
+            const packages = coursePackages[courseSelect.value];
+            updatePackageInfo(packages[this.value]);
+        } else {
+            packageInfo.classList.remove('active');
+        }
+    });
+
+    function updatePackageInfo(pkg) {
+        document.getElementById('package-name').textContent = pkg.name;
+        document.getElementById('package-price').textContent = pkg.price;
+        document.getElementById('package-duration').textContent = pkg.duration;
+        document.getElementById('package-link').href = pkg.url;
+        
+        const featuresHtml = pkg.features.map(f => 
+            `<div class="package-feature"><i class="fas fa-check-circle"></i><span>${f}</span></div>`
+        ).join('');
+        document.getElementById('package-features').innerHTML = featuresHtml;
+        
+        packageInfo.classList.add('active');
+    }
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const item = this.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+
+    const progress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', function() {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        progress.style.width = (scrollTop / scrollHeight * 100) + '%';
+    });
+});
+</script>
+
+<?= $this->endSection() ?>
+<?= $this->section('jsContent')?>
+<script type="text/javascript" src="<?=base_url()?>assets/js/custom_js/view.js?v=1.0.3"></script>
+<script type="text/javascript">var pageType = 'landing_page';</script>
+<?= $this->endSection() ?>

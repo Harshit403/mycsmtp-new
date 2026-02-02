@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best CS Professional Test Series for ICSI final exams. Comprehensive practice tests, case study solutions, and expert evaluation for Company Secretary Professional program.">
+    <meta name="keywords" content="cs professional test series, icsi final exam, company secretary professional, cs test series, icsi exams, cs professional preparation, cs final test series">
+    <title>CS Professional Test Series</title>
+    <style>
+        :root {
+            --primary-color: #1ab79c;
+            --primary-dark: #148f7a;
+            --primary-light: #e0f5f1;
+            --text-color: #333333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--text-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .auth-buttons a {
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: all 0.3s;
+        }
+        
+        .login-btn {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        .login-btn:hover {
+            background-color: var(--primary-light);
+        }
+        
+        .register-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .register-btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light), var(--white));
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-buttons {
+            margin-top: 30px;
+        }
+        
+        .cta-buttons a {
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .primary-cta {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .primary-cta:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .secondary-cta {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+        
+        .secondary-cta:hover {
+            background-color: var(--primary-light);
+        }
+        
+        /* Modules Section */
+        .modules {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .module-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .module-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .module-img {
+            height: 180px;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 50px;
+        }
+        
+        .module-content {
+            padding: 25px;
+        }
+        
+        .module-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .module-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .module-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .module-link:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            text-align: center;
+        }
+        
+        .about-content h3 {
+            font-size: 24px;
+            margin: 30px 0 15px;
+            color: var(--primary-dark);
+        }
+        
+        .about-content p {
+            margin-bottom: 20px;
+        }
+        
+        .about-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .about-content ul li {
+            margin-bottom: 10px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 30px;
+        }
+        
+        .feature-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .feature-item p {
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+            }
+            
+            .auth-buttons {
+                margin-top: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .cta-buttons a {
+                display: block;
+                margin: 10px auto;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">CS<span>Professional</span></a>
+            <nav>
+                <ul>
+                    <li><a href="https://mycsmtp.com/">Home</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="https://mycsmtp.com/sign-in" class="login-btn">Login</a>
+                <a href="https://mycsmtp.com/register" class="register-btn">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Master Your <span>CS Professional</span> Exams</h1>
+            <p>The most comprehensive test series for ICSI final exams. Expert-designed case studies, mock tests, and personalized feedback to help you clear the CS Professional program with confidence.</p>
+            <div class="cta-buttons">
+                <a href="https://schedule.mycsmtp.com/" class="primary-cta">Schedule</a>
+                <a href="https://mycsmtp.com/testimonial" class="secondary-cta">Students feedbacks</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="modules" id="modules">
+        <div class="container">
+            <div class="section-title">
+                <h2>CS Professional Modules</h2>
+                <p>Comprehensive test series covering all modules of the CS Professional program as prescribed by ICSI.</p>
+            </div>
+            <div class="module-cards">
+                <div class="module-card">
+                    <div class="module-img">
+                        <i>📚</i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Module I: Governance & Compliance</h3>
+                        <p>Advanced tests covering corporate governance, due diligence, compliance management, and corporate restructuring.</p>
+                        <a href="https://mycsmtp.com/level/type/13/module/1" class="module-link">Start Tests</a>
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="module-img">
+                        <i>📚</i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Module II: Strategic Management</h3>
+                        <p>Case-study based tests on strategic management, financial and treasury management, and ethics.</p>
+                        <a href="https://mycsmtp.com/level/type/13/module/2" class="module-link">Start Tests</a>
+                    </div>
+                </div>
+                <div class="module-card">
+                    <div class="module-img">
+                        <i>📚</i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Module III: Drafting & Representation</h3>
+                        <p>Practice drafting applications, agreements, deeds and other legal documents with expert evaluation.</p>
+                        <a href="https://mycsmtp.com/level/type/13/module/3" class="module-link">Start Tests</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Comprehensive Guide to CS Professional Test Series</h2>
+                
+                <h3>Introduction to CS Professional Examination</h3>
+                <p>The CS Professional exam conducted by the Institute of Company Secretaries of India (ICSI) represents the final and most challenging stage of the Company Secretary course. This examination tests candidates on advanced aspects of corporate governance, strategic management, and professional skills required for practicing as a qualified Company Secretary. Our CS Professional Test Series is meticulously designed to help aspirants conquer this crucial final hurdle with confidence and competence.</p>
+                
+                <h3>Understanding the CS Professional Program Structure</h3>
+                <p>The CS Professional program is divided into three comprehensive modules that test advanced knowledge and practical skills:</p>
+                
+                <p><strong>Module I: Governance, Risk Management, Compliances and Ethics</strong></p>
+                <ul>
+                    <li>Advanced corporate governance principles and practices</li>
+                    <li>Risk management frameworks and implementation</li>
+                    <li>Compliance management systems</li>
+                    <li>Business ethics and corporate sustainability</li>
+                </ul>
+                
+                <p><strong>Module II: Strategic Management, Applied Business Laws and Economics</strong></p>
+                <ul>
+                    <li>Strategic decision making and implementation</li>
+                    <li>Financial and treasury management</li>
+                    <li>Applied business and corporate laws</li>
+                    <li>Economics for business strategy</li>
+                </ul>
+                
+                <p><strong>Module III: Drafting, Pleadings and Appearances</strong></p>
+                <ul>
+                    <li>Drafting various legal and commercial documents</li>
+                    <li>Appearances before various authorities and tribunals</li>
+                    <li>Corporate restructuring documents</li>
+                    <li>Due diligence reports and certifications</li>
+                </ul>
+                
+                <h3>Why Our CS Professional Test Series is Essential</h3>
+                <p>Our test series provides targeted preparation for all these advanced subjects through:</p>
+                <ul>
+                    <li><strong>Case Study Focus:</strong> Emphasis on practical application through real-world scenarios</li>
+                    <li><strong>Drafting Practice:</strong> Extensive exercises for Module III with expert evaluation</li>
+                    <li><strong>Strategic Analysis:</strong> Development of decision-making skills for Module II</li>
+                    <li><strong>Comprehensive Coverage:</strong> Every topic from all three modules thoroughly covered</li>
+                    <li><strong>Updated Content:</strong> Regular updates reflecting latest laws and ICSI patterns</li>
+                </ul>
+                
+                <h3>Detailed Features of Our Test Series</h3>
+                <p>Our CS Professional Test Series stands out through its unique features designed specifically for ICSI final exam success:</p>
+                
+                <p><strong>1. Module-Wise Test Structure</strong><br>
+                The test series is divided according to the ICSI module structure, allowing focused preparation. Each module contains:</p>
+                <ul>
+                    <li>Subject-wise sectional tests focusing on specific concepts</li>
+                    <li>Combined module tests for integrated preparation</li>
+                    <li>Full-length mock exams simulating actual test conditions</li>
+                    <li>Previous year question papers with model solutions</li>
+                </ul>
+                
+                <p><strong>2. Case Study and Drafting Components</strong><br>
+                Our specialized components include:</p>
+                <ul>
+                    <li>Complex corporate case studies mirroring actual exam patterns</li>
+                    <li>Drafting exercises for all types of legal documents</li>
+                    <li>Model answers prepared by practicing CS professionals</li>
+                    <li>Evaluation rubrics to self-assess your answers</li>
+                    <li>Expert feedback on submitted drafts and case solutions</li>
+                </ul>
+                
+                <p><strong>3. Performance Analytics System</strong><br>
+                Our advanced analytics provide:</p>
+                <ul>
+                    <li>Detailed score reports with topic-wise breakdown</li>
+                    <li>Time management analysis for each paper</li>
+                    <li>Comparison with topper performance benchmarks</li>
+                    <li>Progress tracking across multiple test attempts</li>
+                    <li>Customized improvement suggestions</li>
+                </ul>
+                
+                <h3>Benefits of Joining Our CS Professional Test Series</h3>
+                
+                <p><strong>1. Development of Professional Skills</strong><br>
+                Our test series transforms theoretical knowledge into professional competencies:</p>
+                <ul>
+                    <li>Case study analysis and solution formulation</li>
+                    <li>Legal and commercial drafting skills</li>
+                    <li>Strategic decision-making abilities</li>
+                    <li>Corporate governance implementation</li>
+                </ul>
+                
+                <p><strong>2. Enhanced Examination Performance</strong><br>
+                Regular test practice helps develop crucial exam skills:</p>
+                <ul>
+                    <li>Time management during lengthy papers</li>
+                    <li>Effective presentation of case study answers</li>
+                    <li>Proper formatting of drafted documents</li>
+                    <li>Stress management during challenging exams</li>
+                </ul>
+                
+                <p><strong>3. Comprehensive Learning Resources</strong><br>
+                Along with tests, you get access to:</p>
+                <ul>
+                    <li>Model answers with detailed explanations</li>
+                    <li>Drafting templates and formats</li>
+                    <li>Case study solving techniques</li>
+                    <li>Important legal provisions and references</li>
+                    <li>Current developments in corporate laws</li>
+                </ul>
+                
+                <h3>Success Strategies with Our Test Series</h3>
+                <p>To maximize benefits from our CS Professional Test Series, we recommend:</p>
+                
+                <p><strong>1. Create a Structured Study Plan</strong><br>
+                Allocate specific time slots for:</p>
+                <ul>
+                    <li>Taking regular module-wise tests</li>
+                    <li>Practicing drafting exercises</li>
+                    <li>Analyzing case study solutions</li>
+                    <li>Reviewing performance reports</li>
+                </ul>
+                
+                <p><strong>2. Thorough Performance Analysis</strong><br>
+                After each test:</p>
+                <ul>
+                    <li>Review all case study solutions carefully</li>
+                    <li>Compare your drafts with model formats</li>
+                    <li>Understand the evaluation criteria</li>
+                    <li>Note areas needing improvement</li>
+                </ul>
+                
+                <p><strong>3. Focused Improvement</strong><br>
+                Use analytics to:</p>
+                <ul>
+                    <li>Identify weak topics needing more attention</li>
+                    <li>Track improvement in drafting skills</li>
+                    <li>Measure progress in case study analysis</li>
+                    <li>Adjust study focus accordingly</li>
+                </ul>
+                
+                <p><strong>4. Simulate Exam Conditions</strong><br>
+                For full-length mocks:</p>
+                <ul>
+                    <li>Create a quiet, distraction-free environment</li>
+                    <li>Strictly adhere to time limits</li>
+                    <li>Use only permitted materials</li>
+                    <li>Practice proper answer presentation</li>
+                </ul>
+                
+                <h3>Additional Resources and Support</h3>
+                <p>Our test series platform also provides:</p>
+                <ul>
+                    <li>Doubt clarification forums with expert faculty</li>
+                    <li>Regular webinars on important topics</li>
+                    <li>Study planning tools and templates</li>
+                    <li>Updates on ICSI notifications and changes</li>
+                    <li>Career guidance for aspiring Company Secretaries</li>
+                </ul>
+                
+                <p>With comprehensive coverage, expert-designed content, and powerful analytics, our CS Professional Test Series provides everything you need to excel in your ICSI final examinations. Join thousands of successful CS candidates who have trusted our platform for their exam preparation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our CS Professional Test Series?</h2>
+                <p>We provide the most effective preparation platform for ICSI final exams.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📝</div>
+                    <h3>Case Study Focus</h3>
+                    <p>Real-world corporate scenarios mirroring actual exam patterns.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Expert Evaluation</h3>
+                    <p>Personalized feedback on drafting and case study answers.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Time Management</h3>
+                    <p>Practice completing complex papers within time limits.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📚</div>
+                    <h3>Model Answers</h3>
+                    <p>Access to professionally drafted model answers.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <h3>Practical Approach</h3>
+                    <p>Focus on application rather than rote learning.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Updated Content</h3>
+                    <p>Regular updates reflecting latest laws and ICSI patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>CS Professional</h3>
+                    <p>Premier test series for ICSI CS Professional exams. Expert-designed case studies, drafting practice, and comprehensive preparation materials.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://mycsmtp.com/">Home</a></li>
+                        <li><a href="#modules">Modules</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Modules</h3>
+                    <ul>
+                        <li><a href="https://mycsmtp.com/level/type/13/module/1">Governance & Compliance</a></li>
+                        <li><a href="https://mycsmtp.com/level/type/13/module/2">Strategic Management</a></li>
+                        <li><a href="https://mycsmtp.com/level/type/13/module/3">Drafting & Representation</a></li>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Previous Year Papers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: mycsmtp.com@gmail.com</li>
+                        <li>WhatsApp: +91 9540097210</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 CS Professional Test Series. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
