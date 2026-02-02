@@ -124,8 +124,8 @@
     
     <style>
         .shadcn-footer {
-            background: #f8fafc;
-            border-top: 1px solid #e2e8f0;
+            background: #0f172a;
+            border-top: 1px solid #1e293b;
             padding: 64px 0 32px;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -158,7 +158,7 @@
         }
         
         .shadcn-brand-desc {
-            color: #64748b;
+            color: #94a3b8;
             font-size: 14px;
             line-height: 1.7;
             margin-bottom: 24px;
@@ -174,24 +174,24 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            color: #475569;
+            color: #cbd5e1;
             font-size: 14px;
         }
         
         .shadcn-contact-item i {
             width: 20px;
-            color: #059669;
+            color: #10b981;
             text-align: center;
         }
         
         .shadcn-contact-item a {
-            color: #475569;
+            color: #cbd5e1;
             text-decoration: none;
             transition: color 0.2s ease;
         }
         
         .shadcn-contact-item a:hover {
-            color: #059669;
+            color: #10b981;
         }
         
         .shadcn-footer-links {
@@ -207,7 +207,7 @@
         .shadcn-link-title {
             font-size: 14px;
             font-weight: 600;
-            color: #1e293b;
+            color: #f1f5f9;
             margin-bottom: 16px;
             letter-spacing: 0.02em;
         }
@@ -223,14 +223,14 @@
         
         .shadcn-link {
             font-size: 14px;
-            color: #64748b;
+            color: #94a3b8;
             text-decoration: none;
             transition: all 0.2s ease;
             display: inline-block;
         }
         
         .shadcn-link:hover {
-            color: #059669;
+            color: #10b981;
             transform: translateX(4px);
         }
         
@@ -239,7 +239,7 @@
             align-items: center;
             justify-content: space-between;
             padding-top: 32px;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #1e293b;
             flex-wrap: wrap;
             gap: 24px;
         }
@@ -268,23 +268,23 @@
         
         .shadcn-newsletter-text {
             font-size: 14px;
-            color: #64748b;
+            color: #94a3b8;
             white-space: nowrap;
         }
         
         .shadcn-newsletter-form {
             display: flex;
             align-items: center;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
+            background: #1e293b;
+            border: 1px solid #334155;
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.2s ease;
         }
         
         .shadcn-newsletter-form:focus-within {
-            border-color: #059669;
-            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
         }
         
         .shadcn-newsletter-input {
@@ -294,17 +294,18 @@
             width: 200px;
             outline: none;
             background: transparent;
+            color: #f1f5f9;
         }
         
         .shadcn-newsletter-input::placeholder {
-            color: #94a3b8;
+            color: #64748b;
         }
         
         .shadcn-newsletter-btn {
             width: 40px;
             height: 40px;
             border: none;
-            background: #059669;
+            background: #10b981;
             color: #ffffff;
             cursor: pointer;
             display: flex;
@@ -314,7 +315,7 @@
         }
         
         .shadcn-newsletter-btn:hover {
-            background: #047857;
+            background: #059669;
         }
         
         .shadcn-social-links {
@@ -329,18 +330,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
+            background: #1e293b;
+            border: 1px solid #334155;
             border-radius: 8px;
-            color: #64748b;
+            color: #94a3b8;
             text-decoration: none;
             font-size: 14px;
             transition: all 0.2s ease;
         }
         
         .shadcn-social-link:hover {
-            background: #059669;
-            border-color: #059669;
+            background: #10b981;
+            border-color: #10b981;
             color: #ffffff;
             transform: translateY(-2px);
         }
