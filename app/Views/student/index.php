@@ -1103,27 +1103,22 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     <div class="container">
         <div class="selector-card">
             <div class="selector-header">
-                <h2>Select Your Package</h2>
-                <p>Choose course level and package to view details</p>
+                <h2>Select Test Series</h2>
+                <p>Choose a package to see what it includes</p>
             </div>
             
             <div class="selector-steps">
-                <div class="selector-step">
-                    <label>1. Select Course Level</label>
-                    <select id="course-level" class="selector-select">
-                        <option value="">-- Choose Course --</option>
-                        <?php if(!empty($fetchLevels)): ?>
-                            <?php foreach($fetchLevels as $level): ?>
-                                <option value="<?=$level['level_id']?>"><?=htmlspecialchars($level['level_name'])?></option>
+                <div class="selector-step" style="grid-column: 1 / -1;">
+                    <label>Select Package</label>
+                    <select id="package" class="selector-select">
+                        <option value="">-- Choose Package --</option>
+                        <?php if(!empty($fetchedTypes)): ?>
+                            <?php foreach($fetchedTypes as $type): ?>
+                                <option value="<?=$type['type_id']?>" data-level-id="<?=$type['level_id']?>" data-features="<?=htmlspecialchars($type['type_more_details'] ?? 'Complete test series access')?>">
+                                    <?=htmlspecialchars($type['type_name'])?> (<?=htmlspecialchars($type['level_name'])?>)
+                                </option>
                             <?php endforeach; ?>
                         <?php endif; ?>
-                    </select>
-                </div>
-                
-                <div class="selector-step">
-                    <label>2. Select Package</label>
-                    <select id="package" class="selector-select" disabled>
-                        <option value="">-- Choose Package --</option>
                     </select>
                 </div>
             </div>
@@ -1446,78 +1441,36 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const coursePackages = <?php
-        $packagesByLevel = [];
-        if(!empty($fetchedTypes)){
-            foreach($fetchedTypes as $type){
-                $levelId = $type['level_id'] ?? 0;
-                $typeId = $type['type_id'] ?? 0;
-                if(!isset($packagesByLevel[$levelId])){
-                    $packagesByLevel[$levelId] = [];
-                }
-                $packagesByLevel[$levelId][] = [
-                    'name' => substr($type['type_name'] ?? 'Package', 0, 50),
-                    'url' => base_url('level/type/'.$levelId.'/subject/'.$typeId),
-                    'features' => [
-                        $type['type_more_details'] ?? 'Complete test series access',
-                        'Detailed evaluation',
-                        'Expert feedback',
-                        'Suggested answers'
-                    ]
-                ];
-            }
-        }
-        echo json_encode($packagesByLevel);
-    ?>;
-
-    const courseSelect = document.getElementById('course-level');
     const packageSelect = document.getElementById('package');
     const packageInfo = document.getElementById('package-info');
 
-    courseSelect.addEventListener('change', function() {
-        if (this.value && coursePackages[this.value]) {
-            packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
-            packageSelect.disabled = false;
-            
-            coursePackages[this.value].forEach((pkg, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                option.textContent = pkg.name;
-                packageSelect.appendChild(option);
-            });
-            
-            if (coursePackages[this.value].length === 1) {
-                updatePackageInfo(coursePackages[this.value][0]);
-            }
-        } else {
-            packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
-            packageSelect.disabled = true;
-            packageInfo.classList.remove('active');
-        }
-    });
-
     packageSelect.addEventListener('change', function() {
-        if (this.value !== "" && coursePackages[courseSelect.value]) {
-            const packages = coursePackages[courseSelect.value];
-            if(packages[this.value]) {
-                updatePackageInfo(packages[this.value]);
-            }
+        if (this.value) {
+            const option = this.options[this.selectedIndex];
+            const typeId = this.value;
+            const levelId = option.dataset.levelId || 0;
+            const typeName = option.text.split(' (')[0];
+            
+            document.getElementById('package-name').textContent = typeName;
+            document.getElementById('package-link').href = base_url + 'level/type/' + levelId + '/subject/' + typeId;
+            
+            const features = [
+                option.dataset.features || 'Complete test series access',
+                'Detailed evaluation',
+                'Expert feedback',
+                'Suggested answers'
+            ];
+            
+            const featuresHtml = features.map(f => 
+                `<div class="package-feature"><i class="fas fa-check-circle"></i><span>${f}</span></div>`
+            ).join('');
+            document.getElementById('package-features').innerHTML = featuresHtml;
+            
+            packageInfo.classList.add('active');
         } else {
             packageInfo.classList.remove('active');
         }
     });
-
-    function updatePackageInfo(pkg) {
-        document.getElementById('package-name').textContent = pkg.name;
-        document.getElementById('package-link').href = pkg.url;
-        
-        const featuresHtml = pkg.features.map(f => 
-            `<div class="package-feature"><i class="fas fa-check-circle"></i><span>${f}</span></div>`
-        ).join('');
-        document.getElementById('package-features').innerHTML = featuresHtml;
-        
-        packageInfo.classList.add('active');
-    }
 
     document.querySelectorAll('.faq-question').forEach(btn => {
         btn.addEventListener('click', function() {
