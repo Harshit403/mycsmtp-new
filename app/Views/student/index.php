@@ -312,39 +312,40 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
     .course-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 24px;
-        max-width: 1000px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        max-width: 800px;
         margin: 0 auto;
     }
 
     .course-card {
         background: var(--white);
         border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 32px;
+        border-radius: 12px;
+        padding: 20px 16px;
         text-align: center;
         transition: all 0.3s ease;
         position: relative;
+        cursor: pointer;
     }
 
     .course-card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-4px);
         box-shadow: var(--shadow-lg);
         border-color: var(--primary);
     }
 
     .course-icon {
-        width: 72px;
-        height: 72px;
+        width: 48px;
+        height: 48px;
         background: var(--primary-light);
-        border-radius: 16px;
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 auto 20px;
+        margin: 0 auto 12px;
         color: var(--primary);
-        font-size: 28px;
+        font-size: 20px;
         transition: all 0.3s ease;
     }
 
@@ -354,10 +355,10 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     }
 
     .course-card h3 {
-        font-size: 1.25rem;
+        font-size: 0.95rem;
         color: var(--secondary);
-        margin-bottom: 8px;
-        font-weight: 700;
+        margin-bottom: 6px;
+        font-weight: 600;
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
@@ -371,7 +372,8 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 
     .course-card p {
         color: var(--text-light);
-        font-size: 14px;
+        font-size: 13px;
+        display: none;
     }
 
     .selector {
@@ -1055,32 +1057,31 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     <div class="container">
         <div class="section-title">
             <h2>Choose Your CS Test Series</h2>
-            <p>Select your course level and start preparing with our comprehensive test series</p>
+            <p>Select your course level and start preparing</p>
         </div>
         
         <div class="course-grid">
             <?php
             if(!empty($fetchLevels)){
-                $icons = ["fas fa-gem", "fas fa-briefcase", "fas fa-user-tie"];
+                $icons = ["fas fa-graduation-cap", "fas fa-briefcase", "fas fa-user-tie"];
                 $i = 0;
                 foreach ($fetchLevels as $level) {
                     $icon = $icons[$i] ?? "fas fa-book";
                     $i = ($i + 1) % 3;
                     ?>
-                    <a href="javascript:void(0)" class="course-card levelBtn" data-level-id="<?=$level['level_id']?>">
+                    <div class="course-card levelBtn" data-level-id="<?=$level['level_id']?>">
                         <div class="course-icon">
                             <i class="<?=$icon?>"></i>
                         </div>
                         <h3><?=htmlspecialchars($level['level_name'])?></h3>
-                        <p>Comprehensive test series for complete preparation</p>
-                    </a>
+                    </div>
                     <?php
                 }
             }
             ?>
         </div>
         
-        <div style="text-align: center; margin-top: 40px;">
+        <div style="text-align: center; margin-top: 32px;">
             <a href="<?=base_url()?>/level/cs-test-series" class="btn btn-outline">
                 View All Courses <i class="fas fa-arrow-right"></i>
             </a>
