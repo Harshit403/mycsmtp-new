@@ -3,10 +3,7 @@ $(document).ready(function() {
 
     function cartHTML(cartData = []) {
         if (cartData.length > 0) {
-            var html = '<div class="cart-modal-content">';
-            html += '<table class="table table-striped table-hover mb-3">';
-            html += '<thead class="table-success"><tr><th>Item</th><th>Price</th><th></th></tr></thead>';
-            html += '<tbody>';
+            var html = '<table class="table table-light table-striped table-hover">';
             var totalPrice = 0;
             var discountPercent = 0;
             var discount_type = '';
@@ -14,56 +11,53 @@ $(document).ready(function() {
                 totalPrice = Number(totalPrice.toFixed(2)) + Number(v.offer_price);
                 html += '<tr>' +
                     '<td>' +
-                    '<div class="fw-bold">' + v.subject_name + '</div>' +
-                    '<small class="text-muted">' + v.level_name + '</small><br>' +
-                    '<small class="text-muted">Type: ' + v.type_name + '</small>' +
+                    '<div class="font-weight-bold"> ' + v.subject_name + '</div>' +
+                    '<div>' + v.level_name + ' </div>' +
+                    '<div> Test Series Type :' + v.type_name + '</div>' +
                     '</td>' +
-                    '<td class="align-middle fw-bold">&#x20B9; ' + v.offer_price + '</td>' +
-                    '<td class="align-middle text-center">' +
-                    '<a href="javascript:void(0)" class="removeCartItems text-danger" data-cart-item-id="' + v.cart_items_id + '"><i class="bi bi-x-circle-fill" style="font-size:18px;"></i></a>' +
+                    '<td style="vertical-align:middle; font-weight:bold">&#x20B9; ' + v.offer_price + '</td>' +
+                    '<td style="vertical-align:middle; font-weight:bold">' +
+                    '<a href="javascript:void(0)" class="removeCartItems btn" data-cart-item-id="' + v.cart_items_id + '"><i class="bi bi-x-circle-fill text-danger" style="font-size:16px;"></i></a>' +
                     '</td>' +
                     '</tr>';
                 discountPercent = v.discount;
                 discount_type = v.discount_type;
             });
-            html += '</tbody></table>';
-            
             var totalPriceDeciaml = (totalPrice.toFixed(2));
             if (discount_type == 'percent') {
                 var discountAmount = (((totalPrice * discountPercent) / 100).toFixed(2));
                 var sign = ' % ';
             } else {
                 var discountAmount = (discountPercent);
-                var sign = ' &#8377; ';
+                var sign = ' &#8377 ';
             }
             var payableAmount = ((totalPrice - discountAmount).toFixed(2));
-            
-            html += '<div class="promocode-section">';
-            html += '<div class="input-group mb-2">';
-            html += '<input type="text" class="form-control" placeholder="Enter Promocode" id="code_name">';
-            html += '<button class="btn btn-outline-success applyPromocodeBtn" type="button">Apply</button>';
-            html += '</div>';
-            html += '<div class="text-danger promocodeError small mb-2"></div>';
-            html += '</div>';
-            
-            html += '<div class="cart-summary bg-light p-3 rounded">';
-            html += '<div class="d-flex justify-content-between mb-1"><span>Subtotal</span><span class="fw-bold">&#x20B9; ' + totalPriceDeciaml + '</span></div>';
+            html += '</table>';
+            html += '<div class="input-group mb-1 w-50 ml-auto promocodeContainer">' +
+                '<input type="text" class="form-control" placeholder="Enter Promocode" aria-label="Enter Promocode" aria-describedby="applyPromocodeBtn" id="code_name">' +
+                '<a herf="javascript:void(0)" class="btn btn-success applyPromocodeBtn">Apply</a>' +
+                '</div>';
+            html += '<div class="text-danger promocodeError text-right mb-2"></div>';
+            html += '<div class="text-right">' +
+                '<div class="row">' +
+                '<div class="col-md-9 font-weight-bold">Subtotal</div>' +
+                '<div class="col-md-3">&#x20B9; ' + totalPriceDeciaml + '</div>' +
+                '</div>';
             if (discountPercent != '0') {
-                html += '<div class="d-flex justify-content-between mb-1 text-success"><span>Discount <small>(' + discountPercent + sign + ')</small></span><span>-&#x20B9; ' + discountAmount + ' <i class="fas fa-times-circle removePromoCode" style="cursor:pointer;margin-left:5px;"></i></span></div>';
+                html += '<div class="row">' +
+                    '<div class="col-md-9 font-weight-bold">Discount<span class="text-success"> (' + discountPercent + sign + 'discount) </span></div>' +
+                    '<div class="col-md-3 d-flex align-items-center justify-content-end">&#x20B9;' + discountAmount + '<i class="fas fa-times-circle text-danger removePromoCode" style="margin-left:0.25rem;cursor:pointer;"></i></div>' +
+                    '</div>';
             }
-            html += '<hr class="my-2">';
-            html += '<div class="d-flex justify-content-between fw-bold fs-5"><span>Payable</span><span>&#x20B9; ' + payableAmount + '</span></div>';
-            html += '</div>';
-            html += '</div>';
-            
+            html += '<div class="row">' +
+                '<div class="col-md-9 font-weight-bold">Payable Amount</div>' +
+                '<div class="col-md-3">&#x20B9; ' + payableAmount + '</div>' +
+                '</div>' +
+                '</div>';
             html += '<input type="hidden" id="totalPriceDeciaml" name="totalPriceDeciaml" value="' + totalPriceDeciaml + '">';
             html += '<input type="hidden" id="payableAmount" value="' + payableAmount + '">';
         } else {
-            html = '<div class="empty-cart text-center py-5">' +
-                   '<i class="fas fa-shopping-cart text-muted mb-3" style="font-size: 48px;"></i>' +
-                   '<h5 class="text-muted">Your cart is empty</h5>' +
-                   '<p class="text-muted small">Add some items to get started</p>' +
-                   '</div>';
+            html = '<div class="d-flex align items-center justify-content-center h2">No items in Cart</div>';
         }
         $(".cartPopUpContainer").html(html);
     }
@@ -72,7 +66,9 @@ $(document).ready(function() {
         showCartItems();
     });
 
-    function showCartItems() {
+
+
+    function showCartItems(displayButton = 'disabled') {
         $.ajax({
             url: baseUrl + 'fetch-active-cartitems',
             type: 'GET',
@@ -82,16 +78,18 @@ $(document).ready(function() {
                     cartHTML(response.cartData);
                     $(".cartCount").html(response.cartData.length);
                     
+                    var html = $('.cartPopUpContainer').clone();
                     var hasItems = response.cartData.length > 0;
-                    var buttonConfig = {};
-                    
-                    if (hasItems) {
-                        buttonConfig = {
-                            checkout: {
-                                label: '<i class="fas fa-credit-card"></i> Checkout',
+
+                    var dialog = bootbox.dialog({
+                        title: 'Checkout',
+                        message: html,
+                        buttons: {
+                            yes: {
+                                label: '<i class="fas fa-money-bill-wave-alt"></i> Checkout',
                                 className: 'btn-success checkoutBtn',
                                 callback: function() {
-                                    var totalPayablePrice = $('#payableAmount').val();
+                                    var totalPayablePrice = $(this).find('#payableAmount').val();
                                     if (totalPayablePrice == '0.00') {
                                         $.ajax({
                                             url: baseUrl + '/payment/free-payable-product',
@@ -99,7 +97,8 @@ $(document).ready(function() {
                                             dataType: 'json',
                                             success: function(resp) {
                                                 if (resp.success) {
-                                                    window.open(resp.url, '_self');
+                                                    var url = resp.url;
+                                                    window.open(url, '_self');
                                                 } else {
                                                     bootbox.alert(resp.message);
                                                 }
@@ -134,37 +133,29 @@ $(document).ready(function() {
                                         });
                                     }
                                 }
-                            }
-                        };
-                    }
-                    
-                    var dialog = bootbox.dialog({
-                        title: hasItems ? '<i class="fas fa-shopping-cart mr-2"></i>Your Cart (' + response.cartData.length + ' items)' : 'Your Cart',
-                        message: $('.cartPopUpContainer').clone(),
-                        buttons: buttonConfig,
-                        onEscape: true,
+                            },
+                        },
                     });
                     
                     dialog.init(function() {
-                        if (hasItems) {
+                        if (!hasItems) {
                             $(dialog).find('.checkoutBtn').hide();
                         }
                         
-                        setInterval(function() {
-                            var currentHtml = $('.cartPopUpContainer').html();
-                            var isEmpty = currentHtml.indexOf('empty-cart') > -1;
-                            if (!isEmpty) {
-                                $(dialog).find('.checkoutBtn').show();
-                            } else {
-                                $(dialog).find('.checkoutBtn').hide();
-                            }
-                        }, 500);
-                        
-                        $(dialog).find('.cartPopUpContainer').on('click', '.removeCartItems', function(e) {
-                            e.preventDefault();
+                        $(dialog).find('.cartPopUpContainer').on('click', '.removeCartItems', function() {
                             var cart_items_id = $(this).data('cart-item-id');
                             removeCartItems(cart_items_id);
                         });
+                        
+                        setInterval(function() {
+                            var htmlVal = $('.cartPopUpContainer').html();
+                            var isEmpty = htmlVal.indexOf('No items in Cart') > -1;
+                            if (isEmpty) {
+                                $(dialog).find('.checkoutBtn').hide();
+                            } else {
+                                $(dialog).find('.checkoutBtn').show();
+                            }
+                        }, 800);
                         
                         $(dialog).find('.cartPopUpContainer').on('click', '.applyPromocodeBtn', function() {
                             var code_name = $(dialog).find('#code_name').val();
@@ -226,16 +217,11 @@ $(document).ready(function() {
                             });
                         });
                     });
-                } else {
-                    bootbox.alert({
-                        message: 'Failed to load cart items. Please try again.',
-                        closeButton: false,
-                    });
                 }
             },
             error: function() {
                 bootbox.alert({
-                    message: 'Error loading cart. Please refresh the page.',
+                    message: 'Failed to load cart items. Please try again.',
                     closeButton: false,
                 });
             }
@@ -329,6 +315,7 @@ $(document).ready(function() {
             '<div class="col-md-12 text-center text-dark font-weight-bold">Scan This QR code </br>or</div>' +
             '<div class="col-md-12 text-center" style="font-size:17px !important">' +
             '<a href="upi://pay?pa=' + admin_upi_id + '&pn=' + admin_upi_ac_name + '&am=' + totalPayablePrice + '&cu=INR" style="color:#000 !important;font-weight:bold !important" class="btn btn-sm btn-primary"><font class="text-white">Pay Using UPI App</font></a>' +
+            // ' <a href="javascript:void(0)" id="copy_upi" title="Click to Copy" style="color:#000 !important;font-weight:bold !important;"><i class="fas fa-copy fa-fw"></i></a>'+
             '</div>' +
             '<div class="col-md-12">' +
             '<label>UPI Id</label>' +
