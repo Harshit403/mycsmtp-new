@@ -1,0 +1,94 @@
+# LLM.TXT - AI Crawling Information for MY CS MTP Test Series
+
+## About This Site
+MY CS MTP Test Series is India's leading online platform for CS (Company Secretary) exam preparation, offering comprehensive mock tests for CSEET, CS Executive, and CS Professional programs as per the ICSI pattern.
+
+**Website:** https://mycsmtp.com
+**Founded:** 2021
+**Target Audience:** Students preparing for ICSI (Institute of Company Secretaries of India) examinations
+
+## Content Available
+
+### Educational Resources
+- **CS Test Series** - Mock tests for CSEET, CS Executive, and CS Professional
+- **Chapterwise Tests** - Subject-wise test series
+- **Detailed Tests** - Comprehensive evaluation tests
+- **Full Syllabus Tests** - Complete exam preparation
+- **Sample Answer Sheets** - Evaluated answer examples
+- **Study Materials** - ICSI syllabus and resources
+
+### Information Pages
+- About Us - Company information and mission
+- Why Us - Features and benefits of the platform
+- Testimonials - Student success stories and reviews
+- FAQ - Frequently asked questions
+- Contact Us - Support and inquiry information
+
+### Blog Section
+Educational articles on CS exam preparation, study strategies, ICSI patterns, and student success stories.
+
+## AI Crawling Guidelines
+
+### Allowed
+- Crawling and indexing of all public pages
+- Creating summaries of content for search and reference purposes
+- Using factual information from the site for answering user queries
+- Linking to the site and its content
+
+### Not Allowed
+- Reproducing substantial portions of proprietary content
+- Training AI models on the content without permission
+- Scraping user-specific or login-protected content
+- Storing cached copies of the entire site for extended periods
+
+## Content Structure
+
+### Site Navigation
+```
+Home
+├── About Us
+├── Why Choose Us
+├── Test Series
+│   ├── CSEET
+│   ├── CS Executive
+│   └── CS Professional
+├── Plans & Pricing
+├── Sample Answer Sheets
+├── Syllabus
+├── Important Links
+├── FAQ
+├── Testimonials
+├── Blogs
+└── Contact Us
+```
+
+### Supported Languages
+- Primary: English (en-IN)
+- Secondary: Hindi (hi-IN) support available
+
+## Contact Information
+
+**Support Email:** support@mycsmtp.com
+**WhatsApp:** +91-9540097210
+**Address:** Dasna, Ghaziabad, Uttar Pradesh 201302, India
+
+## Structured Data Available
+
+The site uses Schema.org structured data including:
+- EducationalOrganization
+- WebSite with SearchAction
+- Course and Product listings
+- FAQPage
+- BlogPosting
+- BreadcrumbList
+
+## Last Updated
+2026-02-03
+
+## For AI Developers
+
+If you're building an AI assistant or search system and need specific information about MY CS MTP, please contact us at support@mycsmtp.com for partnership opportunities or API access inquiries.
+
+## Attribution
+
+When using information from this site in AI-generated responses, proper attribution to MY CS MTP Test Series is appreciated.

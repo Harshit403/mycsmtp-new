@@ -62,7 +62,9 @@ $(document).ready(function() {
         $(".cartPopUpContainer").html(html);
     }
 
-    $(".showCartBtn").on('click', function() {
+    $(document).on('click', '.showCartBtn', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         showCartItems();
     });
 
@@ -84,54 +86,12 @@ $(document).ready(function() {
                     var dialog = bootbox.dialog({
                         title: 'Checkout',
                         message: html,
-                        buttons: {
+buttons: {
                             yes: {
-                                label: '<i class="fas fa-money-bill-wave-alt"></i> Checkout',
+                                label: '<i class="fas fa-shopping-cart"></i> View Cart',
                                 className: 'btn-success checkoutBtn',
                                 callback: function() {
-                                    var totalPayablePrice = $(this).find('#payableAmount').val();
-                                    if (totalPayablePrice == '0.00') {
-                                        $.ajax({
-                                            url: baseUrl + '/payment/free-payable-product',
-                                            type: 'GET',
-                                            dataType: 'json',
-                                            success: function(resp) {
-                                                if (resp.success) {
-                                                    var url = resp.url;
-                                                    window.open(url, '_self');
-                                                } else {
-                                                    bootbox.alert(resp.message);
-                                                }
-                                            }
-                                        });
-                                    } else {
-                                        $.ajax({
-                                            url: baseUrl + 'checkout-phone-pe-cart-items',
-                                            type: 'GET',
-                                            dataType: 'json',
-                                            success: function(resp) {
-                                                if (resp.success) {
-                                                    if (paymentGateway == 'CASHFREE') {
-                                                        const cashfree = Cashfree({
-                                                            mode: "production"
-                                                        });
-                                                        let checkoutOptions = {
-                                                            paymentSessionId: resp.payment_session_id,
-                                                            redirectTarget: "_self"
-                                                        }
-                                                        cashfree.checkout(checkoutOptions);
-                                                    } else if (paymentGateway == 'PHONEPE') {
-                                                        window.open(resp.url, '_self');
-                                                    }
-                                                } else {
-                                                    bootbox.alert({
-                                                        message: resp.message,
-                                                        closeButton: false,
-                                                    });
-                                                }
-                                            }
-                                        });
-                                    }
+                                    window.location.href = baseUrl + 'cart';
                                 }
                             },
                         },

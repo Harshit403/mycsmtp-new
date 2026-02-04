@@ -1,6 +1,10 @@
 <?= $this->extend('layout/student_layout') ?>
 <?= $this->section('title') ?>
-    FAQ
+    CS Test Series FAQ - Frequently Asked Questions | MY CS MTP
+<?= $this->endSection() ?>
+<?= $this->section('seoSection') ?>
+<meta name="description" content="Find answers to frequently asked questions about our CS test series. Learn about CS executive test series, CS professional test series, MTP formats, evaluation process, and more.">
+<meta name="keywords" content="cs test series faq, cs executive test series questions, cs professional test series help, icsi test series FAQ, company secretary test series queries">
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
 <style type="text/css">
@@ -116,7 +120,8 @@
 </style>
     <section class="container mt-3 mb-5 section faq-section">
         <div class="text-center">
-            <h2>FAQ</h2>
+            <h1>CS Test Series FAQ</h1>
+            <p class="mt-3">Frequently Asked Questions about our CS Test Series for CSEET, CS Executive & CS Professional</p>
         </div>
 		<div class="row">
                     <div class="col-md-6 offset-md-3">
@@ -131,7 +136,7 @@
                                 </div>
                                 <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1" data-parent="#accordion">
                                     <div class="card-body">
-                                        <p>At MY CS MTP, we're dedicated to being your ultimate partner on the path to academic excellence. Choosing our test series means choosing a comprehensive, effective, and rewarding preparation experience With below features:<br>
+                                        <p>At MY CS MTP, we're dedicated to being your ultimate partner on the path to academic excellence. Choosing our CS test series means choosing a comprehensive, effective, and rewarding preparation experience With below features:<br>
 										</p>
 										<ul>
 											<li>Expert crafted Test papers</li>
@@ -197,7 +202,7 @@
                                 </div>
                                 <div id="faqCollapse-5" class="collapse" aria-labelledby="faqHeading-5" data-parent="#accordion">
                                     <div class="card-body">
-                                        <p>CS Students of All levels can Enroll for Test&nbsp;series</p>
+                                        <p>CS Students of All levels can Enroll for our CS test series</p>
                                     </div>
                                 </div>
                             </div>
@@ -219,7 +224,7 @@
                                 <div class="card-header" id="faqHeading-7">
                                     <div class="mb-0">
                                         <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7" data-aria-expanded="false" data-aria-controls="faqCollapse-7">
-                                            <span class="badge">7</span> Is there a validity period for accessing the test series?
+                                            <span class="badge">7</span> Is there a validity period for accessing the CS test series?
                                         </h5>
                                     </div>
                                 </div>
@@ -253,7 +258,7 @@
                                 </div>
                                 <div id="faqCollapse-9" class="collapse" aria-labelledby="faqHeading-9" data-parent="#accordion">
                                     <div class="card-body">
-                                        <p>Yes, you can buy Any test series of any subjects based on your requirements.</p>
+                                        <p>Yes, you can buy Any CS test series of any subjects based on your requirements.</p>
                                     </div>
                                 </div>
                             </div>
@@ -374,14 +379,14 @@
                                 <div class="card-header" id="faqHeading-15">
                                     <div class="mb-0">
                                         <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-15" data-aria-expanded="false" data-aria-controls="faqCollapse-15">
-                                            <span class="badge">16</span> In which language we can write mock test series?
+                                            <span class="badge">16</span> In which language we can write the CS test series?
                                         </h5>
                                     </div>
                                 </div>
 
                                 <div id="faqCollapse-15" class="collapse" aria-labelledby="faqHeading-15" data-parent="#accordion">
                                     <div class="card-body">
-                                        <p>We Provide test series for both English and Hindi languages students.</p>
+                                        <p>We Provide CS test series for both English and Hindi languages students.</p>
                                     </div>
                                 </div>
                             </div>

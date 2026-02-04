@@ -39,7 +39,7 @@ class BaseModel extends Model
 		}
     	return $response;
 	}
-    public function getInfo($table='',$action='',$where=array(),$sort="",$select="*")
+public function getInfo($table='',$action='',$where=array(),$sort="",$select="*")
     {
     	$builder = $this->db->table($table);
         $builder->select($select);
@@ -47,15 +47,19 @@ class BaseModel extends Model
         if (!empty($sort)) {
             $builder->orderBy($sort);
         }
+        $query = $builder->get();
+        if (!$query) {
+            return [];
+        }
     	switch ($action) {
     		case 'row':
-    		$response = $builder->get()->getRow();
+    		$response = $query->getRow();
     			break;
 			case 'array':
-    		$response =  $builder->get()->getResultArray();
+    		$response =  $query->getResultArray();
     			break;
     		default:
-    		$response =  $builder->get()->getResult();
+    		$response =  $query->getResult();
     			break;
     	}
     	return $response;

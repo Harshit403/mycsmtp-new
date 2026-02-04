@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
   <title><?= $this->renderSection('title') ?></title>
 	<?=view('includes/header.php')?>

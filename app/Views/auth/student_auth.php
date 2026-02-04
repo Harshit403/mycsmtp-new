@@ -1,390 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>User <?=($addClass=='sign_up') ? ' Signup':' Login'; ?></title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="<?=($addClass=='sign_up') ? 'Create your CS MTP account' : 'Sign in to CS MTP account' ?>">
+    <title><?=($addClass=='sign_up') ? 'Create Account' : 'Sign In' ?> | CS Test Series - MY CS MTP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-        
-        body {
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: #333;
-            font-size: 13px;
-            line-height: 1.4;
-            padding: 15px;
-        }
-        
-        .registration-form {
-            background: white;
-            padding: 25px 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 380px;
-            margin: auto;
-            position: relative;
-        }
-        
-        h1 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #2c3e50;
-            text-align: center;
-        }
-        
-        .inputBox {
-            position: relative;
-            margin-bottom: 15px;
-        }
-        
-        .inputBox input, .inputBox select {
-            width: 100%;
-            padding: 10px 35px 10px 8px;
-            font-size: 13px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            outline: none;
-            background: transparent;
-            transition: all 0.3s;
-        }
-        
-        .inputBox input:focus, .inputBox select:focus {
-            border-color: #18ab91;
-        }
-        
-        .inputBox span {
-            position: absolute;
-            left: 8px;
-            top: 10px;
-            padding: 0 4px;
-            color: #777;
-            font-size: 13px;
-            transition: all 0.3s;
-            pointer-events: none;
-        }
-        
-        .inputBox input:valid ~ span,
-        .inputBox input:focus ~ span,
-        .inputBox select:valid ~ span,
-        .inputBox select:focus ~ span {
-            top: -7px;
-            left: 8px;
-            font-size: 11px;
-            background: white;
-            color: #18ab91;
-        }
-        
-        .viewPassWord {
-            cursor: pointer;
-            color: #777;
-            font-size: 16px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 2;
-        }
-        
-        .pass {
-            text-align: right;
-            margin-bottom: 12px;
-        }
-        
-        .pass a {
-            color: #18ab91;
-            text-decoration: none;
-            font-size: 12px;
-        }
-        
-        .pass a:hover {
-            text-decoration: underline;
-        }
-        
-        .authButton {
-            width: 100%;
-            padding: 10px;
-            background: #18ab91;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 13px;
-            cursor: pointer;
-            transition: background 0.3s;
-            margin-bottom: 12px;
-        }
-        
-        .authButton:hover {
-            background: #148f77;
-        }
-        
-        .authButton:disabled {
-            background: #95a5a6;
-            cursor: not-allowed;
-        }
-        
-        .signup_link {
-            text-align: center;
-            font-size: 12px;
-            color: #555;
-        }
-        
-        .signup_link a {
-            color: #18ab91;
-            text-decoration: none;
-        }
-        
-        .signup_link a:hover {
-            text-decoration: underline;
-        }
-        
-        .form-icon {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        
-        .form-icon span {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: #18ab91;
-            border-radius: 50%;
-            line-height: 50px;
-            color: white;
-            font-size: 20px;
-        }
-        
-        .cf-turnstile {
-            margin: 10px 0 15px;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .home-link {
-            margin-top: 10px;
-            display: block;
-            text-align: center;
-        }
-        
-        /* Bootbox modal fixes */
-        .bootbox.modal {
-            z-index: 1060 !important;
-        }
-        .bootbox-body {
-            font-size: 14px;
-            padding: 15px;
-        }
-        .bootbox-close-button {
-            font-size: 24px;
-            opacity: 0.6;
-        }
-        .modal-backdrop {
-            z-index: 1050 !important;
-        }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-                display: flex;
-                align-items: center;
-            }
-            
-            .registration-form {
-                padding: 20px 15px;
-                margin-top: 0;
-            }
-            
-            h1 {
-                font-size: 16px;
-            }
-            
-            .inputBox input, .inputBox select {
-                padding: 8px 30px 8px 6px;
-                font-size: 12px;
-            }
-            
-            .inputBox span {
-                font-size: 12px;
-            }
-            
-            .viewPassWord {
-                font-size: 14px;
-                top: 8px;
-                right: 8px;
-            }
-            
-            .authButton {
-                padding: 8px;
-                font-size: 12px;
-            }
-        }
-        
-        @media (max-width: 360px) {
-            .registration-form {
-                padding: 15px 12px;
-            }
-            
-            .inputBox {
-                margin-bottom: 12px;
-            }
-        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f5;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:10px;font-size:11px;color:#333}
+        .auth-box{background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.08);width:100%;max-width:260px;border:1px solid #e5e5e5}
+        .auth-header{background:#1ab79c;color:#fff;text-align:center;padding:10px 15px;border-radius:6px 6px 0 0}
+        .auth-header h2{font-size:14px;font-weight:600;margin:0}
+        .auth-header p{font-size:10px;margin:2px 0 0;opacity:.9}
+        .auth-body{padding:12px 15px}
+        .form-group{margin-bottom:8px}
+        .form-label{font-size:10px;font-weight:500;color:#555;margin-bottom:2px;display:block}
+        .form-control{width:100%;padding:6px 8px;font-size:11px;border:1px solid #ddd;border-radius:4px;outline:none}
+        .form-control:focus{border-color:#1ab79c}
+        .pwd-wrap{position:relative}
+        .pwd-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;color:#888;cursor:pointer;font-size:12px}
+        .pwd-wrap input{padding-right:28px}
+        .btn-login{width:100%;padding:6px;background:#1ab79c;color:#fff;border:none;border-radius:4px;font-size:11px;cursor:pointer}
+        .btn-login:hover{background:#15967d}
+        .btn-login:disabled{background:#bbb}
+        .divider{display:flex;align-items:center;margin:10px 0;color:#999;font-size:9px}
+        .divider span{padding:0 8px;background:#fff}
+        .divider::before,.divider::after{content:'';flex:1;height:1px;background:#eee}
+        .auth-footer{text-align:center;padding:10px 15px;background:#fafafa;border-radius:0 0 6px 6px;border-top:1px solid #eee;font-size:10px;color:#666}
+        .auth-footer a{color:#1ab79c;text-decoration:none}
+        .auth-footer a:hover{text-decoration:underline}
+        .terms{font-size:9px;color:#999;text-align:center;margin-bottom:8px}
+        .terms a{color:#777}
+        .cf-turnstile{margin:0 0 10px;display:flex;justify-content:center}
+        @media(max-width:320px){.auth-box{max-width:100%}}
     </style>
 </head>
 <body>
-    <div class="signin_container" style="display: <?=($addClass=='sign_up') ? 'none':''; ?>">
-        <div class="registration-form">
-            <h1 class="text-center pb-3">Sign In</h1>
-            <form id="sign_in_form">
-                <div class="inputBox">
-                    <input type="text" class="item" name="email" required="required">
-                    <span>Email</span>
-                </div>
-                <div class="inputBox">
-                    <input type="password" class="item" name="password" required="required">
-                    <ion-icon name="eye-off-outline" class="viewPassWord"></ion-icon>
-                    <span>Password</span>
-                </div>
-                <div class="pass"><a href="<?=base_url()?>forgot-password">Forgot Password?</a></div>
-            </form>
-            <button class="authButton loginBtn">Sign In</button>
-            <div class="signup_link">
-                Not a member? <a href="javascript:void(0)" id="signup_link">Sign Up</a>
-                <div class="home-link"><a href="<?=base_url()?>"><i class="fas fa-undo-alt"></i> Return to Home</a></div>
+    <div class="auth-box">
+        <!-- Sign In -->
+        <div class="signin_container" style="display:<?=($addClass=='sign_up')?' none':' block'?>">
+            <div class="auth-header">
+                <h2>Sign In</h2>
+                <p>CS Test Series</p>
+            </div>
+            <div class="auth-body">
+                <form id="sign_in_form">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <div class="pwd-wrap">
+                            <input type="password" class="form-control" name="password" required placeholder="Password">
+                            <button type="button" class="pwd-toggle"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-login loginBtn">Sign In</button>
+                </form>
+                <div class="divider"><span>or</span></div>
+            </div>
+            <div class="auth-footer">
+                New? <a href="<?=base_url()?>register">Create account</a>
             </div>
         </div>
-    </div>
-    <div class="signup_container" style="display: <?=($addClass=='sign_in') ? 'none':''; ?>">
-        <div class="registration-form">
-            <h1 class="text-center pb-3">Sign Up</h1>
-            <form id="sign_up_form">
-                <div class="inputBox">
-                    <input type="text" class="item" name="student_name" required="required">
-                    <span>Student Name</span>
-                </div>
-                <div class="inputBox">
-                    <input type="text" class="item" name="email" required="required">
-                    <span>Email</span>
-                </div>
-                <div class="inputBox">
-                    <input type="text" class="item" name="mobile_no" required="required">
-                    <span>Mobile No</span>
-                </div>
-                <div class="inputBox">
-                    <input type="text" class="item" name="city_name" required="required">
-                    <span>City</span>
-                </div>
-                <div class="inputBox">
-                    <input type="text" class="item" name="state_name" required="required">
-                    <span>State</span>
-                </div>
-                <div class="inputBox">
-                    <select class="item" name="current_level" required style="appearance: none; padding-top: 10px; padding-bottom: 10px;">
-                        <?php 
-                        if(!empty($level_list)){
-                            foreach($level_list as $levelsRow){
-                                ?>
-                                    <option value="<?=$levelsRow['level_id']?>"><?=$levelsRow['level_name']?></option>
-                                <?php
-                            }
-                        }
-                        ?>
-                    </select>
-                </div>
-                <div class="inputBox">
-                    <input type="password" class="item" name="password" required="required">
-                    <ion-icon name="eye-off-outline" class="viewPassWord"></ion-icon>
-                    <span>Password</span>
-                </div>
-                <div class="inputBox">
-                    <input type="password" class="item" name="confirm_password" required="required">
-                    <ion-icon name="eye-off-outline" class="viewPassWord"></ion-icon>
-                    <span>Confirm Password</span>
-                </div>
-                <div class="cf-turnstile"
-                 data-sitekey="0x4AAAAAAARPAQYMac4ULvRa"
-                 data-callback="onTurnstileSuccess"
-                ></div>
-            </form>
-            <p>By clicking "Sign Up", you agree to our Terms and Conditions, Privacy Policy, and Disclaimer.</p>
-            <button type="button" class="authButton signUpBtn">Sign Up</button>
-            <div class="signup_link">
-                Already a member? <a href="javascript:void(0)" id="signin_link">Sign In</a>
-                <div class="home-link"><a href="<?=base_url()?>"><i class="fas fa-undo-alt"></i> Return to Home</a></div>
+        
+        <!-- Sign Up -->
+        <div class="signup_container" style="display:<?=($addClass=='sign_in')?' none':' block'?>">
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p>Join CS Test Series</p>
+            </div>
+            <div class="auth-body">
+                <form id="sign_up_form">
+                    <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" name="student_name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mobile</label>
+                        <input type="tel" class="form-control" name="mobile_no" required placeholder="Mobile">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" name="city_name" required placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">State</label>
+                        <input type="text" class="form-control" name="state_name" required placeholder="State">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Level</label>
+                        <select class="form-control" name="current_level" required>
+                            <option value="">Select</option>
+                            <?php if(!empty($level_list)):foreach($level_list as $l):?>
+                                <option value="<?=$l['level_id']?>"><?=$l['level_name']?></option>
+                            <?php endforeach;endif?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <div class="pwd-wrap">
+                            <input type="password" class="form-control" name="password" required placeholder="Password">
+                            <button type="button" class="pwd-toggle"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAARPAQYMac4ULvRa" data-callback="onTurnstileSuccess"></div>
+                    <p class="terms">By signing up, you agree to <a href="<?=base_url()?>terms-and-conditions">Terms</a> & <a href="<?=base_url()?>privacy-policy">Privacy</a></p>
+                    <button type="button" class="btn-login signUpBtn" disabled>Create Account</button>
+                </form>
+                <div class="divider"><span>or</span></div>
+            </div>
+            <div class="auth-footer">
+                Already have an account? <a href="<?=base_url()?>sign-in">Sign in</a>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="<?=base_url()?>assets/js/cdn/jquery.min.js"></script>
-    <script type="text/javascript" src="<?=base_url()?>assets/js/cdn/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="<?=base_url()?>assets/js/cdn/bootbox.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="<?=base_url()?>assets/js/cdn/jquery.min.js"></script>
+    <script src="<?=base_url()?>assets/js/cdn/bootstrap.bundle.min.js"></script>
+    <script src="<?=base_url()?>assets/js/cdn/bootbox.min.js"></script>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    
-    <script type="text/javascript">
-        var pageType = "student_auth_page";
-        var baseUrl = "<?=base_url()?>";
-        
-        window.onTurnstileSuccess = function (code) {
-            document.querySelector('.signUpBtn').disabled = false;
-        }
-        
-        // Toggle password visibility
-        function togglePasswordVisibility(icon) {
-            const input = icon.parentElement.querySelector('input');
-            if (input.type === 'password') {
-                input.type = 'text';
-                icon.name = 'eye-outline';
-            } else {
-                input.type = 'password';
-                icon.name = 'eye-off-outline';
-            }
-        }
-        
-        $(document).ready(function() {
-            // Setup password toggles
-            const viewPasswordIcons = document.querySelectorAll('.viewPassWord');
-            viewPasswordIcons.forEach(icon => {
-                // Click handler
-                icon.addEventListener('click', function() {
-                    togglePasswordVisibility(this);
-                });
-                
-                // Touch handler for mobile
-                icon.addEventListener('touchstart', function(e) {
-                    e.preventDefault(); // Prevent touch scroll
-                    togglePasswordVisibility(this);
-                }, {passive: false});
-            });
-            
-            // Toggle between sign in and sign up forms
-            $('#signup_link').on('click', function() {
-                $('.signin_container').hide();
-                $('.signup_container').show();
-                window.scrollTo(0, 0);
-            });
-            
-            $('#signin_link').on('click', function() {
-                $('.signup_container').hide();
-                $('.signin_container').show();
-                window.scrollTo(0, 0);
+    <script>
+        var baseUrl="<?=base_url()?>";
+        window.onTurnstileSuccess=function(){document.querySelector('.signUpBtn').disabled=false};
+        $(function(){
+            $(document).on('click','.pwd-toggle',function(){
+                var i=$(this).find('i'),p=$(this).siblings('input');
+                p.attr('type',p.attr('type')==='password'?'text':'password');
+                i.toggleClass('fa-eye fa-eye-slash');
             });
         });
-    </script>  
-    <script type="text/javascript" src="<?=base_url()?>assets/js/custom_js/design.js"></script>
-    <script type="text/javascript" src="<?=base_url()?>assets/js/custom_js/student_auth.js?v=1.0.3"></script>
+    </script>
+    <script src="<?=base_url()?>assets/js/custom_js/student_auth.js?v=1.0.6"></script>
 </body>
 </html>

@@ -1,18 +1,39 @@
-  <script type="text/javascript" src="<?=base_url()?>assets/js/cdn/jquery.min.js"></script>
-    <script type="text/javascript" src="<?=base_url()?>assets/js/cdn/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="<?=base_url()?>assets/js/cdn/bootbox.min.js"></script>
-    <script type="text/javascript" src="<?=base_url()?>assets/js/custom_js/common.js?v=1.0.1"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="<?=base_url()?>assets/js/cdn/owl.carousel.min.js?v=1.0.0"></script>
-    <script src="<?=base_url()?>assets/js/custom_js/design.js?v=1.0.3"></script>
-    <script src="https://sdk.cashfree.com/js/v3/cashfree.js?v=1.0.0"></script>
-    <script src="<?=base_url()?>assets/js/custom_js/cart.js?v=1.0.9"></script>
+  <!-- jQuery (required for Bootstrap and plugins) -->
+  <script src="<?=base_url()?>assets/js/cdn/jquery.min.js"></script>
+  
+  <!-- Bootstrap Bundle from CDN (better caching, smaller footprint) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+          crossorigin="anonymous" defer></script>
+  
+  <!-- Bootbox for dialogs - load BEFORE cart JS -->
+  <script src="<?=base_url()?>assets/js/cdn/bootbox.min.js"></script>
+  
+  <!-- Custom JS - Minified versions -->
+  <script src="<?=base_url()?>assets/js/custom_js/common.min.js?v=1.0.2" defer></script>
+  
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+  
+  <!-- Owl Carousel - only loaded if needed (defer for non-critical) -->
+  <script src="<?=base_url()?>assets/js/cdn/owl.carousel.min.js?v=1.0.0" defer></script>
+  
+  <!-- Design JS - Minified -->
+  <script src="<?=base_url()?>assets/js/custom_js/design.min.js?v=1.0.4" defer></script>
+  
+  <!-- Cashfree Payment SDK -->
+  <script src="https://sdk.cashfree.com/js/v3/cashfree.js?v=1.0.0" defer></script>
+  
+  <!-- Cart JS - Minified -->
+  <script src="<?=base_url()?>assets/js/custom_js/cart.js?v=1.0.13" defer></script>
+  
+  <!-- View JS - Minified (only loaded on specific pages) -->
+  <script src="<?=base_url()?>assets/js/custom_js/view.min.js?v=1.0.1" defer></script>
     <script type="text/javascript">
       var baseUrl = "<?=base_url()?>";
       var paymentGateway = "<?=PAYMENTGATEWAY?>";
+      var cashfreeMode = "<?=defined('CASHFREE_MODE') ? CASHFREE_MODE : 'sandbox'?>";
     </script>
     <?php if (session()->get('studentDetails')===null): ?>
     <footer class="shadcn-footer">
@@ -94,9 +115,9 @@
                     <div class="shadcn-newsletter">
                         <span class="shadcn-newsletter-text">Subscribe to our newsletter</span>
                         <div class="shadcn-newsletter-form">
-                            <input type="email" id="newsletter_email" placeholder="Enter your email" class="shadcn-newsletter-input">
-                            <button class="shadcn-newsletter-btn btnNewsletter">
-                                <i class="fas fa-paper-plane"></i>
+                            <input type="email" id="newsletter_email" placeholder="Enter your email" class="shadcn-newsletter-input" aria-label="Email address for newsletter subscription">
+                            <button class="shadcn-newsletter-btn btnNewsletter" aria-label="Subscribe to newsletter">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
                             </button>
                         </div>
                     </div>
@@ -158,7 +179,7 @@
         }
         
         .shadcn-brand-desc {
-            color: #94a3b8;
+            color: #cbd5e1;
             font-size: 14px;
             line-height: 1.7;
             margin-bottom: 24px;
@@ -207,7 +228,7 @@
         .shadcn-link-title {
             font-size: 14px;
             font-weight: 600;
-            color: #f1f5f9;
+            color: #ffffff;
             margin-bottom: 16px;
             letter-spacing: 0.02em;
         }
@@ -223,7 +244,7 @@
         
         .shadcn-link {
             font-size: 14px;
-            color: #94a3b8;
+            color: #cbd5e1;
             text-decoration: none;
             transition: all 0.2s ease;
             display: inline-block;
@@ -250,7 +271,8 @@
         
         .shadcn-copyright {
             font-size: 14px;
-            color: #64748b;
+            color: #e2e8f0;
+            font-weight: 500;
         }
         
         .shadcn-footer-bottom-right {
@@ -268,7 +290,7 @@
         
         .shadcn-newsletter-text {
             font-size: 14px;
-            color: #94a3b8;
+            color: #cbd5e1;
             white-space: nowrap;
         }
         
@@ -333,7 +355,7 @@
             background: #1e293b;
             border: 1px solid #334155;
             border-radius: 8px;
-            color: #94a3b8;
+            color: #cbd5e1;
             text-decoration: none;
             font-size: 14px;
             transition: all 0.2s ease;
@@ -417,9 +439,10 @@
         'use strict';
 
         const addEventOnElem = function (elem, type, callback) {
+            if (!elem) return;
             if (elem.length > 1) {
                 for (let i = 0; i < elem.length; i++) {
-                    elem[i].addEventListener(type, callback);
+                    if (elem[i]) elem[i].addEventListener(type, callback);
                 }
             } else {
                 elem.addEventListener(type, callback);
@@ -449,16 +472,23 @@
         const backTopBtn = document.querySelector("[data-back-top-btn]");
 
         const activeElem = function () {
-            if (window.scrollY > 100) {
+            if (window.scrollY > 10) {
                 header.classList.add("active");
+                header.classList.add("scrolled");
                 backTopBtn.classList.add("active");
             } else {
                 header.classList.remove("active");
+                header.classList.remove("scrolled");
                 backTopBtn.classList.remove("active");
             }
         }
 
         addEventOnElem(window, "scroll", activeElem);
+        
+        // Initial check for scroll position
+        if (window.scrollY > 10) {
+            header.classList.add("scrolled");
+        }
         
         // Mobile Menu Toggle
         const menuToggle = document.querySelector('.cs-menu-toggle');
@@ -539,11 +569,12 @@
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                if(this.getAttribute('href') === '#') return;
+                const href = this.getAttribute('href');
+                if (href === '#' || !href.startsWith('#')) return;
                 
                 e.preventDefault();
                 
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth'

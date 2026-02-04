@@ -6,6 +6,7 @@ use App\Models\CartModel;
 use App\Models\StudentDashboardModel;
 use App\Models\StudentModel;
 class StudentController extends BaseController{
+	protected $db;
 	protected $common;
 	protected $cartModel;
 	protected $studentModel;
@@ -13,6 +14,7 @@ class StudentController extends BaseController{
 	private $errorMsg;
 	public function __construct()
 	{
+		$this->db = \Config\Database::connect();
 		$this->common = new BaseModel();
 		$this->cartModel = new CartModel();
 		$this->studentModel = new StudentModel();
@@ -28,6 +30,54 @@ class StudentController extends BaseController{
 		$data['cartCount'] = count($cartDetails);
 		$data['blog_items'] = $this->studentModel->fetchBlogList(3);
 		return view('student/index',$data);
+	}
+
+	public function loadTestSeriesPage(){
+		$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
+		$fetchedTypes = $this->studentModel->fetchtypeModel();
+		$data['fetchedTypes'] = $fetchedTypes;
+		$cartDetails = json_decode($this->getCartDetails());
+		$data['cartCount'] = count($cartDetails);
+		$data['blog_items'] = $this->studentModel->fetchBlogList(3);
+		
+		// Fetch dynamic stats from existing database tables
+		$data['totalStudents'] = 0;
+		if ($this->db->tableExists('student_table')) {
+			$builder = $this->db->table('student_table');
+			$builder->where('deleted', 0);
+			$data['totalStudents'] = $builder->countAllResults();
+		}
+		
+		$data['totalSubjects'] = 0;
+		if ($this->db->tableExists('subject_table')) {
+			$builder = $this->db->table('subject_table');
+			$builder->where('deleted', 0);
+			$data['totalSubjects'] = $builder->countAllResults();
+		}
+		
+		$data['totalPapers'] = 0;
+		if ($this->db->tableExists('paper_table')) {
+			$builder = $this->db->table('paper_table');
+			$builder->where('deleted', 0);
+			$data['totalPapers'] = $builder->countAllResults();
+		}
+		
+		// Fetch testimonials from existing tables if available
+		$data['testimonials'] = [];
+		if ($this->db->tableExists('testimonial_table')) {
+			$data['testimonials'] = $this->common->getInfo('testimonial_table','array',array('deleted'=>0),'created_at desc');
+		}
+		
+		// Fetch FAQs from existing tables if available
+		$data['faqs'] = [];
+		if ($this->db->tableExists('faq_table')) {
+			$data['faqs'] = $this->common->getInfo('faq_table','array',array('deleted'=>0),'sort_order asc');
+		}
+		
+		// Fetch notice/banner info
+		$data['fetchNotice'] = $this->common->getInfo('notice_table','row',array(),'notice_id desc');
+		
+		return view('student/test_series_landing',$data);
 	}
 
 	public function loadBlogListPage(){
@@ -51,6 +101,12 @@ class StudentController extends BaseController{
 		$data['addClass'] = 'sign_up';
 		$data['level_list'] = $this->common->getInfo('level_table','array',array('deleted'=>0));
 		return view('auth/student_auth',$data);
+	}
+
+	public function loadLevelListPage(){
+		$data['level_list'] = $this->studentModel->fetchLevelModel();
+		$data['fetchLevels'] = $data['level_list'];
+		return view('student/level_list',$data);
 	}
 
 	public function addStudentDetails()
@@ -244,6 +300,7 @@ class StudentController extends BaseController{
 					$purchase_id = $purchaseDetails->purcahse_id;
 					$updateCartItems = $this->common->dbAction('cart_items_table',array('payment_status'=>$getData['payment_status'],'deleted'=>1),'update',array('purchase_id'=>$purchase_id));
 					if ($getData['payment_status']=='Credit') {
+						$link_id = session()->get('link_id');
 						$this->createInvoice($checkPurchaseSession);
 						$this->addSalesInfo($purchase_id,$link_id);
 					}
@@ -403,6 +460,10 @@ class StudentController extends BaseController{
 		$data['typeInfo'] = $this->common->getInfo('type_table','row',array('type_id'=>$typeId));
 		$data['fetchedSubject'] = $this->studentModel->getSubjectList($typeId);
         $data['fetchLevels'] = $this->studentModel->fetchLevelModel();
+		// Get level info from type info
+		if(!empty($data['typeInfo']) && isset($data['typeInfo']->level_id)){
+			$data['levelInfo'] = $this->common->getInfo('level_table','row',array('level_id'=>$data['typeInfo']->level_id));
+		}
 		return view('student/subject_list',$data);
 	}
 
@@ -562,6 +623,32 @@ class StudentController extends BaseController{
         
 		return view('student/student_dashboard',$data);
 	}
+	
+	public function loadBuyCoursesPage(){
+		if(session()->get('studentDetails')==null){
+			return redirect()->to('/');
+		}
+		
+		$studentDetails = session()->get('studentDetails');
+		$student_id = $studentDetails['id'];
+		
+		// Get student's current level
+		$studentInfo = $this->common->getInfo('student_table','row',array('student_id'=>$student_id),'student_id,current_level');
+		$level_id = $studentInfo->current_level ?? 1;
+		
+		// Get level info
+		$levelInfo = $this->common->getInfo('level_table','row',array('level_id'=>$level_id));
+		
+		// Get types for this level using getTypeList
+		$fetchedTypes = $this->studentModel->getTypeList($level_id);
+		
+		$data['fetchedTypes'] = $fetchedTypes;
+		$data['levelInfo'] = $levelInfo;
+		$data['level_id'] = $level_id;
+		$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
+		
+		return view('student/buy_courses',$data);
+	}
 
 	public function loadAboutUsPage(){
 		$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
@@ -572,7 +659,15 @@ class StudentController extends BaseController{
 		if(session()->get('studentDetails')!==null){
 			$studentDetails = session()->get('studentDetails');
 			$student_id = $studentDetails['id'];
-			$studentDetails = $this->common->getInfo('student_table','row',array('student_id'=>$student_id),'student_id desc','student_id,student_name,email,city_name,state_name,mobile_no,current_level');
+			$studentDetails = $this->common->getInfo('student_table','row',array('student_id'=>$student_id),'student_id,student_name,email,city_name,state_name,mobile_no,current_level');
+			
+			// Get level name
+			$levelName = 'CS';
+			if (!empty($studentDetails->current_level)) {
+				$levelInfo = $this->common->getInfo('level_table','row',array('level_id'=>$studentDetails->current_level));
+				$levelName = !empty($levelInfo) ? $levelInfo->level_name : 'CS';
+			}
+			$data['levelName'] = $levelName;
 		}
 		$data['level_list'] = $this->common->getInfo('level_table','array',array('deleted'=>0));
 		$data['studentDetails'] = $studentDetails;
@@ -842,6 +937,38 @@ class StudentController extends BaseController{
 		}
 	}
 
+	public function loadCartPage(){
+		if (session()->get('studentDetails')!==null) {
+			$cart_id = $this->getCartId()['data'];
+			$sessionData = session()->get('studentDetails');
+			$student_id = $sessionData['id'] ?? $sessionData['student_id'] ?? '';
+			
+			// Fetch complete student details including city and state from database
+			$studentDetails = $this->common->getInfo('student_table','row',array('student_id'=>$student_id),'','student_id,student_name,email,city_name,state_name,mobile_no,current_level');
+			if(!empty($studentDetails)){
+				$studentData = [
+					'student_id' => $studentDetails->student_id,
+					'student_name' => $studentDetails->student_name,
+					'email' => $studentDetails->email,
+					'mobile_no' => $studentDetails->mobile_no,
+					'city_name' => $studentDetails->city_name,
+					'state_name' => $studentDetails->state_name,
+					'current_level' => $studentDetails->current_level
+				];
+			} else {
+				$studentData = $sessionData;
+			}
+			
+			$data['cartItems'] = $this->cartModel->getActiveCartItems($cart_id);
+			$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
+			$data['cartCount'] = count($data['cartItems']);
+			$data['studentDetails'] = $studentData;
+			return view('student/cart_page',$data);
+		} else {
+			return redirect()->to(base_url('sign-in'));
+		}
+	}
+
 	public function loadLevelList()
 	{
 		$data['level_list'] = $this->common->getInfo('level_table','',array('deleted'=>0));
@@ -887,11 +1014,20 @@ class StudentController extends BaseController{
 	public function loadplansPage()
 	{
 		$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
+		$data['plans'] = $this->studentModel->fetchPlansModel();
+		$data['meta_description'] = 'Get the best CS Test Series for ICSI exams. Choose from Chapterwise, Detailed, or Full Syllabus plans starting at ₹199. Expert evaluation, All India Ranking, and performance analytics.';
+		$data['meta_keywords'] = 'CS Test Series, Company Secretary Test Series, ICSI Exam Preparation, CS Executive Test Series, CS Foundation Test Series, CS Professional Test Series, Online Mock Tests';
+		$data['og_title'] = 'CS Test Series Plans & Pricing | Best Company Secretary Exam Preparation';
+		$data['og_description'] = 'Join thousands of successful CS students with our expert-evaluated test series. Multiple plans starting at ₹199 with detailed feedback and All India Rankings.';
 		return view('student/plans',$data);
 	}
 
 	public function loadpricingPage(){
 		$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
+		$data['meta_description'] = 'Get affordable CS Test Series for ICSI exams starting at ₹119. Chapterwise, Detailed & Full Syllabus plans with expert evaluation, All India Rankings & performance analytics.';
+		$data['meta_keywords'] = 'CS Test Series pricing, CS Executive test series price, CS Professional mock test cost, ICSI exam preparation packages, CS test series plans';
+		$data['og_title'] = 'CS Test Series Pricing Plans | Affordable ICSI Exam Preparation';
+		$data['og_description'] = 'Choose from our flexible CS Test Series packages starting at ₹119. Expert evaluation, All India Rankings, and proven results.';
 		return view('student/pricing',$data);
 	}
 
@@ -919,6 +1055,7 @@ class StudentController extends BaseController{
 
 
 	public function checkoutGatewayRedirect(){
+		$response = null;
 		if (PAYMENTGATEWAY=='PHONEPE') {
 			// for phonepe
 			$response = $this->phonepePaymentGateway();
@@ -926,6 +1063,15 @@ class StudentController extends BaseController{
 			// for cashfree
 			$response = $this->cashfreePaymentGateway();
 		}
+		
+		// Handle case where payment gateway is not configured
+		if ($response === null) {
+			$response = array(
+				'success'=>false,
+				'message'=>'Payment gateway not configured properly'
+			);
+		}
+		
 		return $response;
 	}
 
@@ -1115,12 +1261,32 @@ class StudentController extends BaseController{
 			$student_id = $studentDetails['id'];
 			$order_id = 'OD'.uniqid($student_id.'M');
 			$linkInfo = $this->cashfreePayment($studentDetails,$total_amt_to_pay,$order_id);
+			log_message('error','Cashfree API Raw Response: ' . $linkInfo);
 			if (!empty($linkInfo)) {
 				$linkInfo = json_decode($linkInfo);
+				log_message('error','Cashfree API Decoded Response: ' . json_encode($linkInfo));
+				// Check if API returned an error
+				if (isset($linkInfo->message) && isset($linkInfo->code)) {
+					log_message('error','Cashfree API Error: ' . $linkInfo->message . ' (Code: ' . $linkInfo->code . ')');
+					$response = array(
+						'success'=>false,
+						'message'=>'Payment gateway error: ' . $linkInfo->message
+					);
+					return json_encode($response);
+				}
+				// Check if payment_session_id exists
+				if (!isset($linkInfo->payment_session_id) || empty($linkInfo->payment_session_id)) {
+					log_message('error','Cashfree API response missing payment_session_id. Response: ' . json_encode($linkInfo));
+					$response = array(
+						'success'=>false,
+						'message'=>'Invalid payment gateway response. Please try again.'
+					);
+					return json_encode($response);
+				}
 				session()->set('link_id',$linkInfo->order_id);
 			}
 			// save purchase details
-			if (!empty($linkInfo)) {
+			if (!empty($linkInfo) && isset($linkInfo->cf_order_id)) {
 				$insertData = array();
 				$cartIdArray = $this->getCartId();
 				$insertData['cart_id'] = $cartIdArray['data'];
@@ -1180,10 +1346,22 @@ class StudentController extends BaseController{
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 		$result = curl_exec($ch);
+		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 		if (curl_errno($ch)) {
-		    echo 'Error:' . curl_error($ch);
+		    log_message('error','Cashfree CURL Error: ' . curl_error($ch));
+		    curl_close($ch);
+		    return json_encode(array(
+		    	'message'=>'Connection error with payment gateway',
+		    	'code'=>'curl_error'
+		    ));
 		}
 		curl_close($ch);
+		
+		// Log non-200 responses for debugging
+		if ($httpCode != 200) {
+			log_message('error','Cashfree API returned HTTP ' . $httpCode . '. Response: ' . $result);
+		}
+		
 		return $result;
 	}
 
@@ -1287,6 +1465,25 @@ class StudentController extends BaseController{
 	public function loadBlogDetailsPage($blog_id=''){
 		$data['blog_item'] = $this->common->getInfo('blog_table','row',array('blog_id'=>$blog_id));
 		$data['fetchLevels'] = $this->studentModel->fetchLevelModel();
+		
+		// Fetch related blogs (3 recent blogs excluding current)
+		try {
+			$db = \Config\Database::connect();
+			$builder = $db->table('blog_table');
+			$builder->where('blog_id !=', $blog_id);
+			$builder->where('status', '1');
+			$builder->orderBy('created_date', 'DESC');
+			$builder->limit(3);
+			$query = $builder->get();
+			if ($query) {
+				$data['related_blogs'] = $query->getResult();
+			} else {
+				$data['related_blogs'] = [];
+			}
+		} catch (\Exception $e) {
+			$data['related_blogs'] = [];
+		}
+		
 		return view('student/blog_details',$data);
 	}
 

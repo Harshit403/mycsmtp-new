@@ -1,22 +1,296 @@
-<?= $this->extend('layout/student_layout') ?>
-<?= $this->section('title') ?>
-CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
+<?= $this->extend("layout/student_layout") ?>
+<?= $this->section("title") ?>
+CS Test Series | CS Executive Test Series | CS Professional Test Series - My CS MTP
 <?= $this->endSection() ?>
-<?= $this->section('seoSection') ?>
+<?= $this->section("seoSection") ?>
 <link rel="canonical" href="https://mycsmtp.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<meta name="description" content="My CS MTP CS Test Series is the most trusted and reliable CS Test Series For CS Executive and CS Professional exams. Prepare with expert-crafted mock tests.">
-<meta name="keywords" content="CS Test Series, CS Executive Test Series, icsi test series, Company Secretary, online test series, cseet, cs exams, cs online test series, my cs mtp, cs test series for june 2026, best test series for cs executive">
-<meta name="robots" content="index, follow" />
+<!-- Removed duplicate preconnects and fonts - already loaded in header -->
+<meta name="description" content="Join My CS MTP Test Series - India's #1 CS Test Series for CS Executive & CS Professional exams. Expert evaluation, ICSI pattern questions, detailed feedback. Best CS Executive Test Series & CS Professional Test Series online.">
+<meta name="keywords" content="CS Test Series, CS Executive Test Series, CS Professional Test Series, My CS MTP, icsi test series, Company Secretary test series, online test series, cseet test series, cs exams preparation, cs online test series, cs executive mock tests, cs professional mock tests, best test series for cs executive, best test series for cs professional">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="My CS MTP">
+<meta name="publisher" content="My CS MTP Test Series">
+<meta name="language" content="English">
+<meta name="revisit-after" content="7 days">
+<meta name="geo.region" content="IN">
+<meta name="geo.placename" content="India">
+<meta name="geo.position" content="20.593684;78.96288">
+<meta name="ICBM" content="20.593684, 78.96288">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="theme-color" content="#059669">
+<meta name="msapplication-TileColor" content="#059669">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="My CS MTP Test Series">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mycsmtp.com/">
+<meta property="og:title" content="CS Test Series 2026 | CS Executive & CS Professional - My CS MTP">
+<meta property="og:description" content="India's most trusted CS Test Series for CS Executive & CS Professional exams. Expert evaluation, ICSI pattern questions, detailed feedback. Start your preparation today!">
+<meta property="og:image" content="https://mycsmtp.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="My CS MTP Test Series - CS Executive and CS Professional Online Test Series">
+<meta property="og:site_name" content="My CS MTP Test Series">
+<meta property="og:locale" content="en_IN">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://mycsmtp.com/">
+<meta property="twitter:title" content="CS Test Series 2026 | CS Executive & CS Professional - My CS MTP">
+<meta property="twitter:description" content="India's most trusted CS Test Series for CS Executive & CS Professional exams. Expert evaluation, ICSI pattern questions, detailed feedback.">
+<meta property="twitter:image" content="https://mycsmtp.com/images/og-image.jpg">
+<meta property="twitter:image:alt" content="My CS MTP Test Series - CS Executive and CS Professional Online Test Series">
+<meta name="twitter:site" content="@mycsmtp">
+<meta name="twitter:creator" content="@mycsmtp">
+
+<!-- Structured Data - Organization -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "My CS MTP Test Series",
+    "url": "https://mycsmtp.com",
+    "logo": "https://mycsmtp.com/images/logo-min.png",
+    "description": "India's most trusted CS Test Series platform for CS Executive and CS Professional exams",
+    "sameAs": [
+        "https://www.facebook.com/mycsmtp",
+        "https://twitter.com/mycsmtp",
+        "https://www.instagram.com/mycsmtp",
+        "https://www.youtube.com/@mycsmtp",
+        "https://www.linkedin.com/company/mycsmtp"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9540097210",
+        "contactType": "customer support",
+        "availableLanguage": ["English", "Hindi"],
+        "areaServed": "IN"
+    }
+}
+</script>
+
+<!-- Structured Data - WebSite -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "My CS MTP Test Series",
+    "url": "https://mycsmtp.com",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://mycsmtp.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+
+<!-- Structured Data - Educational Organization -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "My CS MTP Test Series",
+    "url": "https://mycsmtp.com",
+    "logo": "https://mycsmtp.com/images/logo-min.png",
+    "description": "Premium CS Test Series for CS Executive and CS Professional exam preparation with expert evaluation and ICSI pattern questions",
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+    },
+    "telephone": "+91-9540097210",
+    "email": "support@mycsmtp.com",
+    "areaServed": {
+        "@type": "Country",
+        "name": "India"
+    },
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "CS Test Series",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Course",
+                    "name": "CS Executive Test Series",
+                    "description": "Comprehensive test series for CS Executive level preparation"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Course",
+                    "name": "CS Professional Test Series",
+                    "description": "Advanced test series for CS Professional level preparation"
+                }
+            }
+        ]
+    }
+}
+</script>
+
+<!-- Structured Data - Product -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "My CS MTP Test Series",
+    "image": "https://mycsmtp.com/images/og-image.jpg",
+    "description": "India's #1 CS Test Series for CS Executive and CS Professional exams with expert evaluation and ICSI pattern questions",
+    "brand": {
+        "@type": "Brand",
+        "name": "My CS MTP"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "5000",
+        "bestRating": "5"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://mycsmtp.com/pricing"
+    }
+}
+</script>
+
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://mycsmtp.com/"
+        }
+    ]
+}
+</script>
+
+<!-- FAQ Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Why Should I Choose MY CS MTP?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "At MY CS MTP, we're dedicated to being your ultimate partner on the path to academic excellence. Our test series features expert crafted papers, wide topic coverage, real exam simulation, improvement ideas, flexibility, and expert guidance."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How many times can I submit answersheets for evaluation?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You will get access to submit answersheet only one time per test."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "After how much time will I get evaluated answersheets?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You'll get evaluated answersheet within 2-3 working days, but in unusual circumstances it may delay."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is there a validity period for accessing the test series?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Your purchase will expire on conclusion of attempt you are enrolling for or 6 months, whichever is earlier."
+            }
+        }
+    ]
+}
+</script>
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "My CS MTP Test Series",
+    "description": "India's premier CS Test Series platform for CS Executive and CS Professional exam preparation",
+    "url": "https://mycsmtp.com",
+    "logo": "https://mycsmtp.com/images/logo-min.png",
+    "image": "https://mycsmtp.com/images/og-image.jpg",
+    "telephone": "+91-9540097210",
+    "email": "support@mycsmtp.com",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dasna",
+        "addressLocality": "Ghaziabad",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201302",
+        "addressCountry": "IN"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.6789",
+        "longitude": "77.5231"
+    },
+    "areaServed": {
+        "@type": "Country",
+        "name": "India"
+    },
+    "priceRange": "₹₹",
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "09:00",
+            "closes": "21:00"
+        }
+    ],
+    "sameAs": [
+        "https://www.facebook.com/mycsmtp",
+        "https://twitter.com/mycsmtp",
+        "https://www.instagram.com/mycsmtp",
+        "https://www.youtube.com/@mycsmtp",
+        "https://www.linkedin.com/company/mycsmtp"
+    ],
+    "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "CS Test Series",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "CS Executive Test Series"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "CS Professional Test Series"
+                }
+            }
+        ]
+    }
+}
+</script>
 <?= $this->endSection() ?>
-<?= $this->section('content') ?>
+<?= $this->section("content") ?>
 <style>
     :root {
-        --primary: #059669;
-        --primary-dark: #047857;
-        --primary-light: #d1fae5;
+        --primary: #1ab79c;
+        --primary-dark: #15967d;
+        --primary-light: rgba(26, 183, 156, 0.1);
         --secondary: #1e293b;
         --accent: #0ea5e9;
         --text: #334155;
@@ -116,7 +390,7 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         font-weight: 400;
     }
 
-    .material-text h4 {
+    .material-text h3.material-title {
         font-size: 15px;
         margin-bottom: 4px;
         font-weight: 600;
@@ -147,7 +421,7 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         width: 50%;
         height: 100%;
         background: url('https://mycsmtp.com/images/hero-section-image.webp') center/cover;
-        opacity: 0.08;
+        opacity: 1;
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
     }
 
@@ -183,7 +457,7 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         width: 50%;
         height: 100%;
         background: url('https://mycsmtp.com/images/hero-section-image.webp') center/cover;
-        opacity: 0.3;
+        opacity: 1;
         clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
     }
 
@@ -236,7 +510,42 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     .hero-buttons {
         display: flex;
         gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-secondary-buttons {
+        display: flex;
+        gap: 12px;
         margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .hero-secondary-buttons .btn-small {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border-radius: 6px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.3s ease;
+        border: 2px solid #ffffff;
+        background: #ffffff;
+        color: #1ab79c;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-secondary-buttons .btn-small:hover {
+        background: #1ab79c;
+        color: #ffffff;
+        border-color: #1ab79c;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(26, 183, 156, 0.3);
+    }
+
+    .hero-secondary-buttons .btn-small i {
+        font-size: 0.9rem;
     }
 
     .hero-features {
@@ -553,14 +862,15 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     }
 
     .sample-materials {
-        padding: 80px 0;
-        background: var(--secondary);
-        color: var(--white);
+        padding: 60px 0;
+        background: linear-gradient(135deg, #f0fdf9 0%, #ecfeff 100%);
+        border-top: 1px solid rgba(26, 183, 156, 0.1);
+        border-bottom: 1px solid rgba(26, 183, 156, 0.1);
     }
 
     .sample-materials .section-title h2,
     .sample-materials .section-title p {
-        color: var(--white);
+        color: var(--dark);
     }
 
     .material-list {
@@ -572,64 +882,69 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 20px 24px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        margin-bottom: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 16px 20px;
+        background: white;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(26, 183, 156, 0.15);
         transition: all 0.2s ease;
+        box-shadow: 0 2px 8px rgba(26, 183, 156, 0.05);
     }
 
     .material-item:hover {
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateX(8px);
+        border-color: var(--primary);
+        box-shadow: 0 4px 12px rgba(26, 183, 156, 0.12);
+        transform: translateX(4px);
     }
 
     .material-info {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 14px;
     }
 
     .material-icon {
-        width: 44px;
-        height: 44px;
-        background: var(--primary);
+        width: 42px;
+        height: 42px;
+        background: linear-gradient(135deg, var(--primary) 0%, #15967d 100%);
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--white);
-        font-size: 18px;
+        color: white;
+        font-size: 16px;
     }
 
-    .material-text h4 {
-        font-size: 15px;
-        margin-bottom: 4px;
+    .material-text h3.material-title {
+        font-size: 14px;
+        margin-bottom: 2px;
+        font-weight: 600;
+        color: var(--dark);
     }
 
     .material-text p {
-        font-size: 13px;
-        color: #94a3b8;
+        font-size: 12px;
+        color: #64748b;
     }
 
     .download-btn {
-        padding: 10px 20px;
-        background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        color: var(--white);
-        border-radius: 8px;
-        font-size: 14px;
+        padding: 8px 16px;
+        background: var(--primary);
+        border: 1px solid var(--primary);
+        color: white;
+        border-radius: 6px;
+        font-size: 13px;
         cursor: pointer;
         transition: all 0.2s ease;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
     }
 
     .download-btn:hover {
-        background: var(--primary);
-        border-color: var(--primary);
+        background: var(--primary-dark);
+        border-color: var(--primary-dark);
+        transform: translateY(-1px);
     }
 
     .testimonials {
@@ -685,7 +1000,7 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         font-weight: 700;
     }
 
-    .testimonial-meta h4 {
+    .testimonial-meta h3.testimonial-name {
         font-size: 16px;
         color: var(--secondary);
         margin-bottom: 2px;
@@ -764,6 +1079,15 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-answer[hidden] {
+        display: none;
+    }
+
+    .faq-answer:not([hidden]) {
+        display: block;
+        max-height: 300px;
     }
 
     .faq-item.active .faq-answer {
@@ -973,6 +1297,18 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
             align-items: center;
         }
 
+        .hero-secondary-buttons {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .hero-secondary-buttons .btn-small {
+            padding: 6px 10px;
+            font-size: 0.75rem;
+            border-width: 1px;
+        }
+
         .stats-grid {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -1008,18 +1344,27 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>Clear Your <span>CS Exams</span> With Most Trusted CS Test Series</h1>
+            <h1>Best CS Test Series for CS Executive & CS Professional | My CS MTP</h1>
             <p>Get access to the most comprehensive CS test series designed by experts to match the Latest ICSI exam pattern and relevant amendments.</p>
-            
+
             <div class="hero-buttons">
-                <a href="<?=base_url()?>register" class="btn btn-primary">
+                <a href="<?= base_url() ?>register" class="btn btn-primary">
                     <i class="fas fa-user-plus"></i> Register
                 </a>
-                <a href="<?=base_url()?>sign-in" class="btn btn-outline">
+                <a href="<?= base_url() ?>sign-in" class="btn btn-outline">
                     <i class="fas fa-sign-in-alt"></i> Login
                 </a>
             </div>
-            
+
+            <div class="hero-secondary-buttons">
+                <a href="<?= base_url() ?>sample-answersheet" class="btn btn-small btn-secondary">
+                    <i class="fas fa-file-alt"></i> View Sample Answersheets
+                </a>
+                <a href="<?= base_url() ?>testimonial" class="btn btn-small btn-secondary">
+                    <i class="fas fa-star"></i> Testimonials
+                </a>
+            </div>
+
             <div class="hero-features">
                 <div class="hero-feature">
                     <div class="hero-feature-icon">
@@ -1044,109 +1389,466 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
     </div>
 </section>
 
-<section class="stats">
+<section class="test-series-selector">
     <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">10K+</div>
-                <div class="stat-label">Students Enrolled</div>
+        <div class="selector-card">
+            <div class="selector-header">
+                <h2>Select Test Series</h2>
+                <p>Choose level and package to continue</p>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Mock Tests</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Success Rate</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">50+</div>
-                <div class="stat-label">Expert Faculty</div>
+
+                <div class="selector-wizard">
+                <div class="selector-row">
+                    <div class="selector-field">
+                        <label for="level-select">Step 1: Select Level</label>
+                        <select id="level-select" class="selector-select" name="level">
+                            <option value="">-- Choose Level --</option>
+                            <?php if (!empty($fetchLevels)): ?>
+                                <?php foreach ($fetchLevels as $level): ?>
+                                    <option value="<?= $level[
+                                        "level_id"
+                                    ] ?>"><?= htmlspecialchars(
+    $level["level_name"],
+) ?></option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
+                    </div>
+
+                    <div class="selector-field">
+                        <label for="type-select">Step 2: Select Package</label>
+                        <select id="type-select" class="selector-select" name="package" disabled>
+                            <option value="">-- Choose Package --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="step-actions" id="step-actions" style="display: none;">
+<button type="button" class="btn btn-primary" id="view-test-series-btn">
+                    View Test Series <i class="fas fa-arrow-right"></i>
+                </button>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="courses" id="test-series">
+<div class="modal-overlay" id="details-modal">
+    <div class="modal-content">
+        <button class="modal-close" id="close-details-modal">&times;</button>
+        <div class="modal-header">
+            <h3 id="modal-type-name">Package Name</h3>
+        </div>
+        <div class="modal-body">
+            <div class="type-details" id="type-details"></div>
+            <div class="modal-actions">
+                <a href="#" id="download-schedule-btn" class="btn btn-outline" target="_blank">
+                    <i class="fas fa-download"></i> Download Schedule
+                </a>
+                <a href="#" id="view-subjects-btn" class="btn btn-primary">
+                    View Subjects <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.test-series-selector {
+    padding: 60px 0;
+    background: var(--bg);
+}
+
+.test-series-selector .selector-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.test-series-selector .selector-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.test-series-selector .selector-header h2 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.test-series-selector .selector-header p {
+    color: var(--text-light);
+}
+
+.selector-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.selector-field label {
+    display: block;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.selector-select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--text);
+    background: var(--white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.selector-select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.step-actions {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.step-actions .btn {
+    padding: 14px 40px;
+    font-size: 16px;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex !important;
+}
+
+.modal-content {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 32px;
+    max-width: 520px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--bg);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--text-light);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.modal-header h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.modal-header h3::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    background: var(--primary);
+    color: var(--white);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.type-details {
+    margin-bottom: 24px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text);
+    transition: all 0.2s ease;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row:hover {
+    background: var(--primary-light);
+    margin: 0 -20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+.detail-row i {
+    color: var(--primary);
+    font-size: 16px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.detail-row span {
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.modal-actions .btn {
+    flex: 1;
+    min-width: 140px;
+    max-width: none;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.modal-actions .btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.modal-actions .btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+}
+
+.modal-actions .btn-outline {
+    border-color: var(--border);
+}
+
+.modal-actions .btn-outline:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .test-series-selector .selector-card {
+        padding: 24px 20px;
+    }
+
+    .selector-row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-actions .btn {
+        flex: 1 1 100%;
+    }
+}
+</style>
+
+<section class="levels-section" id="levels-section">
     <div class="container">
         <div class="section-title">
-            <h2>Choose Your CS Test Series</h2>
-            <p>Select your course level and start preparing</p>
+            <h2>Choose Your Level</h2>
+            <p>Select the exam level that matches your preparation stage</p>
         </div>
-        
-        <div class="course-grid">
-            <?php
-            if(!empty($fetchLevels)){
-                $icons = ["fas fa-graduation-cap", "fas fa-briefcase", "fas fa-user-tie"];
-                $i = 0;
-                foreach ($fetchLevels as $level) {
-                    $icon = $icons[$i] ?? "fas fa-book";
-                    $i = ($i + 1) % 3;
-                    ?>
-                    <div class="course-card levelBtn" data-level-id="<?=$level['level_id']?>">
-                        <div class="course-icon">
-                            <i class="<?=$icon?>"></i>
+
+        <div class="levels-grid">
+            <?php if (!empty($fetchLevels)): ?>
+                <?php foreach ($fetchLevels as $level): ?>
+                    <div class="level-card">
+                        <div class="level-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
-                        <h3><?=htmlspecialchars($level['level_name'])?></h3>
+                        <h3><?= htmlspecialchars($level["level_name"]) ?></h3>
+                        <a href="<?= base_url(
+                            "level/type/" . $level["level_id"],
+                        ) ?>" class="level-btn">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <?php
-                }
-            }
-            ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
-        
-        <div style="text-align: center; margin-top: 32px;">
-            <a href="<?=base_url()?>/level/cs-test-series" class="btn btn-outline">
-                View All Courses <i class="fas fa-arrow-right"></i>
+
+        <div class="text-center mt-4">
+            <a href="<?= base_url(
+                "level-list",
+            ) ?>" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%); border: none; padding: 12px 30px; border-radius: 8px; color: white; text-decoration: none; display: inline-block; font-weight: 600;">
+                <i class="fas fa-th-large me-2"></i>View All Levels
             </a>
         </div>
     </div>
 </section>
 
-<section class="selector">
-    <div class="container">
-        <div class="selector-card">
-            <div class="selector-header">
-                <h2>Select Test Series</h2>
-                <p>Choose level and package to see details</p>
-            </div>
-            
-            <div class="selector-steps">
-                <div class="selector-step">
-                    <label>1. Select Level</label>
-                    <select id="course-level" class="selector-select">
-                        <option value="">-- Choose Level --</option>
-                        <?php if(!empty($fetchLevels)): ?>
-                            <?php foreach($fetchLevels as $level): ?>
-                                <option value="<?=$level['level_id']?>"><?=htmlspecialchars($level['level_name'])?></option>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </select>
-                </div>
-                
-                <div class="selector-step">
-                    <label>2. Select Package</label>
-                    <select id="package" class="selector-select" disabled>
-                        <option value="">-- Choose Package --</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="package-info" id="package-info">
-                <h3 id="package-name">Package Name</h3>
-                <div class="package-features" id="package-features"></div>
-                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                    <a href="#" id="download-schedule" class="btn btn-outline" target="_blank">
-                        <i class="fas fa-download"></i> Download Schedule
-                    </a>
-                    <a href="#" id="package-link" class="btn btn-primary">
-                        View Subjects <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<style>
+.levels-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--bg) 0%, var(--white) 100%);
+}
+
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.level-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.level-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+.level-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.level-card:hover::before {
+    transform: scaleX(1);
+}
+
+.level-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--primary-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    color: var(--primary);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.level-card:hover .level-icon {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.level-card h3 {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.level-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.level-btn:hover {
+    background: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+    .levels-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+}
+</style>
 
 <section class="sample-materials" id="sample-materials">
     <div class="container">
@@ -1154,7 +1856,7 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
             <h2>Free Sample Answersheets</h2>
             <p>Download sample evaluated answer sheets to experience our quality</p>
         </div>
-        
+
         <div class="material-list">
             <div class="material-item">
                 <div class="material-info">
@@ -1162,56 +1864,56 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="material-text">
-                        <h4>Sample Answersheet - 1</h4>
+                        <h3 class="material-title">Sample Answersheet - 1</h3>
                         <p>PDF • 1.2 MB</p>
                     </div>
                 </div>
-                <a href="https://mycsmtp.com/sample-copy/sample-copy-1.pdf" class="download-btn" target="_blank">
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-1.pdf" class="download-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Sample Answersheet 1 PDF">
                     <i class="fas fa-download"></i> Download
                 </a>
             </div>
-            
+
             <div class="material-item">
                 <div class="material-info">
                     <div class="material-icon">
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="material-text">
-                        <h4>Sample Answersheet - 2</h4>
+                        <h3 class="material-title">Sample Answersheet - 2</h3>
                         <p>PDF • 1.5 MB</p>
                     </div>
                 </div>
-                <a href="https://mycsmtp.com/sample-copy/sample-copy-2.pdf" class="download-btn" target="_blank">
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-2.pdf" class="download-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Sample Answersheet 2 PDF">
                     <i class="fas fa-download"></i> Download
                 </a>
             </div>
-            
+
             <div class="material-item">
                 <div class="material-info">
                     <div class="material-icon">
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="material-text">
-                        <h4>Sample Answersheet - 3</h4>
+                        <h3 class="material-title">Sample Answersheet - 3</h3>
                         <p>PDF • 1.8 MB</p>
                     </div>
                 </div>
-                <a href="https://mycsmtp.com/sample-copy/sample-copy-3.pdf" class="download-btn" target="_blank">
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-3.pdf" class="download-btn" target="_blank" rel="noopener noreferrer" aria-label="Download Sample Answersheet 3 PDF">
                     <i class="fas fa-download"></i> Download
                 </a>
             </div>
-            
+
             <div class="material-item">
                 <div class="material-info">
                     <div class="material-icon">
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="material-text">
-                        <h4>CS Executive Sample Paper - Tax Laws</h4>
+                        <h3 class="material-title">CS Executive Sample Paper - Tax Laws</h3>
                         <p>PDF • 1.3 MB</p>
                     </div>
                 </div>
-                <a href="https://mycsmtp.com/sample-copy/sample-copy-4.pdf" class="download-btn" target="_blank">
+                <a href="https://mycsmtp.com/sample-copy/sample-copy-4.pdf" class="download-btn" target="_blank" rel="noopener noreferrer" aria-label="Download CS Executive Tax Laws Sample Paper PDF">
                     <i class="fas fa-download"></i> Download
                 </a>
             </div>
@@ -1225,13 +1927,13 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
             <h2>What Our Students Say</h2>
             <p>Trusted by thousands of CS students across India</p>
         </div>
-        
+
         <div class="testimonial-grid">
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-avatar">ZS</div>
                     <div class="testimonial-meta">
-                        <h4>Zara Siddiqui</h4>
+                        <h3 class="testimonial-name">Zara Siddiqui</h3>
                         <p>CS Professional</p>
                     </div>
                 </div>
@@ -1244,12 +1946,12 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                 </div>
                 <p class="testimonial-text">"One of the best test series for CS Aspirants at a reasonable price. They are humble and always ready to assist. Highly recommended!"</p>
             </div>
-            
+
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-avatar">SG</div>
                     <div class="testimonial-meta">
-                        <h4>Snaha Gurrani</h4>
+                        <h3 class="testimonial-name">Snaha Gurrani</h3>
                         <p>CS Executive</p>
                     </div>
                 </div>
@@ -1262,12 +1964,12 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                 </div>
                 <p class="testimonial-text">"Loved the test series! The facility to submit when students feel ready is amazing. It helped me learn perfectly. Thank you for the support!"</p>
             </div>
-            
+
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-avatar">TS</div>
                     <div class="testimonial-meta">
-                        <h4>Tejal Soni</h4>
+                        <h3 class="testimonial-name">Tejal Soni</h3>
                         <p>CS Executive</p>
                     </div>
                 </div>
@@ -1280,12 +1982,12 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
                 </div>
                 <p class="testimonial-text">"Test papers were amazing! While writing, I felt like writing ICSI questions only. The evaluation quality was best. Thank you for your guidance!"</p>
             </div>
-            
+
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-avatar">RK</div>
                     <div class="testimonial-meta">
-                        <h4>Reshma Krishna</h4>
+                        <h3 class="testimonial-name">Reshma Krishna</h3>
                         <p>CS Executive</p>
                     </div>
                 </div>
@@ -1308,82 +2010,132 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
             <h2>Frequently Asked Questions</h2>
             <p>Find answers to common questions about our test series</p>
         </div>
-        
-        <div class="faq-list">
+
+        <div class="faq-list" role="region" aria-label="Frequently Asked Questions">
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
                     Why Should I Choose MY CS MTP?
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="faq-answer">
+                <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
                     <div class="faq-answer-content">
                         <p>At MY CS MTP, we're dedicated to being your ultimate partner on the path to academic excellence. Our test series features expert crafted papers, wide topic coverage, real exam simulation, improvement ideas, flexibility, and expert guidance.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
                     How many times can I submit answersheets for evaluation?
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="faq-answer">
+                <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
                     <div class="faq-answer-content">
                         <p>You will get access to submit answersheet only one time per test.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
                     After how much time will I get evaluated answersheets?
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="faq-answer">
+                <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
                     <div class="faq-answer-content">
                         <p>You'll get evaluated answersheet within 2-3 working days, but in unusual circumstances it may delay.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
                     Is there a validity period for accessing the test series?
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="faq-answer">
+                <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
                     <div class="faq-answer-content">
                         <p>Your purchase will expire on conclusion of attempt you are enrolling for or 6 months, whichever is earlier.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5">
                     Can I access the tests on any device?
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="faq-answer">
+                <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
                     <div class="faq-answer-content">
                         <p>Yes, you can access tests on any device including Android, Windows, and iOS.</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="faq-item">
-                <button class="faq-question">
+                <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6" id="faq-question-6">
                     How can I get support?
-                    <i class="fas fa-chevron-down"></i>
+                    <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
-                <div class="faq-answer">
+                <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
                     <div class="faq-answer-content">
-                        <p>You can reach us through chat on our website, WhatsApp at +91-9540097210, or email at support@mycsmtp.com</p>
+                        <p>You can reach us through chat on our website, WhatsApp at +91-9540097210, or email at <a href="mailto:support@mycsmtp.com" class="email-link">support@mycsmtp.com</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- SEO Content Section - CS Test Series -->
+<section class="seo-content" id="seo-content">
+    <div class="container">
+        <div class="seo-content-wrapper">
+            <div class="seo-header">
+                <h1>Best CS Test Series for CS Executive & CS Professional Exams 2026</h1>
+                <p class="seo-subtitle">India's #1 Online Platform for CS Test Series Preparation</p>
+            </div>
+
+            <div class="seo-grid">
+                <div class="seo-card">
+                    <h2>CS Test Series Online</h2>
+                    <p>Looking for the <strong>best CS Test Series</strong> to crack your Company Secretary exams? My CS MTP offers comprehensive <strong>CS Test Series online</strong> designed by ICSI experts. Our <strong>CS Test Series</strong> provides chapter-wise and full syllabus tests that match the actual exam pattern.</p>
+                    <p>Join thousands of successful students who cleared their CS exams with our premium <strong>CS Test Series</strong>. Get detailed evaluation reports, expert feedback, and personalized improvement suggestions.</p>
+                </div>
+
+                <div class="seo-card">
+                    <h2>CS Executive Test Series</h2>
+                    <p>Prepare for your CS Executive exams with India's most trusted <strong>CS Executive Test Series</strong>. Our <strong>CS Executive Test Series online</strong> covers all 7 subjects with ICSI pattern questions. Each test in our <strong>CS Executive Test Series</strong> is evaluated by experienced faculty.</p>
+                    <p>Our <strong>CS Executive Test Series</strong> includes detailed model answers, marking schemes, and improvement tips. Practice with our <strong>CS Executive Test Series</strong> and boost your confidence before the actual exam.</p>
+                </div>
+
+                <div class="seo-card">
+                    <h2>CS Professional Test Series</h2>
+                    <p>Ace your CS Professional exams with our specialized <strong>CS Professional Test Series</strong>. Our <strong>CS Professional Test Series online</strong> offers comprehensive coverage of all modules. The <strong>CS Professional Test Series</strong> by My CS MTP is trusted by thousands of aspirants.</p>
+                    <p>Get expert evaluation for every test in our <strong>CS Professional Test Series</strong>. Our experienced evaluators provide detailed feedback to help you score better. Join the <strong>best CS Professional Test Series</strong> today!</p>
+                </div>
+            </div>
+
+            <div class="seo-features">
+                <h3>Why Choose My CS MTP Test Series?</h3>
+                <ul class="seo-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>ICSI Pattern Questions</strong> - All tests follow the latest ICSI exam pattern</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Expert Evaluation</strong> - Detailed feedback by experienced CS faculty</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Comprehensive Coverage</strong> - Chapter-wise and full syllabus tests</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Model Answers</strong> - Detailed solutions with marking schemes</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Performance Analysis</strong> - Track your progress with detailed reports</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Flexible Access</strong> - Study anytime, anywhere on any device</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Affordable Pricing</strong> - Best value for money CS Test Series</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Latest Amendments</strong> - Updated content with recent ICSI changes</li>
+                </ul>
+            </div>
+
+            <div class="seo-about">
+                <h2>About My CS MTP - Leading CS Test Series Provider</h2>
+                <p>My CS MTP is India's premier destination for <strong>CS Test Series, CS Executive Test Series, and CS Professional Test Series</strong>. We have helped over 50,000+ students clear their Company Secretary exams with our comprehensive test series.</p>
+                <p>Our <strong>online CS Test Series</strong> platform offers the perfect blend of practice, evaluation, and guidance. Whether you are preparing for CS Executive or CS Professional exams, our test series provides everything you need to succeed.</p>
+                <p>Choose from our flexible packages: <strong>CSEET Test Series, CS Executive Test Series, and CS Professional Test Series</strong>. Each package is designed to meet specific exam requirements and help you achieve your dream of becoming a Company Secretary.</p>
+            </div>
 
 <section class="blog" id="blog">
     <div class="container">
@@ -1391,171 +2143,536 @@ CS Test Series for June 2026 | CS Executive | CS Professional | My CS MTP
             <h2>Latest From Our Blog</h2>
             <p>Get insights, tips and updates about CS exams and preparation</p>
         </div>
-        
+
         <div class="blog-grid">
             <?php
-            $latestBlogs = !empty($blog_items) ? array_slice($blog_items, 0, 4) : [];
-            if(!empty($latestBlogs)):
+            $latestBlogs = !empty($blog_items)
+                ? array_slice($blog_items, 0, 4)
+                : [];
+            if (!empty($latestBlogs)):
                 foreach ($latestBlogs as $value):
-                    $image_path = '';
-                    if (!empty($value->blog_temp_image) && file_exists(FCPATH . $value->blog_temp_image)) {
+
+                    $image_path = "";
+                    if (
+                        !empty($value->blog_temp_image) &&
+                        file_exists(FCPATH . $value->blog_temp_image)
+                    ) {
                         $image_path = base_url($value->blog_temp_image);
                     } else {
-                        $image_path = base_url('design_assets/images/blog-1.jpg');
+                        $image_path = base_url(
+                            "design_assets/images/blog-1.jpg",
+                        );
                     }
                     ?>
-                    <a href="<?= base_url('blog/'.$value->blog_id) ?>" class="blog-card">
+                    <a href="<?= base_url(
+                        "blog/" . $value->blog_id,
+                    ) ?>" class="blog-card">
                         <div class="blog-image">
-                            <img src="<?= $image_path ?>" alt="<?= htmlspecialchars($value->blog_heading) ?>" onerror="this.src='<?= base_url('design_assets/images/blog-1.jpg') ?>'">
+                            <img src="<?= $image_path ?>" alt="<?= htmlspecialchars(
+    $value->blog_heading,
+) ?>" width="280" height="160" loading="lazy" decoding="async" onerror="this.src='<?= base_url(
+    "design_assets/images/blog-1.jpg",
+) ?>'">
                         </div>
                         <div class="blog-content">
-                            <span class="blog-date"><?= date('M j, Y', strtotime($value->created_date)) ?></span>
-                            <h3><?= htmlspecialchars($value->blog_heading) ?></h3>
-                            <span class="blog-link">
-                                Read More <i class="fas fa-arrow-right"></i>
+                            <span class="blog-date"><?= date(
+                                "M j, Y",
+                                strtotime($value->created_date),
+                            ) ?></span>
+                            <h3><?= htmlspecialchars(
+                                $value->blog_heading,
+                            ) ?></h3>
+                            <span class="blog-link" aria-label="Read article: <?= htmlspecialchars(
+                                $value->blog_heading,
+                            ) ?>">
+                                Read Full Article <i class="fas fa-arrow-right"></i>
                             </span>
                         </div>
                     </a>
-                <?php endforeach; ?>
-            <?php else: ?>
+                <?php
+                endforeach; ?>
+            <?php
+            else:
+                 ?>
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="<?= base_url('design_assets/images/blog-1.jpg') ?>" alt="CS Exam Preparation">
+                        <img src="<?= base_url(
+                            "design_assets/images/blog-1.jpg",
+                        ) ?>" alt="CS Exam Preparation" width="280" height="160" loading="lazy" decoding="async">
                     </div>
                     <div class="blog-content">
                         <span class="blog-date">June 2023</span>
                         <h3>5 Strategies to Ace Your CS Executive Exams</h3>
-                        <span class="blog-link">Read More <i class="fas fa-arrow-right"></i></span>
+                        <span class="blog-link" aria-label="Read article: 5 Strategies to Ace Your CS Executive Exams">Read Full Article <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-            <?php endif; ?>
+            <?php
+            endif;
+            ?>
         </div>
-        
-        <?php if(!empty($blog_items) && count($blog_items) > 4): ?>
+
+        <?php if (!empty($blog_items)): ?>
         <div style="text-align: center; margin-top: 32px;">
-            <a href="<?= base_url('blogs') ?>" class="btn btn-outline">
+            <a href="<?= base_url(
+                "blogs",
+            ) ?>" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">
                 View All Articles <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <?php else: ?>
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="<?= base_url(
+                "blogs",
+            ) ?>" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary);">
+                Visit Our Blog <i class="fas fa-arrow-right"></i>
             </a>
         </div>
         <?php endif; ?>
     </div>
 </section>
 
-<section class="cta">
-    <div class="container">
-        <h2>Ready to Clear Your CS Exams?</h2>
-        <p>Join thousands of successful students who cleared their exams with My CS MTP</p>
-        <a href="<?=base_url()?>register" class="btn">
-            Get Started Now <i class="fas fa-arrow-right"></i>
-        </a>
+            <div class="seo-cta">
+                <h3>Start Your CS Exam Preparation Today!</h3>
+                <p>Don't wait until it's too late. Join the best <strong>CS Test Series, CS Executive Test Series, and CS Professional Test Series</strong> now and give yourself the best chance of success.</p>
+                <a href="<?= base_url() ?>register" class="btn btn-primary">
+                    <i class="fas fa-user-plus"></i> Enroll Now
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
+<style>
+.seo-content {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 80px 0;
+    margin-top: 60px;
+}
+
+.seo-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seo-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.seo-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.seo-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.seo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.seo-card {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.seo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.seo-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1ab79c;
+    margin-bottom: 20px;
+}
+
+.seo-card p {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.seo-features {
+    background: white;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.seo-features h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.seo-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.seo-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: #475569;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.seo-list li i {
+    color: #1ab79c;
+    font-size: 1.2rem;
+}
+
+.seo-about {
+    background: linear-gradient(135deg, #1ab79c 0%, #0f766e 100%);
+    color: white;
+    padding: 50px;
+    border-radius: 16px;
+    margin-bottom: 50px;
+}
+
+.seo-about h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.seo-about p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.seo-about strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.seo-cta {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.seo-cta h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.seo-cta p {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seo-cta .btn {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #1ab79c 0%, #0f766e 100%);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.seo-cta .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -5px rgba(26, 183, 156, 0.3);
+}
+
+@media (max-width: 992px) {
+    .seo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seo-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .seo-content {
+        padding: 50px 0;
+    }
+
+    .seo-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .seo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seo-card {
+        padding: 25px;
+    }
+
+    .seo-features {
+        padding: 30px;
+    }
+
+    .seo-about {
+        padding: 30px;
+    }
+
+    .seo-about h2 {
+        font-size: 1.5rem;
+    }
+
+    .seo-cta {
+        padding: 30px;
+    }
+
+    .seo-cta h3 {
+        font-size: 1.5rem;
+    }
+}
+</style>
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const allTypes = <?php
-        $typesByLevel = [];
-        if(!empty($fetchedTypes)){
-            foreach($fetchedTypes as $type){
-                $levelId = $type['level_id'] ?? 0;
-                if(!isset($typesByLevel[$levelId])){
-                    $typesByLevel[$levelId] = [];
+// Define allTypes from PHP data - grouped by level_id
+const allTypes = <?= json_encode(
+    array_reduce(
+        $fetchedTypes ?? [],
+        function ($carry, $type) {
+            $levelId = $type["level_id"] ?? 0;
+            if (!isset($carry[$levelId])) {
+                $carry[$levelId] = [];
+            }
+            $features = [];
+            $typeDetails = $type["type_more_details"] ?? "";
+            if (!empty($typeDetails)) {
+                $features = array_filter(
+                    array_map("trim", preg_split('/[\n\r]+/', $typeDetails)),
+                );
+                if (empty($features)) {
+                    $features = ["Complete test series access"];
                 }
-                $typesByLevel[$levelId][] = [
-                    'id' => $type['type_id'] ?? 0,
-                    'name' => substr($type['type_name'] ?? 'Package', 0, 50),
-                    'schedule_url' => $type['type_schedule_pdf'] ?? '',
-                    'features' => [
-                        $type['type_more_details'] ?? 'Complete test series access',
-                        'Detailed evaluation',
-                        'Expert feedback',
-                        'Suggested answers'
-                    ]
-                ];
-            }
-        }
-        echo json_encode($typesByLevel);
-    ?>;
-
-    const courseSelect = document.getElementById('course-level');
-    const packageSelect = document.getElementById('package');
-    const packageInfo = document.getElementById('package-info');
-
-    courseSelect.addEventListener('change', function() {
-        const selectedLevel = this.value;
-        
-        if (selectedLevel && allTypes[selectedLevel] && allTypes[selectedLevel].length > 0) {
-            packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
-            packageSelect.disabled = false;
-            
-            allTypes[selectedLevel].forEach((pkg) => {
-                const option = document.createElement('option');
-                option.value = pkg.id;
-                option.textContent = pkg.name;
-                option.dataset.name = pkg.name;
-                option.dataset.scheduleUrl = pkg.schedule_url;
-                option.dataset.features = JSON.stringify(pkg.features);
-                packageSelect.appendChild(option);
-            });
-            
-            document.getElementById('package-info').classList.remove('active');
-        } else {
-            packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
-            packageSelect.disabled = true;
-            document.getElementById('package-info').classList.remove('active');
-        }
-    });
-
-    packageSelect.addEventListener('change', function() {
-        const selectedType = this.value;
-        const selectedLevel = courseSelect.value;
-        
-        if (selectedType && selectedLevel) {
-            const option = this.options[this.selectedIndex];
-            const typeId = this.value;
-            const levelId = courseSelect.value;
-            
-            document.getElementById('package-name').textContent = option.dataset.name || 'Package Name';
-            document.getElementById('package-link').href = base_url + 'level/type/' + levelId + '/subject/' + typeId;
-            
-            const scheduleLink = document.getElementById('download-schedule');
-            if (option.dataset.scheduleUrl && option.dataset.scheduleUrl !== 'null' && option.dataset.scheduleUrl !== '') {
-                scheduleLink.href = base_url + option.dataset.scheduleUrl;
-                scheduleLink.style.display = 'inline-flex';
             } else {
-                scheduleLink.style.display = 'none';
+                $features = ["Complete test series access"];
             }
-            
-            const features = JSON.parse(option.dataset.features || '[]');
-            const featuresHtml = features.map(f => 
-                `<div class="package-feature"><i class="fas fa-check-circle"></i><span>${f}</span></div>`
-            ).join('');
-            document.getElementById('package-features').innerHTML = featuresHtml;
-            
-            document.getElementById('package-info').classList.add('active');
-        } else {
-            document.getElementById('package-info').classList.remove('active');
-        }
+            $carry[$levelId][] = [
+                "id" => $type["type_id"] ?? 0,
+                "name" => substr($type["type_name"] ?? "Package", 0, 60),
+                "scheduleUrl" => $type["schedule_file"] ?? "",
+                "features" => $features,
+            ];
+            return $carry;
+        },
+        [],
+    ),
+) ?>;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const detailsModal = document.getElementById('details-modal');
+    const closeDetailsModal = document.getElementById('close-details-modal');
+    const levelSelect = document.getElementById('level-select');
+    const typeSelect = document.getElementById('type-select');
+    const stepActions = document.getElementById('step-actions');
+    const viewTestSeriesBtn = document.getElementById('view-test-series-btn');
+    const viewSubjectsBtn = document.getElementById('view-subjects-btn');
+
+    console.log('Modal elements found:', {
+        detailsModal: !!detailsModal,
+        levelSelect: !!levelSelect,
+        typeSelect: !!typeSelect,
+        viewTestSeriesBtn: !!viewTestSeriesBtn,
+        allTypes: allTypes
     });
 
-    document.querySelectorAll('.faq-question').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const item = this.parentElement;
-            item.classList.toggle('active');
+    if (detailsModal && levelSelect && typeSelect && stepActions && viewTestSeriesBtn) {
+        let selectedLevelId = null;
+        let selectedTypeId = null;
+        let selectedTypeData = null;
+
+        levelSelect.addEventListener('change', function() {
+            const levelId = this.value;
+            selectedLevelId = levelId;
+            selectedTypeId = null;
+            selectedTypeData = null;
+            stepActions.style.display = 'none';
+
+            console.log('Level changed to:', levelId, 'Available types:', allTypes[levelId]);
+
+            if (levelId && allTypes[levelId] && allTypes[levelId].length > 0) {
+                typeSelect.innerHTML = '<option value="">-- Choose Package --</option>';
+                typeSelect.disabled = false;
+
+                allTypes[levelId].forEach(type => {
+                    const option = document.createElement('option');
+                    option.value = type.id;
+                    option.textContent = type.name;
+                    option.dataset.typeName = type.name;
+                    option.dataset.scheduleUrl = type.scheduleUrl || '';
+                    option.dataset.features = JSON.stringify(type.features);
+                    typeSelect.appendChild(option);
+                });
+            } else {
+                typeSelect.innerHTML = '<option value="">-- Choose Package --</option>';
+                typeSelect.disabled = true;
+            }
         });
-    });
 
-    const progress = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', function() {
-        const scrollTop = document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        progress.style.width = (scrollTop / scrollHeight * 100) + '%';
+        typeSelect.addEventListener('change', function() {
+            const typeId = this.value;
+
+            if (typeId) {
+                const option = this.options[this.selectedIndex];
+                selectedTypeId = typeId;
+                selectedTypeData = {
+                    name: option.dataset.typeName || 'Package',
+                    scheduleUrl: option.dataset.scheduleUrl || '',
+                    features: JSON.parse(option.dataset.features || '[]')
+                };
+                stepActions.style.display = 'block';
+            } else {
+                selectedTypeId = null;
+                selectedTypeData = null;
+                stepActions.style.display = 'none';
+            }
+        });
+
+        viewTestSeriesBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (selectedTypeId && selectedTypeData) {
+                showDetailsModal();
+            } else {
+                alert('Please select a package first');
+            }
+        });
+
+        function showDetailsModal() {
+            document.getElementById('modal-type-name').textContent = selectedTypeData.name;
+
+            const features = selectedTypeData.features;
+            const detailsHtml = features.map(f =>
+                `<div class="detail-row"><i class="fas fa-check-circle"></i><span>${f}</span></div>`
+            ).join('');
+
+            document.getElementById('type-details').innerHTML = detailsHtml;
+
+            const scheduleBtn = document.getElementById('download-schedule-btn');
+            if (selectedTypeData.scheduleUrl && selectedTypeData.scheduleUrl.trim() !== '' && selectedTypeData.scheduleUrl !== 'null' && selectedTypeData.scheduleUrl !== 'undefined') {
+                scheduleBtn.href = baseUrl + selectedTypeData.scheduleUrl;
+                scheduleBtn.style.display = 'inline-flex';
+            } else {
+                scheduleBtn.style.display = 'none';
+            }
+
+            const subjectsUrl = baseUrl + 'type/subject/' + selectedTypeId;
+            document.getElementById('view-subjects-btn').href = subjectsUrl;
+
+            detailsModal.classList.add('active');
+        }
+
+        if (closeDetailsModal) {
+            closeDetailsModal.addEventListener('click', function() {
+                detailsModal.classList.remove('active');
+            });
+        }
+
+        if (detailsModal) {
+            detailsModal.addEventListener('click', function(e) {
+                if (e.target === detailsModal) {
+                    detailsModal.classList.remove('active');
+                }
+            });
+        }
+
+        if (viewSubjectsBtn) {
+            viewSubjectsBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && detailsModal) {
+                detailsModal.classList.remove('active');
+            }
+        });
+    }
+
+    // FAQ Accordion functionality with accessibility
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const answerId = this.getAttribute('aria-controls');
+            const answer = document.getElementById(answerId);
+            const faqItem = this.closest('.faq-item');
+
+            // Toggle current FAQ
+            this.setAttribute('aria-expanded', !isExpanded);
+            if (answer) {
+                if (isExpanded) {
+                    answer.hidden = true;
+                    faqItem.classList.remove('active');
+                } else {
+                    answer.hidden = false;
+                    faqItem.classList.add('active');
+                }
+            }
+
+            // Close other FAQs (optional - remove if you want multiple open)
+            document.querySelectorAll('.faq-question').forEach(otherButton => {
+                if (otherButton !== this) {
+                    const otherAnswerId = otherButton.getAttribute('aria-controls');
+                    const otherAnswer = document.getElementById(otherAnswerId);
+                    const otherFaqItem = otherButton.closest('.faq-item');
+
+                    otherButton.setAttribute('aria-expanded', 'false');
+                    if (otherAnswer) {
+                        otherAnswer.hidden = true;
+                    }
+                    if (otherFaqItem) {
+                        otherFaqItem.classList.remove('active');
+                    }
+                }
+            });
+        });
     });
 });
 </script>
 
 <?= $this->endSection() ?>
-<?= $this->section('jsContent')?>
-<script type="text/javascript" src="<?=base_url()?>assets/js/custom_js/view.js?v=1.0.3"></script>
+<?= $this->section("jsContent") ?>
+<script type="text/javascript" src="<?= base_url() ?>assets/js/custom_js/view.js?v=1.0.3"></script>
 <script type="text/javascript">var pageType = 'landing_page';</script>
 <?= $this->endSection() ?>

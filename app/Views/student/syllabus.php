@@ -1,1212 +1,955 @@
-<?= $this->extend('layout/student_layout') ?>
-<?= $this->section('title') ?>
-    CS Test Series Syllabus 2024 | Comprehensive CSEET, Executive & Professional Guide
+<?= $this->extend("layout/student_layout") ?>
+
+<?= $this->section("title") ?>
+    CS Syllabus 2025 | ICSI CSEET, Executive & Professional Complete Guide
 <?= $this->endSection() ?>
-<?= $this->section('content') ?>
-<!-- Course Selector Section -->
-<section class="ecss-course-selector">
-    <div class="ecss-container">
-        <div class="ecss-header">
-            <h2>Build Your Perfect Test Series</h2>
-            <p>Select your course and package to view details and available subjects</p>
-        </div>
-        
-        <div class="ecss-selection-flow">
-            <!-- Step 1: Course Selection -->
-            <div class="ecss-selection-group">
-                <label for="course-level">1. Select Course Level</label>
-                <div class="ecss-custom-select">
-                    <select id="course-level" class="ecss-select">
-                        <option value="">-- Choose Course Level --</option>
-                        <option value="cseet">CSEET</option>
-                        <option value="executive">CS Executive</option>
-                        <option value="professional">CS Professional</option>
-                    </select>
-                    <div class="ecss-select-arrow">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Step 2: Package Selection -->
-            <div class="ecss-selection-group" id="package-group" style="display: none;">
-                <label for="package">2. Select Package</label>
-                <div class="ecss-custom-select">
-                    <select id="package" class="ecss-select" disabled>
-                        <option value="">-- Choose Package --</option>
-                        <!-- Options will be populated by JavaScript -->
-                    </select>
-                    <div class="ecss-select-arrow">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Plan Details Card -->
-            <div class="ecss-plan-details" id="plan-details" style="display: none;">
-                <div class="ecss-plan-header">
-                    <h3 id="plan-name">Package Name</h3>
-                    <div class="ecss-plan-badge" id="plan-badge">Most Popular</div>
-                </div>
-                <div class="ecss-plan-content">
-                    <div class="ecss-plan-features" id="plan-features">
-                        <!-- Features will be populated by JavaScript -->
-                    </div>
-                    <div class="ecss-plan-price">
-                        <span id="plan-price">₹2,999</span>
-                        <span id="plan-duration">/ module</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Action Buttons -->
-            <div class="ecss-action-group" id="action-group" style="display: none;">
-                <button class="ecss-details-btn" id="details-btn">
-                    <i class="fas fa-info-circle"></i> Full Details
-                </button>
-                <button class="ecss-continue-btn">
-                    View Subjects <i class="fas fa-arrow-right"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Syllabus Content Section -->
-<section class="container mt-0 mb-5 syllabus-section">
-    <div class="text-center mb-5">
-        <div class="gradient-text mb-3">
-            <h1 class="display-4 fw-bold">CS Syllabus Structure</h1>
-        </div>
-        <p class="lead text-muted">Detailed curriculum for CSEET, Executive & Professional levels</p>
-    </div>
+<?= $this->section('meta') ?>
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Complete ICSI syllabus for CS Course 2025. Detailed curriculum for CSEET (4 papers), CS Executive (7 papers), and CS Professional (9 papers + electives). New syllabus 2022 structure with subject-wise breakdown.">
+    <meta name="keywords" content="CS syllabus 2025, ICSI syllabus, CSEET syllabus, CS Executive syllabus, CS Professional syllabus, Company Secretary course structure, ICSI new syllabus 2022, CS exam subjects, CS course modules">
+    <meta name="author" content="MY CS MTP Test Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?= base_url() ?>syllabus">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= base_url() ?>syllabus">
+    <meta property="og:title" content="CS Syllabus 2025 | Complete ICSI Course Guide CSEET to Professional">
+    <meta property="og:description" content="Complete ICSI syllabus structure for Company Secretary course 2025. CSEET, Executive (7 papers) & Professional (9 papers) detailed curriculum.">
+    <meta property="og:image" content="<?= base_url() ?>images/og-syllabus.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="MY CS MTP Test Series">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<?= base_url() ?>syllabus">
+    <meta property="twitter:title" content="CS Syllabus 2025 | ICSI CSEET, Executive & Professional">
+    <meta property="twitter:description" content="Complete Company Secretary syllabus guide. CSEET (4 papers), Executive (7 papers), Professional (9 papers + electives). New ICSI syllabus 2022.">
+    <meta property="twitter:image" content="<?= base_url() ?>images/og-syllabus.jpg">
+    
+    <!-- Structured Data - Educational Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "MY CS MTP Test Series",
+        "description": "CS Test Series covering complete ICSI syllabus for CSEET, Executive & Professional levels",
+        "url": "<?= base_url() ?>",
+        "logo": "<?= base_url() ?>design_assets/images/favicon.png"
+    }
+    </script>
+    
+    <!-- Structured Data - Course -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Company Secretary Course",
+        "description": "Complete ICSI syllabus covering CSEET, Executive and Professional levels",
+        "provider": {
+            "@type": "EducationalOrganization",
+            "name": "MY CS MTP Test Series"
+        },
+        "hasCourseInstance": [
+            {
+                "@type": "CourseInstance",
+                "courseMode": "online",
+                "courseWorkload": "PT4H",
+                "name": "CSEET",
+                "description": "CS Executive Entrance Test - 4 papers"
+            },
+            {
+                "@type": "CourseInstance",
+                "courseMode": "online",
+                "courseWorkload": "PT6H",
+                "name": "CS Executive",
+                "description": "CS Executive Programme - 7 papers"
+            },
+            {
+                "@type": "CourseInstance",
+                "courseMode": "online",
+                "courseWorkload": "PT8H",
+                "name": "CS Professional",
+                "description": "CS Professional Programme - 9 papers + electives"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "<?= base_url() ?>"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Syllabus",
+                "item": "<?= base_url() ?>syllabus"
+            }
+        ]
+    }
+    </script>
+<?= $this->endSection() ?>
 
-    <!-- CSEET Syllabus -->
-    <div id="cseet-syllabus" class="card syllabus-card mb-5 border-0">
-        <div class="card-header bg-transparent border-0 position-relative">
-            <div class="d-flex align-items-center">
-                <div class="level-badge bg-primary text-white rounded-circle me-3">1</div>
-                <h2 class="h3 mb-0">CSEET Syllabus</h2>
-            </div>
-            <div class="floating-shape shape-1"></div>
+<?= $this->section("content") ?>
+
+<main role="main">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="bg-light py-2 border-bottom">
+        <div class="container">
+            <ol class="breadcrumb mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="<?= base_url() ?>" itemprop="item" class="text-decoration-none" style="color: #1ab79c;">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Syllabus</span>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
         </div>
-        <div class="card-body pt-0">
-            <p class="text-muted mb-4">The gateway to your CS journey with focus on fundamentals</p>
-            
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="position-relative overflow-hidden" aria-labelledby="hero-heading">
+        <div class="py-5" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 50%, #0d6b5a 100%);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 text-white py-4">
+                        <span class="badge bg-white mb-3 px-3 py-2 fs-6 fw-semibold" style="color: #1ab79c;">
+                            <i class="fas fa-book-open me-2"></i>ICSI Syllabus 2025
+                        </span>
+                        <h1 id="hero-heading" class="display-4 fw-bold mb-3 animate-fade-in">
+                            Complete CS Course <span class="text-warning">Syllabus Guide</span>
+                        </h1>
+                        <p class="lead mb-4 fs-5 animate-fade-in-delay">
+                            Comprehensive curriculum structure for CSEET (4 papers), CS Executive (7 papers), and CS Professional (9 papers + electives). Updated as per ICSI New Syllabus 2022.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 animate-fade-in-delay-2">
+                            <a href="#cseet" class="btn btn-light btn-lg px-4 py-3 fw-bold shadow-lg" style="color: #1ab79c;">
+                                <i class="fas fa-graduation-cap me-2"></i>CSEET
+                            </a>
+                            <a href="#executive" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">
+                                <i class="fas fa-briefcase me-2"></i>Executive
+                            </a>
+                            <a href="#professional" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">
+                                <i class="fas fa-user-tie me-2"></i>Professional
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="text-center">
+                            <div class="syllabus-icon bg-white rounded-4 p-4 shadow-lg d-inline-block animate-float">
+                                <i class="fas fa-book-reader fa-5x" style="color: #1ab79c;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="py-4 bg-white border-bottom">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-3 rounded-4" style="background: linear-gradient(135deg, rgba(26, 183, 156, 0.1) 0%, rgba(26, 183, 156, 0.05) 100%);">
+                        <h3 class="display-5 fw-bold mb-1" style="color: #1ab79c;">4</h3>
+                        <p class="text-muted mb-0 fw-semibold small">CSEET Papers</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-3 rounded-4" style="background: linear-gradient(135deg, rgba(111, 66, 193, 0.1) 0%, rgba(111, 66, 193, 0.05) 100%);">
+                        <h3 class="display-5 fw-bold mb-1" style="color: #6f42c1;">7</h3>
+                        <p class="text-muted mb-0 fw-semibold small">Executive Papers</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-3 rounded-4" style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);">
+                        <h3 class="display-5 fw-bold mb-1 text-warning">9+</h3>
+                        <p class="text-muted mb-0 fw-semibold small">Professional Papers</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-card p-3 rounded-4" style="background: linear-gradient(135deg, rgba(220, 53, 69, 0.1) 0%, rgba(220, 53, 69, 0.05) 100%);">
+                        <h3 class="display-5 fw-bold mb-1 text-danger">3</h3>
+                        <p class="text-muted mb-0 fw-semibold small">Course Levels</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSEET Syllabus Section -->
+    <section id="cseet" class="py-5" style="background-color: #f8f9fa;" aria-labelledby="cseet-heading">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge px-3 py-2 mb-3" style="background-color: rgba(26, 183, 156, 0.1); color: #1ab79c;">
+                        <i class="fas fa-door-open me-2"></i>Entrance Level
+                    </span>
+                    <h2 id="cseet-heading" class="display-4 fw-bold mb-3" style="color: #1ab79c;">CSEET Syllabus</h2>
+                    <p class="lead text-muted">CS Executive Entrance Test - Your gateway to the Company Secretary profession</p>
+                </div>
+            </div>
+
             <div class="row g-4">
+                <!-- Paper 1 -->
                 <div class="col-md-6">
-                    <div class="topic-card h-100">
-                        <h3 class="h5"><span class="text-primary">01.</span> Business Communication</h3>
-                        <ul class="topic-list">
-                            <li>Principles of effective communication</li>
-                            <li>Business correspondence essentials</li>
-                            <li>Modern communication technologies</li>
-                            <li>Professional writing techniques</li>
-                        </ul>
-                    </div>
+                    <article class="syllabus-card card border-0 shadow-lg h-100 overflow-hidden" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="card-header p-4 text-white" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%);">
+                            <div class="d-flex align-items-center">
+                                <div class="paper-number bg-white text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; font-weight: bold;">1</div>
+                                <div>
+                                    <h3 class="h5 mb-0 fw-bold">Business Communication</h3>
+                                    <small>100 Marks | 120 Minutes</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #1ab79c;"></i>Essentials of Good English</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #1ab79c;"></i>Communication Skills - Written & Oral</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #1ab79c;"></i>Business Correspondence</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #1ab79c;"></i>Interpersonal Skills</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #1ab79c;"></i>Listening Skills</li>
+                                <li class="mb-0"><i class="fas fa-check-circle me-2" style="color: #1ab79c;"></i>Modern Forms of Communication</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-                <div class="col-md-6">
-                    <div class="topic-card h-100">
-                        <h3 class="h5"><span class="text-primary">02.</span> Legal Aptitude</h3>
-                        <ul class="topic-list">
-                            <li>Indian legal system overview</li>
-                            <li>Company law fundamentals</li>
-                            <li>Logical reasoning patterns</li>
-                            <li>Quantitative analysis</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="topic-card h-100">
-                        <h3 class="h5"><span class="text-primary">03.</span> Economic Environment</h3>
-                        <ul class="topic-list">
-                            <li>Basic economic concepts</li>
-                            <li>Indian economic landscape</li>
-                            <li>Business environment factors</li>
-                            <li>Recent economic reforms</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="topic-card h-100">
-                        <h3 class="h5"><span class="text-primary">04.</span> Current Affairs</h3>
-                        <ul class="topic-list">
-                            <li>National & international updates</li>
-                            <li>Corporate developments</li>
-                            <li>Presentation techniques</li>
-                            <li>Verbal assessment</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Executive Syllabus -->
-    <div id="executive-syllabus" class="card syllabus-card mb-5 border-0">
-        <div class="card-header bg-transparent border-0 position-relative">
-            <div class="d-flex align-items-center">
-                <div class="level-badge bg-primary text-white rounded-circle me-3">2</div>
-                <h2 class="h3 mb-0">Executive Syllabus</h2>
+                <!-- Paper 2 -->
+                <div class="col-md-6">
+                    <article class="syllabus-card card border-0 shadow-lg h-100 overflow-hidden" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="card-header p-4 text-white" style="background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);">
+                            <div class="d-flex align-items-center">
+                                <div class="paper-number bg-white text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; font-weight: bold;">2</div>
+                                <div>
+                                    <h3 class="h5 mb-0 fw-bold">Legal Aptitude & Logical Reasoning</h3>
+                                    <small>100 Marks | 120 Minutes</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #6f42c1;"></i>Indian Constitution</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #6f42c1;"></i>Elements of Company Law</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #6f42c1;"></i>Legal Awareness</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #6f42c1;"></i>Logical Reasoning (Verbal & Non-verbal)</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #6f42c1;"></i>Analytical Reasoning</li>
+                                <li class="mb-0"><i class="fas fa-check-circle me-2" style="color: #6f42c1;"></i>Data Sufficiency & Interpretation</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="col-md-6">
+                    <article class="syllabus-card card border-0 shadow-lg h-100 overflow-hidden" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="card-header p-4 text-white" style="background: linear-gradient(135deg, #fd7e14 0%, #e56b0a 100%);">
+                            <div class="d-flex align-items-center">
+                                <div class="paper-number bg-white text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; font-weight: bold;">3</div>
+                                <div>
+                                    <h3 class="h5 mb-0 fw-bold">Economic & Business Environment</h3>
+                                    <small>100 Marks | 120 Minutes</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #fd7e14;"></i>Basics of Demand & Supply</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #fd7e14;"></i>Forms of Business Organizations</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #fd7e14;"></i>Indian Financial System</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #fd7e14;"></i>Indian Economy & Business Environment</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #fd7e14;"></i>Government Policies & Initiatives</li>
+                                <li class="mb-0"><i class="fas fa-check-circle me-2" style="color: #fd7e14;"></i>Economic Reforms & Liberalization</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paper 4 -->
+                <div class="col-md-6">
+                    <article class="syllabus-card card border-0 shadow-lg h-100 overflow-hidden" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="card-header p-4 text-white" style="background: linear-gradient(135deg, #20c997 0%, #16a085 100%);">
+                            <div class="d-flex align-items-center">
+                                <div class="paper-number bg-white text-dark rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 45px; height: 45px; font-weight: bold;">4</div>
+                                <div>
+                                    <h3 class="h5 mb-0 fw-bold">Current Affairs & Communication Skills</h3>
+                                    <small>Viva Voce | 30 Minutes</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #20c997;"></i>National & International Current Affairs</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #20c997;"></i>Government Schemes & Policies</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #20c997;"></i>Corporate & Business News</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #20c997;"></i>Presentation Skills Assessment</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #20c997;"></i>Communication Ability Test</li>
+                                <li class="mb-0"><i class="fas fa-check-circle me-2" style="color: #20c997;"></i>Verbal & Non-verbal Communication</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
             </div>
-            <div class="floating-shape shape-2"></div>
+
+            <div class="mt-5 text-center">
+                <div class="alert alert-info d-inline-block" role="alert">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>Exam Pattern:</strong> Computer Based Test (CBT) | MCQ Format | No Negative Marking
+                </div>
+            </div>
         </div>
-        <div class="card-body pt-0">
-            <p class="text-muted mb-4">Advanced corporate laws and governance concepts</p>
-            
-            <div class="module-tabs">
-                <ul class="nav nav-tabs" id="executiveTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="module1-tab" data-bs-toggle="tab" data-bs-target="#module1-content" type="button">Module I</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="module2-tab" data-bs-toggle="tab" data-bs-target="#module2-content" type="button">Module II</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="module3-tab" data-bs-toggle="tab" data-bs-target="#module3-content" type="button">Module III</button>
-                    </li>
-                </ul>
-                <div class="tab-content p-4" id="executiveTabContent">
-                    <div class="tab-pane fade show active" id="module1-content" role="tabpanel">
-                        <h4 class="h5 mb-3 text-primary">Jurisprudence & Company Law</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="styled-list">
-                                    <li>Legal interpretation methods</li>
-                                    <li>General laws framework</li>
+    </section>
+
+    <!-- CS Executive Syllabus Section -->
+    <section id="executive" class="py-5" aria-labelledby="executive-heading">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge px-3 py-2 mb-3" style="background-color: rgba(111, 66, 193, 0.1); color: #6f42c1;">
+                        <i class="fas fa-briefcase me-2"></i>Second Level
+                    </span>
+                    <h2 id="executive-heading" class="display-4 fw-bold mb-3" style="color: #6f42c1;">CS Executive Syllabus</h2>
+                    <p class="lead text-muted">Executive Programme - 7 Papers divided into 3 Modules (New Syllabus 2022)</p>
+                </div>
+            </div>
+
+            <!-- Module 1 -->
+            <div class="mb-5">
+                <h3 class="h4 fw-bold mb-4 text-center" style="color: #1ab79c;">
+                    <i class="fas fa-layer-group me-2"></i>Module I (3 Papers)
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 1: Jurisprudence, Interpretation & General Laws</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Sources of Law & Constitution</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Interpretation of Statutes</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Administrative & General Laws</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Arbitration & Conciliation</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Other Commercial Laws</li>
                                 </ul>
                             </div>
-                            <div class="col-md-6">
-                                <ul class="styled-list">
-                                    <li>Company law applications</li>
-                                    <li>Business entity formation</li>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 2: Company Law & Practice</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Company Formation & Documents</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Share Capital & Debentures</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Members & Shareholders</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Directors & KMP</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Meetings & Compliances</li>
                                 </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #fd7e14 0%, #e56b0a 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 3: Setting up of Business & Closure</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Types of Business Organizations</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Formation Procedures</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Registrations & Licenses</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Business Agreements</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Winding up & Closure</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="mb-5">
+                <h3 class="h4 fw-bold mb-4 text-center" style="color: #20c997;">
+                    <i class="fas fa-layer-group me-2"></i>Module II (3 Papers)
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #20c997 0%, #16a085 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 4: Corporate & Management Accounting</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Financial Accounting</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Corporate Accounting</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Management Accounting</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Cost Accounting</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Financial Analysis</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 5: Securities Laws & Capital Markets</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>SEBI Act & Regulations</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Securities Contracts Act</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Depositories Act</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Listing Agreements</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Insider Trading Regulations</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 6: Economic, Business & Commercial Laws</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>Competition Act</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>FEMA & FDI Regulations</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>IBC & Insolvency</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>Labour Laws</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>Other Economic Laws</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div>
+                <h3 class="h4 fw-bold mb-4 text-center" style="color: #ffc107;">
+                    <i class="fas fa-layer-group me-2"></i>Module III (1 Paper)
+                </h3>
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <article class="syllabus-card card border-0 shadow-lg" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 7: Financial & Strategic Management</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h5 class="h6 fw-bold mb-2" style="color: #ffc107;">Financial Management</h5>
+                                        <ul class="list-unstyled mb-0 small">
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Cost of Capital</li>
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Capital Structure</li>
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Investment Decisions</li>
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Dividend Policy</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h5 class="h6 fw-bold mb-2" style="color: #ffc107;">Strategic Management</h5>
+                                        <ul class="list-unstyled mb-0 small">
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Business Policy</li>
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Strategic Analysis</li>
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Formulation & Implementation</li>
+                                            <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Evaluation & Control</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CS Professional Syllabus Section -->
+    <section id="professional" class="py-5" style="background-color: #f8f9fa;" aria-labelledby="professional-heading">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge px-3 py-2 mb-3" style="background-color: rgba(255, 193, 7, 0.1); color: #ffc107;">
+                        <i class="fas fa-user-tie me-2"></i>Final Level
+                    </span>
+                    <h2 id="professional-heading" class="display-4 fw-bold mb-3" style="color: #ffc107;">CS Professional Syllabus</h2>
+                    <p class="lead text-muted">Professional Programme - 9 Papers + 1 Elective (New Syllabus 2022)</p>
+                </div>
+            </div>
+
+            <!-- Module 1 -->
+            <div class="mb-5">
+                <h3 class="h4 fw-bold mb-4 text-center" style="color: #1ab79c;">
+                    <i class="fas fa-layer-group me-2"></i>Module I (3 Papers)
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 1: Governance, Risk Management & Ethics</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Corporate Governance Principles</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Board Structure & Processes</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Risk Management Framework</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Internal Controls</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Business Ethics</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #1ab79c;"></i>Sustainability & CSR</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 2: Advanced Tax Laws & Practice</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Direct Tax Laws</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>International Taxation</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Transfer Pricing</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>GST & Indirect Taxes</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Tax Planning & Compliance</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #6f42c1;"></i>Tax Audit & Assessments</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #fd7e14 0%, #e56b0a 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 3: Drafting, Pleadings & Appearances</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Company Drafting</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Legal Drafting</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Pleadings & Conveyancing</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Appearing before Authorities</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>RTI & Appeals</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #fd7e14;"></i>Tribunal Practice</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="mb-5">
+                <h3 class="h4 fw-bold mb-4 text-center" style="color: #20c997;">
+                    <i class="fas fa-layer-group me-2"></i>Module II (3 Papers)
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #20c997 0%, #16a085 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 4: Secretarial Audit & Due Diligence</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Secretarial Audit</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Internal Audit</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Due Diligence</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Compliance Management</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>Stakeholders Relationship</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #20c997;"></i>IPO Compliance</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 5: Corporate Restructuring & Insolvency</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Mergers & Acquisitions</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Corporate Restructuring</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>IBC & Insolvency</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Liquidation & Winding-up</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Cross Border M&A</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #dc3545;"></i>Valuation</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 6: Resolution of Corporate Disputes</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>Alternative Dispute Resolution</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>Company Law Litigation</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>NCLT & NCLAT</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>SEBI & ROC Proceedings</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>Oppression & Mismanagement</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #0dcaf0;"></i>Class Action Suits</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="mb-5">
+                <h3 class="h4 fw-bold mb-4 text-center" style="color: #ffc107;">
+                    <i class="fas fa-layer-group me-2"></i>Module III (2 Papers)
+                </h3>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-5">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 7: Corporate Funding & Listings</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Sources of Finance</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>IPO & Public Issues</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Listing Requirements</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Debt Financing</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Foreign Funding</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2" style="color: #ffc107;"></i>Banking & Financial Institutions</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-5">
+                        <article class="syllabus-card card border-0 shadow-lg h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                            <div class="card-header p-3 text-white" style="background: linear-gradient(135deg, #6c757d 0%, #495057 100%);">
+                                <h4 class="h6 mb-0 fw-bold">Paper 8: Multidisciplinary Case Studies</h4>
+                            </div>
+                            <div class="card-body p-3">
+                                <ul class="list-unstyled mb-0 small">
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2 text-secondary"></i>Case Study Methodology</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2 text-secondary"></i>Company Law Cases</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2 text-secondary"></i>Securities Law Cases</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2 text-secondary"></i>Economic Laws Cases</li>
+                                    <li class="mb-1"><i class="fas fa-angle-right me-2 text-secondary"></i>Ethical Dilemmas</li>
+                                    <li class="mb-0"><i class="fas fa-angle-right me-2 text-secondary"></i>Strategic Decision Making</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electives -->
+            <div>
+                <h3 class="h4 fw-bold mb-4 text-center" style="color: #6f42c1;">
+                    <i class="fas fa-star me-2"></i>Elective Papers (Choose One)
+                </h3>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="elective-card card border-0 shadow-sm h-100" style="border-radius: 10px; transition: all 0.3s ease;">
+                            <div class="card-body p-3">
+                                <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">Paper 9.1: IPR Laws & Practice</h5>
+                                <p class="text-muted small mb-0">Patents, Trademarks, Copyrights, Designs & Geographical Indications</p>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="module2-content" role="tabpanel">
-                        <h4 class="h5 mb-3 text-primary">Tax & Financial Management</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="styled-list">
-                                    <li>Taxation laws overview</li>
-                                    <li>Corporate taxation</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="styled-list">
-                                    <li>Accounting standards</li>
-                                    <li>Financial strategies</li>
-                                </ul>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="elective-card card border-0 shadow-sm h-100" style="border-radius: 10px; transition: all 0.3s ease;">
+                            <div class="card-body p-3">
+                                <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">Paper 9.2: Insurance Law & Practice</h5>
+                                <p class="text-muted small mb-0">IRDAI Act, Insurance Contracts, Regulations & Compliances</p>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="module3-content" role="tabpanel">
-                        <h4 class="h5 mb-3 text-primary">Governance & Compliance</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="styled-list">
-                                    <li>Capital market regulations</li>
-                                    <li>Securities law compliance</li>
-                                </ul>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="elective-card card border-0 shadow-sm h-100" style="border-radius: 10px; transition: all 0.3s ease;">
+                            <div class="card-body p-3">
+                                <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">Paper 9.3: Forensic Audit</h5>
+                                <p class="text-muted small mb-0">Forensic Accounting, Fraud Detection, Investigation Techniques</p>
                             </div>
-                            <div class="col-md-6">
-                                <ul class="styled-list">
-                                    <li>Economic legislation</li>
-                                    <li>Labor law applications</li>
-                                </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="elective-card card border-0 shadow-sm h-100" style="border-radius: 10px; transition: all 0.3s ease;">
+                            <div class="card-body p-3">
+                                <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">Paper 9.4: International Business</h5>
+                                <p class="text-muted small mb-0">International Trade, FEMA, Cross-border Transactions, WTO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="elective-card card border-0 shadow-sm h-100" style="border-radius: 10px; transition: all 0.3s ease;">
+                            <div class="card-body p-3">
+                                <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">Paper 9.5: Investment Banking</h5>
+                                <p class="text-muted small mb-0">M&A Advisory, IPO Management, Financial Restructuring</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="elective-card card border-0 shadow-sm h-100" style="border-radius: 10px; transition: all 0.3s ease;">
+                            <div class="card-body p-3">
+                                <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">Paper 9.6: Labour Laws & Practice</h5>
+                                <p class="text-muted small mb-0">Industrial Relations, Wages, Social Security, New Labour Codes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mx-auto">
+                        <div class="elective-card card border-0 shadow-sm h-100" style="border-radius: 10px; transition: all 0.3s ease;">
+                            <div class="card-body p-3">
+                                <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">Paper 9.7: Real Estate Laws & Practice</h5>
+                                <p class="text-muted small mb-0">RERA, Transfer of Property, Land Laws, REITs</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Professional Syllabus -->
-    <div id="professional-syllabus" class="card syllabus-card mb-5 border-0">
-        <div class="card-header bg-transparent border-0 position-relative">
-            <div class="d-flex align-items-center">
-                <div class="level-badge bg-primary text-white rounded-circle me-3">3</div>
-                <h2 class="h3 mb-0">Professional Syllabus</h2>
+    <!-- Course Path Section -->
+    <section class="py-5" aria-labelledby="path-heading">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge px-3 py-2 mb-3" style="background-color: rgba(26, 183, 156, 0.1); color: #1ab79c;">
+                        <i class="fas fa-road me-2"></i>Your Journey
+                    </span>
+                    <h2 id="path-heading" class="display-4 fw-bold mb-3" style="color: #1ab79c;">CS Course Structure</h2>
+                    <p class="lead text-muted">Complete path from CSEET to CS Professional</p>
+                </div>
             </div>
-            <div class="floating-shape shape-3"></div>
-        </div>
-        <div class="card-body pt-0">
-            <p class="text-muted mb-4">Advanced expertise in corporate governance and strategy</p>
-            
+
             <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="professional-paper">
-                        <div class="paper-header bg-primary bg-opacity-10 p-3 rounded-top">
-                            <h3 class="h5 mb-0 text-primary">Core Papers</h3>
+                <div class="col-md-4">
+                    <article class="path-card card border-0 shadow-lg text-center h-100 p-4" style="border-radius: 15px; transition: all 0.3s ease; border-top: 4px solid #1ab79c;">
+                        <div class="path-icon mx-auto mb-3" style="width: 70px; height: 70px; background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-white fw-bold fs-4">1</span>
                         </div>
-                        <div class="paper-body p-3">
-                            <div class="paper-item">
-                                <h4 class="h6"><span class="paper-number">01</span> Governance & Ethics</h4>
-                                <p>Corporate governance frameworks and ethical decision-making processes</p>
-                            </div>
-                            <div class="paper-item">
-                                <h4 class="h6"><span class="paper-number">02</span> Advanced Taxation</h4>
-                                <p>Complex tax scenarios and international taxation principles</p>
-                            </div>
-                            <div class="paper-item">
-                                <h4 class="h6"><span class="paper-number">03</span> Legal Drafting</h4>
-                                <p>Professional documentation and representation techniques</p>
-                            </div>
-                        </div>
-                    </div>
+                        <h3 class="h5 fw-bold mb-2" style="color: #1ab79c;">CSEET</h3>
+                        <p class="text-muted small mb-3">Entrance Test</p>
+                        <ul class="list-unstyled text-start small">
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #1ab79c;"></i>4 Papers</li>
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #1ab79c;"></i>MCQ Format</li>
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #1ab79c;"></i>Online Exam</li>
+                            <li class="mb-0"><i class="fas fa-check me-2" style="color: #1ab79c;"></i>Held 4 times/year</li>
+                        </ul>
+                    </article>
                 </div>
-                <div class="col-lg-6">
-                    <div class="professional-paper">
-                        <div class="paper-header bg-primary bg-opacity-10 p-3 rounded-top">
-                            <h3 class="h5 mb-0 text-primary">Elective Papers</h3>
+
+                <div class="col-md-4">
+                    <article class="path-card card border-0 shadow-lg text-center h-100 p-4" style="border-radius: 15px; transition: all 0.3s ease; border-top: 4px solid #6f42c1;">
+                        <div class="path-icon mx-auto mb-3" style="width: 70px; height: 70px; background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-white fw-bold fs-4">2</span>
                         </div>
-                        <div class="paper-body p-3">
-                            <div class="paper-item">
-                                <h4 class="h6"><span class="paper-number">01</span> Banking & Insurance</h4>
-                                <p>Financial sector regulations and compliance requirements</p>
-                            </div>
-                            <div class="paper-item">
-                                <h4 class="h6"><span class="paper-number">02</span> IPR Laws</h4>
-                                <p>Intellectual property protections and legal frameworks</p>
-                            </div>
-                            <div class="paper-item">
-                                <h4 class="h6"><span class="paper-number">03</span> International Business</h4>
-                                <p>Cross-border transactions and global trade laws</p>
-                            </div>
+                        <h3 class="h5 fw-bold mb-2" style="color: #6f42c1;">CS Executive</h3>
+                        <p class="text-muted small mb-3">Intermediate Level</p>
+                        <ul class="list-unstyled text-start small">
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #6f42c1;"></i>7 Papers</li>
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #6f42c1;"></i>3 Modules</li>
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #6f42c1;"></i>Descriptive + MCQ</li>
+                            <li class="mb-0"><i class="fas fa-check me-2" style="color: #6f42c1;"></i>Held 2 times/year</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="path-card card border-0 shadow-lg text-center h-100 p-4" style="border-radius: 15px; transition: all 0.3s ease; border-top: 4px solid #ffc107;">
+                        <div class="path-icon mx-auto mb-3" style="width: 70px; height: 70px; background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span class="text-white fw-bold fs-4">3</span>
                         </div>
+                        <h3 class="h5 fw-bold mb-2" style="color: #ffc107;">CS Professional</h3>
+                        <p class="text-muted small mb-3">Final Level</p>
+                        <ul class="list-unstyled text-start small">
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #ffc107;"></i>9 + 1 Papers</li>
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #ffc107;"></i>3 Modules</li>
+                            <li class="mb-1"><i class="fas fa-check me-2" style="color: #ffc107;"></i>Descriptive Format</li>
+                            <li class="mb-0"><i class="fas fa-check me-2" style="color: #ffc107;"></i>Held 2 times/year</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 position-relative overflow-hidden" aria-labelledby="cta-heading">
+        <div style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 50%, #0d6b5a 100%); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;"></div>
+        <div class="container text-center text-white position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 id="cta-heading" class="display-4 fw-bold mb-4">Start Your CS Preparation</h2>
+                    <p class="lead mb-5">Access comprehensive test series covering the complete ICSI syllabus. Practice with ICSI pattern tests and get expert evaluation.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="<?= base_url() ?>plans" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="color: #1ab79c; border-radius: 50px;">
+                            <i class="fas fa-rocket me-2"></i>View Test Series
+                        </a>
+                        <a href="https://wa.me/+919540097210" target="_blank" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold" style="border-radius: 50px;">
+                            <i class="fab fa-whatsapp me-2"></i>Get Guidance
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Final CTA -->
-    <div class="cta-section text-center p-5 rounded-4 mb-5">
-        <h2 class="h1 mb-3">Start Your CS Journey Today</h2>
-        <p class="lead mb-4">Join India's most trusted CS test series with thousand successful candidates</p>
-        <div class="d-flex justify-content-center gap-3">
-            <a href="https://mycsmtp.com/register" class="btn btn-primary btn-lg px-4 rounded-pill">Enroll Now</a>
-            <a href="https://mycsmtp.com/testimonial" class="btn btn-light btn-lg px-4 rounded-pill">Testimonials</a>
-        </div>
-    </div>
-</section>
-
-<!-- Details Popup -->
-<div class="ecss-popup" id="details-popup">
-    <div class="ecss-popup-content">
-        <span class="ecss-popup-close" id="popup-close">&times;</span>
-        <h3 id="popup-title">Package Details</h3>
-        <div class="ecss-popup-features" id="popup-features">
-            <!-- Popup content will be populated by JavaScript -->
-        </div>
-        <div class="ecss-popup-footer">
-            <button class="ecss-popup-btn" id="popup-continue">Continue to Enrollment</button>
-        </div>
-    </div>
-</div>
+    </section>
+</main>
 
 <style>
-    /* Enhanced Course Selection System Styles */
-    .ecss-course-selector {
-        padding: 80px 0 60px;
-        background: linear-gradient(135deg, #f8fcfb 0%, #e8f7f4 100%);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        border-bottom: 1px solid rgba(26,183,156,0.1);
+    /* Animations */
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out;
     }
     
-    .ecss-container {
-        width: 90%;
-        max-width: 900px;
-        margin: 0 auto;
+    .animate-fade-in-delay {
+        animation: fadeIn 1s ease-out 0.3s both;
     }
     
-    .ecss-header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-    .ecss-header h2 {
-        font-size: 2.2rem;
-        color: #2c3e50;
-        margin-bottom: 15px;
-        background: linear-gradient(90deg, #1ab79c, #148f7a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .ecss-header p {
-        color: #6c757d;
-        font-size: 1.05rem;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .ecss-selection-flow {
-        background: white;
-        border-radius: 20px;
-        padding: 40px;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-        border: 1px solid rgba(26,183,156,0.1);
-    }
-    
-    .ecss-selection-group {
-        margin-bottom: 25px;
-    }
-    
-    .ecss-selection-group label {
-        display: block;
-        font-weight: 600;
-        color: #2c3e50;
-        margin-bottom: 10px;
-        font-size: 1rem;
-    }
-    
-    .ecss-custom-select {
-        position: relative;
-    }
-    
-    .ecss-select {
-        width: 100%;
-        padding: 15px 25px;
-        border: 2px solid #e0f2ef;
-        border-radius: 12px;
-        font-size: 0.95rem;
-        appearance: none;
-        background: white;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    
-    .ecss-select:focus {
-        outline: none;
-        border-color: #1ab79c;
-        box-shadow: 0 0 0 4px rgba(26,183,156,0.15);
-    }
-    
-    .ecss-select-arrow {
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        color: #1ab79c;
-        pointer-events: none;
-        transition: all 0.3s ease;
-    }
-    
-    .ecss-select:focus + .ecss-select-arrow {
-        transform: translateY(-50%) rotate(180deg);
-    }
-    
-    .ecss-plan-details {
-        background: #f9fcfb;
-        border-radius: 15px;
-        padding: 25px;
-        margin: 25px 0;
-        border: 1px solid rgba(26,183,156,0.1);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.03);
-        transition: all 0.4s ease;
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    
-    .ecss-plan-details.show {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-    .ecss-plan-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-    
-    .ecss-plan-header h3 {
-        font-size: 1.3rem;
-        color: #2c3e50;
-        margin: 0;
-    }
-    
-    .ecss-plan-badge {
-        background: linear-gradient(135deg, #1ab79c, #148f7a);
-        color: white;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: 600;
-    }
-    
-    .ecss-plan-features {
-        margin-bottom: 20px;
-    }
-    
-    .ecss-plan-feature {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        font-size: 0.9rem;
-    }
-    
-    .ecss-plan-feature i.fa-check {
-        color: #28a745;
-        margin-right: 10px;
-        width: 18px;
-        text-align: center;
-    }
-    
-    .ecss-plan-feature i.fa-times {
-        color: #dc3545;
-        margin-right: 10px;
-        width: 18px;
-        text-align: center;
-    }
-    
-    .ecss-plan-price {
-        text-align: right;
-    }
-    
-    .ecss-plan-price span:first-child {
-        font-size: 1.6rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #1ab79c, #148f7a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    
-    .ecss-plan-price span:last-child {
-        color: #6c757d;
-        font-size: 0.95rem;
-    }
-    
-    .ecss-action-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
-    }
-    
-    .ecss-details-btn, .ecss-continue-btn {
-        flex: 1;
-        padding: 14px;
-        border-radius: 10px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-    }
-    
-    .ecss-details-btn {
-        background: white;
-        border: 2px solid #1ab79c;
-        color: #1ab79c;
-    }
-    
-    .ecss-details-btn:hover {
-        background: rgba(26,183,156,0.05);
-    }
-    
-    .ecss-continue-btn {
-        background: linear-gradient(135deg, #1ab79c, #148f7a);
-        color: white;
-        border: none;
-        box-shadow: 0 8px 20px rgba(26,183,156,0.25);
-    }
-    
-    .ecss-continue-btn:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 30px rgba(26,183,156,0.35);
-    }
-    
-    .ecss-continue-btn:hover i {
-        transform: translateX(4px);
-    }
-    
-    .ecss-continue-btn i {
-        transition: transform 0.3s ease;
-    }
-    
-    /* Syllabus Section Styles */
-    .syllabus-section {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        padding-top: 40px;
-    }
-    
-    .gradient-text {
-        background: linear-gradient(90deg, #1AB79C 0%, #2D68C4 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-    }
-    
-    .text-primary {
-        color: #1AB79C !important;
-    }
-    
-    .bg-primary {
-        background-color: #1AB79C !important;
-    }
-    
-    .btn-primary {
-        background-color: #1AB79C;
-        border-color: #1AB79C;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-primary:hover {
-        background-color: #148f77;
-        border-color: #148f77;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(26, 183, 156, 0.3);
-    }
-    
-    .btn-outline-primary {
-        color: #1AB79C;
-        border-color: #1AB79C;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-outline-primary:hover {
-        background-color: #1AB79C;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(26, 183, 156, 0.2);
-    }
-    
-    .syllabus-card {
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.05);
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .level-badge {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-    }
-    
-    .floating-shape {
-        position: absolute;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        opacity: 0.1;
-        z-index: -1;
-    }
-    
-    .shape-1 {
-        background: #1AB79C;
-        top: -30px;
-        right: -30px;
-    }
-    
-    .shape-2 {
-        background: #2D68C4;
-        top: -30px;
-        right: -30px;
-    }
-    
-    .shape-3 {
-        background: #8E44AD;
-        top: -30px;
-        right: -30px;
-    }
-    
-    .topic-card {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-        border: 1px solid rgba(0, 0, 0, 0.03);
-        transition: all 0.3s ease;
-    }
-    
-    .topic-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-        border-color: rgba(26, 183, 156, 0.3);
-    }
-    
-    .topic-list {
-        list-style: none;
-        padding-left: 0;
-    }
-    
-    .topic-list li {
-        padding: 6px 0;
-        position: relative;
-        padding-left: 24px;
-    }
-    
-    .topic-list li:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 14px;
-        width: 8px;
-        height: 8px;
-        background: #1AB79C;
-        border-radius: 50%;
-    }
-    
-    .nav-tabs .nav-link {
-        color: #495057;
-        font-weight: 500;
-        border: none;
-        padding: 12px 20px;
-    }
-    
-    .nav-tabs .nav-link.active {
-        color: #1AB79C;
-        background: transparent;
-        border-bottom: 3px solid #1AB79C;
-    }
-    
-    .styled-list {
-        list-style: none;
-        padding-left: 0;
-    }
-    
-    .styled-list li {
-        padding: 8px 0;
-        position: relative;
-        padding-left: 28px;
-    }
-    
-    .styled-list li:before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #1AB79C;
-        font-weight: bold;
-    }
-    
-    .professional-paper {
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
-        transition: all 0.3s ease;
-        height: 100%;
-    }
-    
-    .professional-paper:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-    
-    .paper-number {
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        background: #1AB79C;
-        color: white;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 28px;
-        font-size: 14px;
-        margin-right: 12px;
-    }
-    
-    .cta-section {
-        background: linear-gradient(135deg, #1AB79C 0%, #2D68C4 100%);
-        color: white;
-    }
-    
-    .cta-section .btn-light {
-        background: rgba(255, 255, 255, 0.15);
-        color: white;
-        border: none;
-    }
-    
-    .cta-section .btn-light:hover {
-        background: rgba(255, 255, 255, 0.25);
-    }
-    
-    /* Popup Styles */
-    .ecss-popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.7);
-        z-index: 1000;
-        align-items: center;
-        justify-content: center;
-        animation: fadeIn 0.3s;
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 1s ease-out 0.6s both;
     }
     
     @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     
-    .ecss-popup-content {
-        background-color: white;
-        padding: 30px;
-        border-radius: 15px;
-        width: 90%;
-        max-width: 600px;
-        max-height: 80vh;
-        overflow-y: auto;
-        box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-        position: relative;
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
     }
     
-    .ecss-popup-close {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 1.8rem;
-        color: #6c757d;
-        cursor: pointer;
-        transition: color 0.3s;
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
     }
     
-    .ecss-popup-close:hover {
-        color: #dc3545;
-    }
-    
-    .ecss-popup-features {
-        margin: 20px 0;
-    }
-    
-    .ecss-popup-feature {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-        border-bottom: 1px dashed #e9ecef;
-    }
-    
-    .ecss-popup-feature i {
-        margin-right: 15px;
-        font-size: 1.2rem;
-        min-width: 25px;
-        text-align: center;
-        padding-top: 3px;
-    }
-    
-    .ecss-popup-feature i.fa-check {
-        color: #28a745;
-    }
-    
-    .ecss-popup-feature i.fa-times {
-        color: #dc3545;
-    }
-    
-    .ecss-popup-feature-content {
-        flex: 1;
-    }
-    
-    .ecss-popup-feature-title {
-        font-weight: 600;
-        margin-bottom: 5px;
-        color: #2c3e50;
-    }
-    
-    .ecss-popup-feature-desc {
-        color: #6c757d;
-        font-size: 0.9rem;
-    }
-    
-    .ecss-popup-footer {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .ecss-popup-btn {
-        background: linear-gradient(135deg, #1ab79c, #148f7a);
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor: pointer;
+    /* Stat Cards */
+    .stat-card {
         transition: all 0.3s ease;
     }
     
-    .ecss-popup-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(26,183,156,0.4);
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
     
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-        .ecss-selection-flow {
-            padding: 30px;
-        }
-        
-        .ecss-header h2 {
+    /* Syllabus Cards */
+    .syllabus-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .syllabus-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+    
+    /* Elective Cards */
+    .elective-card {
+        transition: all 0.3s ease;
+    }
+    
+    .elective-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* Path Cards */
+    .path-card {
+        transition: all 0.3s ease;
+    }
+    
+    .path-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+    
+    .path-card:hover .path-icon {
+        transform: scale(1.1);
+    }
+    
+    .path-icon {
+        transition: all 0.3s ease;
+    }
+    
+    /* Paper Number */
+    .paper-number {
+        font-size: 1.2rem;
+    }
+    
+    /* CTA Section */
+    .cta-section .btn:hover {
+        transform: translateY(-3px);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .display-4 {
             font-size: 2rem;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .ecss-course-selector {
-            padding: 60px 0 40px;
-        }
         
-        .ecss-header h2 {
-            font-size: 1.8rem;
-        }
-        
-        .ecss-action-group {
-            flex-direction: column;
-        }
-        
-        .display-4 {
-            font-size: 2.2rem;
-        }
-        
-        .ecss-popup-content {
-            padding: 20px;
+        .syllabus-card {
+            margin-bottom: 1rem;
         }
     }
     
-    @media (max-width: 576px) {
-        .ecss-selection-flow {
-            padding: 25px;
-        }
-        
-        .ecss-header h2 {
-            font-size: 1.6rem;
-        }
-        
-        .ecss-select {
-            padding: 12px 20px;
-        }
-        
-        .ecss-popup-content {
-            width: 95%;
-            padding: 15px;
-        }
+    /* Smooth Scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Focus Styles */
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid #1ab79c;
+        outline-offset: 2px;
     }
 </style>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Course to Package mapping with detailed specifications
-        const coursePackages = {
-            cseet: [
-                { 
-                    value: "https://mycsmtp.com/level/type/11",
-                    name: "CSEET Complete Package",
-                    badge: "Most Popular",
-                    price: "₹1,999",
-                    duration: "/ module",
-                    features: [
-                        {icon: "check", title: "Test Papers", description: "8 Unit Tests + 2 Full Syllabus Papers"},
-                        {icon: "check", title: "Pattern", description: "Strictly as per ICSI Pattern"},
-                        {icon: "check", title: "Study Material", description: "Revision Notes for Theory Subjects"},
-                        {icon: "check", title: "Flexibility", description: "Schedule or Unscheduled Option"},
-                        {icon: "check", title: "Late Submission", description: "Missed schedule? Submit any day (1 week before exam)"},
-                        {icon: "check", title: "Evaluation", description: "In-depth Evaluation with Suggested Answers"},
-                        {icon: "check", title: "Feedback", description: "Personalized Improvement Tips"},
-                        {icon: "check", title: "Marks Distribution", description: "Unit Tests: 20-45 marks | Full Papers: 100 marks"},
-                        {icon: "check", title: "Validity", description: "Valid till December 2025"}
-                    ]
-                }
-            ],
-            executive: [
-                { 
-                    value: "https://mycsmtp.com/type/subject/38",
-                    name: "Chapter Wise Tests",
-                    badge: "",
-                    price: "₹2,499",
-                    duration: "/ module",
-                    features: [
-                        {icon: "check", title: "Test Papers", description: "4 Unit Tests + 1 Full Syllabus Paper"},
-                        {icon: "check", title: "Pattern", description: "Strictly as per ICSI Pattern"},
-                        {icon: "check", title: "Study Material", description: "Revision Notes for Theory Subjects"},
-                        {icon: "check", title: "Flexibility", description: "Schedule or Unscheduled Option"},
-                        {icon: "check", title: "Late Submission", description: "Missed schedule? Submit any day (1 week before exam)"},
-                        {icon: "check", title: "Evaluation", description: "In-depth Evaluation with Suggested Answers"},
-                        {icon: "check", title: "Feedback", description: "Personalized Improvement Tips"},
-                        {icon: "check", title: "Marks Distribution", description: "Unit Tests: 20-45 marks | Full Papers: 100 marks"},
-                        {icon: "check", title: "Validity", description: "Valid till December 2025"}
-                    ]
-                },
-                { 
-                    value: "https://mycsmtp.com/type/subject/39",
-                    name: "Detailed Test Series",
-                    badge: "Recommended",
-                    price: "₹3,999",
-                    duration: "/ module",
-                    features: [
-                        {icon: "check", title: "Test Papers", description: "8 Unit Tests + 2 Full Syllabus Papers"},
-                        {icon: "check", title: "Pattern", description: "Strictly as per ICSI Pattern"},
-                        {icon: "check", title: "Study Material", description: "Comprehensive Revision Notes"},
-                        {icon: "check", title: "Flexibility", description: "Schedule or Unscheduled Option"},
-                        {icon: "check", title: "Late Submission", description: "Missed schedule? Submit any day (1 week before exam)"},
-                        {icon: "check", title: "Evaluation", description: "Detailed Evaluation with Model Answers"},
-                        {icon: "check", title: "Feedback", description: "Personalized Performance Analysis"},
-                        {icon: "check", title: "Marks Distribution", description: "Unit Tests: 20-45 marks | Full Papers: 100 marks"},
-                        {icon: "check", title: "Priority Support", description: "Priority Evaluation Turnaround"},
-                        {icon: "check", title: "Validity", description: "Valid till December 2025"}
-                    ]
-                },
-                { 
-                    value: "https://mycsmtp.com/type/subject/40",
-                    name: "Full Syllabus Tests",
-                    badge: "",
-                    price: "₹4,999",
-                    duration: "/ all modules",
-                    features: [
-                        {icon: "check", title: "Test Papers", description: "1 Full Syllabus Test Paper (No Unit Tests)"},
-                        {icon: "check", title: "Pattern", description: "Strictly as per ICSI Pattern"},
-                        {icon: "times", title: "Study Material", description: "No revisionary notes included"},
-                        {icon: "check", title: "Flexibility", description: "Unscheduled Option Only"},
-                        {icon: "check", title: "Late Submission", description: "Submit any day (1 week before exam)"},
-                        {icon: "check", title: "Evaluation", description: "In-depth Evaluation with Suggested Answers"},
-                        {icon: "check", title: "Feedback", description: "Personalized Improvement Tips"},
-                        {icon: "check", title: "Marks Distribution", description: "Full Papers: 100 marks format"},
-                        {icon: "check", title: "Validity", description: "Valid till December 2025"}
-                    ]
-                }
-            ],
-            professional: [
-                { 
-                    value: "https://mycsmtp.com/type/subject/41",
-                    name: "Chapter Wise Tests",
-                    badge: "",
-                    price: "₹2,999",
-                    duration: "/ module",
-                    features: [
-                        {icon: "check", title: "Test Papers", description: "4 Unit Tests + 1 Full Syllabus Paper"},
-                        {icon: "check", title: "Pattern", description: "Strictly as per ICSI Pattern"},
-                        {icon: "check", title: "Study Material", description: "Professional Drafting Notes Included"},
-                        {icon: "check", title: "Flexibility", description: "Schedule or Unscheduled Option"},
-                        {icon: "check", title: "Late Submission", description: "Missed schedule? Submit any day (1 week before exam)"},
-                        {icon: "check", title: "Evaluation", description: "Expert Evaluation with Model Drafts"},
-                        {icon: "check", title: "Feedback", description: "Drafting-Specific Feedback"},
-                        {icon: "check", title: "Marks Distribution", description: "Unit Tests: 20-45 marks | Full Papers: 100 marks"},
-                        {icon: "check", title: "Validity", description: "Valid till December 2025"}
-                    ]
-                },
-                { 
-                    value: "https://mycsmtp.com/type/subject/42",
-                    name: "Detailed Test Series",
-                    badge: "Best Value",
-                    price: "₹4,499",
-                    duration: "/ module",
-                    features: [
-                        {icon: "check", title: "Test Papers", description: "8 Unit Tests + 2 Full Syllabus Papers"},
-                        {icon: "check", title: "Pattern", description: "Strictly as per ICSI Pattern"},
-                        {icon: "check", title: "Study Material", description: "Comprehensive Drafting Materials"},
-                        {icon: "check", title: "Flexibility", description: "Flexible Scheduling Options"},
-                        {icon: "check", title: "Late Submission", description: "Missed deadline? Submit within grace period"},
-                        {icon: "check", title: "Evaluation", description: "Detailed Drafting Evaluation"},
-                        {icon: "check", title: "Feedback", description: "Section-wise Improvement Plan"},
-                        {icon: "check", title: "Marks Distribution", description: "Unit Tests: 20-45 marks | Full Papers: 100 marks"},
-                        {icon: "check", title: "Support", description: "Priority Mentor Support"},
-                        {icon: "check", title: "Validity", description: "Valid till December 2025"}
-                    ]
-                },
-                { 
-                    value: "https://mycsmtp.com/type/subject/43",
-                    name: "Full Syllabus Tests",
-                    badge: "",
-                    price: "₹5,999",
-                    duration: "/ all modules",
-                    features: [
-                        {icon: "check", title: "Test Papers", description: "1 Comprehensive Final Paper (100 marks)"},
-                        {icon: "check", title: "Pattern", description: "ICSI Exam Pattern Simulation"},
-                        {icon: "times", title: "Study Material", description: "No additional notes provided"},
-                        {icon: "check", title: "Flexibility", description: "Unscheduled Attempt Option"},
-                        {icon: "check", title: "Late Submission", description: "Submit anytime before final week"},
-                        {icon: "check", title: "Evaluation", description: "Expert Drafting Evaluation"},
-                        {icon: "check", title: "Feedback", description: "Competency Benchmarking"},
-                        {icon: "check", title: "Materials", description: "Full-length Suggested Answers"},
-                        {icon: "check", title: "Validity", description: "Valid till December 2025"}
-                    ]
-                }
-            ]
-        };
-        
-        // DOM Elements
-        const courseSelect = document.getElementById('course-level');
-        const packageGroup = document.getElementById('package-group');
-        const packageSelect = document.getElementById('package');
-        const planDetails = document.getElementById('plan-details');
-        const planName = document.getElementById('plan-name');
-        const planBadge = document.getElementById('plan-badge');
-        const planFeatures = document.getElementById('plan-features');
-        const planPrice = document.getElementById('plan-price');
-        const planDuration = document.getElementById('plan-duration');
-        const actionGroup = document.getElementById('action-group');
-        const continueBtn = document.querySelector('.ecss-continue-btn');
-        const detailsBtn = document.getElementById('details-btn');
-        const detailsPopup = document.getElementById('details-popup');
-        const popupClose = document.getElementById('popup-close');
-        const popupTitle = document.getElementById('popup-title');
-        const popupFeatures = document.getElementById('popup-features');
-        const popupContinue = document.getElementById('popup-continue');
-        
-        // Course selection handler
-        courseSelect.addEventListener('change', function() {
-            if (this.value) {
-                // Show package selection
-                packageGroup.style.display = 'block';
-                
-                // Clear and disable package select
-                packageSelect.innerHTML = '<option value="">-- Choose Package --</option>';
-                packageSelect.disabled = false;
-                
-                // Populate packages
-                coursePackages[this.value].forEach(pkg => {
-                    const option = document.createElement('option');
-                    option.value = JSON.stringify(pkg);
-                    option.textContent = pkg.name;
-                    packageSelect.appendChild(option);
-                });
-                
-                // For CSEET which has only one option, auto-select it
-                if (this.value === 'cseet' && coursePackages.cseet.length === 1) {
-                    packageSelect.value = JSON.stringify(coursePackages.cseet[0]);
-                    updatePlanDetails(coursePackages.cseet[0]);
-                    actionGroup.style.display = 'flex';
-                    planDetails.classList.add('show');
-                } else {
-                    // Hide details and buttons for other courses
-                    actionGroup.style.display = 'none';
-                    planDetails.classList.remove('show');
-                }
-            } else {
-                // Reset flow if no course selected
-                packageGroup.style.display = 'none';
-                actionGroup.style.display = 'none';
-                planDetails.classList.remove('show');
-                packageSelect.disabled = true;
-            }
-        });
-        
-        // Package selection handler
-        packageSelect.addEventListener('change', function() {
-            if (this.value) {
-                const selectedPackage = JSON.parse(this.value);
-                updatePlanDetails(selectedPackage);
-                actionGroup.style.display = 'flex';
-                planDetails.classList.add('show');
-            } else {
-                actionGroup.style.display = 'none';
-                planDetails.classList.remove('show');
-            }
-        });
-        
-        // Update plan details function
-        function updatePlanDetails(pkg) {
-            planName.textContent = pkg.name;
-            planPrice.textContent = pkg.price;
-            planDuration.textContent = pkg.duration;
-            
-            // Update badge
-            if (pkg.badge) {
-                planBadge.textContent = pkg.badge;
-                planBadge.style.display = 'block';
-            } else {
-                planBadge.style.display = 'none';
-            }
-            
-            // Update features
-            planFeatures.innerHTML = '';
-            pkg.features.slice(0, 4).forEach(feature => {
-                const featureEl = document.createElement('div');
-                featureEl.className = 'ecss-plan-feature';
-                const iconClass = feature.icon === "check" ? "fa-check" : "fa-times";
-                const iconColor = feature.icon === "check" ? "#28a745" : "#dc3545";
-                featureEl.innerHTML = `
-                    <i class="fas ${iconClass}" style="color: ${iconColor}"></i>
-                    <span>${feature.title}: ${feature.description}</span>
-                `;
-                planFeatures.appendChild(featureEl);
-            });
-            
-            // Add "View All Features" link if more than 4 features
-            if (pkg.features.length > 4) {
-                const viewAll = document.createElement('div');
-                viewAll.className = 'ecss-plan-feature';
-                viewAll.innerHTML = `
-                    <i class="fas fa-ellipsis-h" style="color: #6c757d"></i>
-                    <span>+ ${pkg.features.length - 4} more features</span>
-                `;
-                planFeatures.appendChild(viewAll);
-            }
-            
-            // Update continue button
-            continueBtn.onclick = function() {
-                window.location.href = pkg.value;
-            };
-            
-            // Update details button to show popup
-            detailsBtn.onclick = function() {
-                showDetailsPopup(pkg);
-            };
-        }
-        
-        // Show details popup
-        function showDetailsPopup(pkg) {
-            popupTitle.textContent = pkg.name;
-            popupFeatures.innerHTML = '';
-            
-            pkg.features.forEach(feature => {
-                const featureEl = document.createElement('div');
-                featureEl.className = 'ecss-popup-feature';
-                const iconClass = feature.icon === "check" ? "fa-check" : "fa-times";
-                featureEl.innerHTML = `
-                    <i class="fas ${iconClass}"></i>
-                    <div class="ecss-popup-feature-content">
-                        <div class="ecss-popup-feature-title">${feature.title}</div>
-                        <div class="ecss-popup-feature-desc">${feature.description}</div>
-                    </div>
-                `;
-                popupFeatures.appendChild(featureEl);
-            });
-            
-            // Update continue button in popup
-            popupContinue.onclick = function() {
-                window.location.href = pkg.value;
-            };
-            
-            detailsPopup.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-        
-        // Close popup
-        popupClose.onclick = function() {
-            detailsPopup.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        };
-        
-        // Close popup when clicking outside
-        window.onclick = function(event) {
-            if (event.target == detailsPopup) {
-                detailsPopup.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        };
-    });
-</script>
 <?= $this->endSection() ?>
 
 <?= $this->section('jsContent') ?>
-<!-- Bootstrap JS and dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Bootstrap Icons -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.js"></script>
 <?= $this->endSection() ?>

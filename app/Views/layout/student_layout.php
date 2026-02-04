@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 
 <head>
     <title>
@@ -12,10 +12,13 @@
 <body>
     <div class="wrapper">
         <?=view('includes/student_navbar.php')?>
-        <?= $this->renderSection('content') ?>
+        <main role="main">
+            <?= $this->renderSection('content') ?>
+        </main>
     </div>
     <?=view('includes/student_footer.php')?>
     <?= $this->renderSection('jsContent') ?>
+
 </body>
 
 </html>

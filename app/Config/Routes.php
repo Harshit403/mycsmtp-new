@@ -30,6 +30,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'StudentController::loadIndex');
+$routes->get('/test-series', 'StudentController::loadTestSeriesPage');
 $routes->get('/login', 'LoginController::loadLoginPage');
 $routes->post('/verify/adminlogin', 'LoginController::verifyAdminLogin');
 $routes->get('/admin/logout','LoginController::logoutAdmin');
@@ -184,6 +185,7 @@ $routes->get('/sign-in','StudentController::loadSignInPage');
 $routes->get('/register','StudentController::loadSignUpPage');
 $routes->post('/student/register-details','StudentController::addStudentDetails');
 $routes->post('/student/sign-in','StudentController::verifyStudentLogin');
+$routes->get('/level-list','StudentController::loadLevelListPage');
 $routes->get('/orders','StudentController::loadOrderPage',['filter' => 'studentAuthGuard']);
 $routes->get('/profile','StudentController::loadProfilePage',['filter' => 'studentAuthGuard']);
 $routes->get('/logout','StudentController::logoutStudent');
@@ -198,6 +200,7 @@ $routes->get('/get-cart-items','StudentController::getCartItems');
 $routes->post('/checkout-cart-items','StudentController::checkoutCartItem');
 $routes->get('/dashboard','StudentController::loadDashboardPage',['filter' => 'studentAuthGuard']);
 $routes->get('/dashboard/(:any)','StudentController::loadDashboardPage/$1',['filter' => 'studentAuthGuard']);
+$routes->get('/buy-courses','StudentController::loadBuyCoursesPage',['filter' => 'studentAuthGuard']);
 
 $routes->get('/payment-status','StudentController::getPaymentStatus',['filter' => 'studentAuthGuard']);
 $routes->get('/payment/free-payable-product','StudentController::addFreeProductByItsPromoCode',['filter' => 'studentAuthGuard']);
@@ -246,6 +249,7 @@ $routes->get('/cart-payment','StudentController::loadPaymentpage');
 $routes->post('/cart-payment/manual','StudentController::addManualPayment');
 
 $routes->get('/order-history','StudentController::loadOrderHistoryPage');
+$routes->get('/cart','StudentController::loadCartPage',['filter' => 'studentAuthGuard']);
 
 $routes->get('/checkout-phone-pe-cart-items','StudentController::checkoutGatewayRedirect');
 $routes->post('/success-payment','StudentController::phonepePaymentSuccess');

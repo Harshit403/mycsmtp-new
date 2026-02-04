@@ -20,8 +20,8 @@ section {
 }
 
 .card {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    min-height: auto;
 }
 
 footer {

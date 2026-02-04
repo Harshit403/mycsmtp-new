@@ -3,79 +3,596 @@
     Privacy Policy
 <?= $this->endSection() ?>
 <?= $this->section('content') ?>
-<section class="container">
-    <div class="row py-3">
-        <div class="col-md-12 h4 text-center">
-     
+
+<main role="main">
+    <!-- Hero Section -->
+    <section class="position-relative overflow-hidden">
+        <div class="py-5" style="background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 50%, #4a2483 100%);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center text-white py-4">
+                        <div class="mb-3">
+                            <i class="fas fa-user-shield fa-3x"></i>
+                        </div>
+                        <h1 class="display-4 fw-bold mb-3">Privacy Policy</h1>
+                        <p class="lead mb-0">Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row pb-3" style="min-height:50vh !important">
-        <div class="col-md-12 text-center">
-       <h2> Privacy Policy</h2>
-We, MY CS MTP, an organisation incorporated in India, having its registered office at Noida, Uttar Pradesh, India, the creator of this Privacy Policy ensure our firm’s commitment to your privacy vis-à-vis the protection of your priceless information. In order to endow you with our uninterrupted use of services or for legal compliance as per Indian government, we may collect and, in some circumstances, disclose information about you. To enhance better protection of your privacy we provide this notice explaining our information practices and the choices you can make about the way your information is collected and used. All visitors to www.mycamtp.com (“website”) are advised to read and understand our Privacy Policy carefully, as by accessing the website you agree to be bound by the terms and conditions of the Privacy Policy and consent to the collection, storage and use of information relating to you as provided herein. If you do not agree with the terms and conditions of our Privacy Policy, including in relation to the manner of collection or use of your information, please do not use or access the Site. If you have any questions or concerns regarding this privacy policy, you should contact our Customer Support Desk at support@mycamtp.com
-ANY CAPITALIZED WORDS USED HENCEFORTH SHALL HAVE THE MEANING ACCORDED TO THEM UNDER THIS AGREEMENT. FURTHER, ALL HEADING USED HEREIN ARE ONLY FOR THE PURPOSE OF ARRANGING THE VARIOUS PROVISIONS OF THE AGREEMENT IN ANY MANNER. NEITHER THE USER NOR THE CREATERS OF THIS PRIVACY POLICY MAY USE THE HEADING TO INTERPRET THE PROVISIONS CONTAINED WITHIN IT IN ANY MANNER.
-</h4>DEFINITIONS</h4>
-“We”, “Our”, and “Us” shall mean and refer to the creators of this privacy policy. “You”, “Your”, “Yourself” and “User/Subscriber/Student” shall mean and refer to natural and legal individuals who use the Website. “Website” shall mean and refer to www.mycsmtp.com created by MY CS MTP. “Personal Information” shall mean and refer to any personally identifiable information that we may collect from you. “Third Parties” refer to any Website, Website, company or individual apart from the User and the creator of the Website.
-<h4>OVERVIEW</h4>
-We commit to respecting privacy to your online personal data. We further recognize your need for appropriate protection and management of any personally identifiable information ("Personal Information") you share with us. Information that is considered personal about you by us includes, but is not limited to, your name, address, email address, phone number or other contact information.
-In order to purchase any product/service from this Website, you are required to provide the following information which includes, but is not limited to:
-• Name<br>
-• DOB<br>
-• E-mail<br>
-• Phone No.<br>
-• Class, Subject, Attempt Details <br>
-• Banking Details<br>
-• Password<br>
-• Postal Address<br>
-• Student Registration No in ICSI<br>
-This privacy policy also applies to data we collect from users who are not registered as members of this site, including, but not limited to, browsing behaviour, pages viewed etc. The Website also requests for permissions while linking your MY CS MTP Account with your Social account, the information shall be collected directly from your social media account in the event you have granted the permission to link such accounts.
-<h4>NOTIFICATION OF MODIFICATIONS AND CHANGES TO THE T&C AND PRIVACY POLICY</h4>
-We reserve the right to change the Terms and Privacy Policy from time to time as we deem fit, without any intimation to you, and your continued use of the site will signify your acceptance of any amendment to these terms. You are therefore advised to re-read the Terms of Service on a regular basis. Should it be that you do not accept any of the modifications or amendments to the Terms, you may terminate your use of this Website immediately.
-<h4>INFORMATION WE COLLECT</h4>
-Our Platform's online requisition form requires users to give us contact information (like your name, address, telephone number and email address), and demographic information (like your zip code/pin code). As a User, you are requested to provide a valid E-mail address & Phone Number at the time of registration. After that you will be provided a username or alias that represents your identity on our Website. This information is compiled and analysed on an aggregated basis. This information may include the URL that you just came from (whether this URL is on the Site or not), which URL you next go to (whether this URL is on the Site or not), your computer browser information, your IP address, and other information associated with your interaction with the Site. We also collect and store personal information provided by you from time to time on the Site. We only collect and use such information from you that we consider necessary for achieving a seamless, efficient and safe experience, customized to your needs including: To enable the provision of services opted for by you. To communicate necessary account and product/service/subscription related information from time to time. To allow you to receive quality customer care services. To undertake necessary fraud and money laundering prevention checks, and comply with the highest security standards. To comply with applicable laws, rules and regulations. To provide you with information and offers on products and services, on updates, on promotions, on related, affiliated or associated service providers and partners, that we believe would be of interest to you. Where any service requested by you involves a third party, such information as is reasonably necessary by the Company to carry out your service request may be shared with such third party. We also do use your contact information to send you offers based on your interests and prior activity. The Company may also use contact information internally to direct its efforts for product/service improvement, to contact you as a survey respondent, to notify you if you win any contest; and to send you promotional materials from its contest sponsors or advertisers. Further, you may from time to time choose to provide payment related financial information (Net banking, credit card, debit card, bank account details, billing address etc.) on the Site. We are committed to keeping all such sensitive data/information safe at all times and ensure that such data/information is only transacted over secure Site of approved payment gateways which are digitally encrypted, and provide the highest possible degree of care available under the technology presently in use. The Company will not use your financial information for any purpose other than to complete a transaction with you. To the extent possible, we provide you the option of not divulging any specific information that you wish for us not to collect, store or use. You may also choose not to use a particular service or feature on the Site, and opt out of any non-essential communications from the Company. Further, transacting over the internet has inherent risks which can only be avoided by you following security practices yourself, such as not revealing account/login related information to any other person and informing our customer care team about any suspicious activity or where your account has/may have been compromised.
-<h4>HOW INFORMATION IS COLLECTED</h4>
-Before or at the time of collecting personal information, we will identify the purposes for which information is being collected. We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law. We will only retain personal information as long as necessary for the fulfilment of those purposes. To undertake necessary fraud and money laundering prevention checks, and comply with the highest security standards. We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned. Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date.
-<h4>COOKIES</h4>
-We use data collection devices such as "cookies" on certain pages of our Websites. "Cookies" are small files sited on your hard drive that assist us in providing customized services. We also offer certain features that are only available through the use of a "cookie". Cookies can also help us provide information, which is targeted to your interests. Cookies may be used to identify logged in or registered users. Third party vendors including google.com (“Google”) may use cookies to serve ads based on your visits to this Website. You may visit the Website of the third party and choose to opt out of the use of cookies for interest-based advertising, if the third party offers such an option. You may choose to opt-out of the DoubleClick cookie that Google and its partners use for interest-based advertising by visiting Ads Settings. (Alternatively, you can direct users to opt out of a third-party vendor's use of cookies for interest based advertising by visiting aboutads.info.) The Website also has enabled the Google Analytics Advertising, which allows Google to collect data about users on our Website, in addition to Google advertising cookies and anonymous identifiers. You may choose to opt out of this by downloading and installing the Google Analytics opt-out add-on here https://tools.google.com/dlpage/gaoptout/
-<h4>EXTERNAL LINKS ON WEBSITE</h4>
-The Website may include hyperlinks to other web sites or content or resources. We have no control over any Websites or resources, which are provided by companies or persons other than us. You acknowledge and agree that we are not responsible for the availability of any such external sites or resources, and does not endorse any advertising, products or other materials on or available from such Websites or resources. You acknowledge and agree that We are not liable for any loss or damage which may be incurred by you as a result of the availability of those external sites or resources, or as a result of any reliance placed by you on the completeness, accuracy or existence of any advertising, products or other materials on, or available from, such Websites or resources. These third-party service providers and Third-Party Sites may have their own privacy policies governing the storage and retention of your personal information that you may be subject to. We recommend that when you enter a Third-Party Site, you review the Third Party Site’s privacy policy as it relates to safeguarding your personal information. We use third-party advertising companies to serve ads when you visit the Website.
-<h4>OUR USE OF YOUR INFORMATION</h4>
-Your contact information is also used to contact you when necessary. We use your IP address to help diagnose problems with our server, and to administer our Website. Your IP address is also used to help identify you and to gather broad demographic information. Finally, we may use your IP address to help protect our partners and ourselves from fraud. We will continue to enhance our security procedures as new technology becomes available. We will transfer information about you if we are acquired by or merged with another company. In this event, we will notify you by email or by putting a prominent notice on the site before information about you is transferred and becomes subject to a different privacy policy. We may release your personal information to a third-party in order to comply with a Court Order or other similar legal procedure, or when we believe in good faith that such disclosure is necessary to comply with the law; prevent imminent physical harm or financial loss; or investigate or take action regarding illegal activities, suspected fraud, or violations of Our Terms of Use. We may disclose personally identifiable information to parties in compliance with our Copyright Policy as mentioned in the Terms of Use as we in our sole discretion believe necessary or appropriate in connection with an investigation of fraud, intellectual property infringement, piracy, or other unlawful activity. In such events, we may disclose name, address, country, phone number, email address and company name.
-<h4>CONFIDENTIALITY</h4>
-You further acknowledge that the Website may contain information which is designated confidential by us and that you shall not disclose such information without our prior written consent. Your information is regarded as confidential and therefore will not be divulged to any third party, unless if legally required to do so to the appropriate authorities. We will not sell, share, or rent your personal information to any third party or use your e-mail address for unsolicited mail. Any emails sent by us will only be in connection with the provision of agreed services and products.
-<h4>OUR DISCLOSURE OF YOUR INFORMATION</h4>
-Due to the existing regulatory environment, we cannot ensure that all of your private communications and other personally identifiable information will never be disclosed in ways not otherwise described in this Privacy Policy. By way of example (without limiting and foregoing), we may be forced to disclose information to the government, law enforcement agencies or third parties. Under certain circumstances, third parties may unlawfully intercept or access transmissions or private communications, or members may abuse or misuse your information that they collect from our Website. Therefore, although we use industry standard practices to protect your privacy, we do not promise, and you should not expect, that your personally identifiable information or private communications would always remain private. As a matter of policy, we do not sell or rent any personally identifiable information about you to any third party. However, the following describes some of the ways that your personally identifiable information may be disclosed: External Service Providers: There may be a number of services offered by external service providers that help you use our Websites. If you choose to use these optional services, and in the course of doing so, disclose information to the external service providers, and/or grant them permission to collect information about you, then their use of your information is governed by their private policy. Other Corporate Entities: We share much of our data, including personally identifiable information about you, with our parent and/or subsidiaries that are committed to serving your online needs and related services, throughout the world. Such data will be shared for the sole purpose of enhancing your browsing experience and providing our products/services to you. To the extent that these entities have access to your information, they will treat it at least as protectively as they treat information they obtain from their other members. It is possible that we and/or its subsidiaries, or any combination of such, could merge with or be acquired by another business entity. Should such a combination occur, you should expect that we would share some or all of your information in order to continue to provide the service. You will receive notice of such event (to the extent that it occurs). Law and Order: We cooperate with law enforcement inquiries, as well as other third parties to enforce laws, such as: intellectual property rights, fraud and other rights. We can (and you authorize us to) disclose any information about you to law enforcement and other government officials as we, in our sole discretion, believe necessary or appropriate, in connection with an investigation of fraud, intellectual property infringements, or other activity that is illegal or may expose us or you to legal liability.
-<h4>ACCESSING AND REVIEWING INFORMATION</h4>
-Following registration, you can review and change the information you submitted each time except your display name. If you change any information we may keep track of your old information. You can change your registration information such as: name, address, city, state, zip code, country, phone number, and profile details etc. We will retain in our files information you have requested to remove for certain circumstances, such as to resolve disputes, troubleshoot problems and enforce our terms and conditions. Further, such prior information is never completely removed from our databases due to technical and legal constraints, including stored 'back up' systems. Therefore, you should not expect that all of your personally identifiable information will be completely removed from our databases in response to your requests.
-<h4>CONTROL OF YOUR PASSWORD</h4>
-When you sign up to become a Registered User, at the time of signup you will also be asked to choose a password. You are entirely responsible for maintaining the confidentiality of your password. It is important that you protect it against unauthorized access of your account and information by choosing your password carefully, and keeping your password and computer secure by signing out after using our services. You accepting our privacy policy you are agreeing not to use the account, username, email address or password of another User at any time or to disclose your password to any third party. If you choose to share this information with third parties to provide you additional services, you are responsible for all actions taken with your login information and password and therefore should review each third party's privacy policy. You are responsible for all actions taken with your login information and password, including fees. If you lose control of your password, you may lose substantial control over your personally identifiable information and may be subject to legally binding actions taken on your behalf. Therefore, if your password has been compromised for any reason, you should immediately change your password. You agree to notify us immediately if you suspect any consistent unauthorized use of your account or access to your password even after changing it.
-<h4>PUBLIC FORUMS</h4>
-When you use certain features on our website like the discussion forums, FAQ, Blogs and you post or share your personal information such as comments, messages, files, photos, will be available to all users, and will be in the public domain. All such sharing of information is done at your own risk. Please keep in mind that if you disclose personal information in your profile or when posting on our forums this information may become publicly available.
-<h4>OTHER INFORMATION COLLECTORS</h4>
-Except as otherwise expressly included in this Privacy Policy, this document only addresses the use and disclosure of information we collect from you. To the extent that you disclose your information to other parties, whether they are on our Websites or on other sites throughout the Internet, different rules may apply to their use or disclosure of the information you disclose to them. To the extent that we use third party advertisers, they adhere to their own privacy policies. Since we do not control the privacy policies of the third parties, you are subject to ask questions before you disclose your personal information to others.
-<h4>SECURITY</h4>
-We treat data as an asset that must be protected against loss and unauthorized access. We employ many different security techniques to protect such data from unauthorized access by users/members inside and outside the company. We do not recommend transfer of sensitive information (such as credit card number) and bank account details via the Site to other Users. Users are recommended to do so offline, on the phone or via personal emails. We follow generally accepted industry standards to protect the personal information submitted to us, both during transmission and once we receive it. However, "perfect security" does not exist on the Internet. You therefore agree that any security breaches beyond the control of our standard security procedures are at your sole risk and discretion.
-<h4>DISCLAIMER</h4>
-We cannot ensure that all of your private communications and other personal information (including sensitive information like credit card information and bank account number) will never be disclosed in ways not otherwise described in this Privacy Policy. Therefore, although we are committed to protecting your privacy, we do not promise, and you should not expect, that your personal information will always remain private. As a user of the Site, you understand and agree that you assume all responsibility and risk for your use of the Site, the internet generally, and the documents you post or access and for your conduct on and off the Site.
-<h4>QUESTIONS AND SUGGESTIONS</h4>
-If you have any questions or concerns regarding this privacy policy, you should contact us by sending an e-mail to mycsmtp@gmail.com
-<hr>
-<h2>Refund and Cancellation Policy</h2>
+    </section>
 
-<h4>For Digital Products(Test Series):</h4>
-As our website offers digital products available for immediate download or scheduled date download, all sales of digital products are final and no refunds are provided under any circumstances. Once payment transaction is completed and download access links are provided, digital product purchases cannot be canceled or refunded.
-
-<h4>For Services(Mentorship Program):</h4>
-
-No refunds will be provided for any services purchased through our website under any circumstances. This includes dissatisfaction with services rendered. All services sales are final. We encourage customers to get in touch regarding any concerns with an order before services are rendered, but no guarantees are made.
-
-<h4>For Custom Orders:</h4>
-Custom and personalized orders cannot be canceled or refunded after order confirmation due to the unique nature of the products. Please review and confirm all details of your custom order carefully prior to final confirmation and payment.
-
-Contact us at support@mycsmtp.com with any other questions about our no refund policy. By making any purchase through our website, you accept this policy. We appreciate your understanding that due to the nature of our products and services, no refunds are provided whatsoever. All sales are final.
-
-<hr>
+    <!-- Quick Navigation -->
+    <section class="py-3 bg-light border-bottom sticky-top" style="z-index: 100;">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="#overview" class="btn btn-sm btn-outline-primary">Overview</a>
+                <a href="#information" class="btn btn-sm btn-outline-primary">Information</a>
+                <a href="#cookies" class="btn btn-sm btn-outline-primary">Cookies</a>
+                <a href="#security" class="btn btn-sm btn-outline-primary">Security</a>
+                <a href="#disclosure" class="btn btn-sm btn-outline-primary">Disclosure</a>
+                <a href="#refund" class="btn btn-sm btn-outline-primary">Refund Policy</a>
+            </div>
         </div>
-    <div>
-</section>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Introduction Card -->
+                    <div class="card border-0 shadow-lg mb-5" style="border-radius: 15px;">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="flex-shrink-0">
+                                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%); border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-building text-white fs-4"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h3 class="h4 fw-bold mb-2" style="color: #6f42c1;">About MY CS MTP</h3>
+                                    <p class="text-muted mb-0">We, MY CS MTP, an organisation incorporated in India, having its registered office at Dasna, Ghaziabad, Uttar Pradesh, India, the creator of this Privacy Policy ensure our firm's commitment to your privacy vis-à-vis the protection of your priceless information.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info" role="alert">
+                                <i class="fas fa-envelope me-2"></i>
+                                <strong>Contact Us:</strong> If you have any questions or concerns regarding this privacy policy, please contact our Customer Support Desk at <strong>support@mycsmtp.com</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Definitions -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-book text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #1ab79c;">Definitions</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">"We", "Our", "Us"</h5>
+                                            <p class="small text-muted mb-0">Shall mean and refer to the creators of this privacy policy (MY CS MTP)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">"You", "Your", "User"</h5>
+                                            <p class="small text-muted mb-0">Shall mean and refer to natural and legal individuals who use the Website</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">"Website"</h5>
+                                            <p class="small text-muted mb-0">Shall mean and refer to www.mycsmtp.com created by MY CS MTP</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-3 bg-light rounded-3">
+                                            <h5 class="h6 fw-bold mb-2" style="color: #6f42c1;">"Personal Information"</h5>
+                                            <p class="small text-muted mb-0">Shall mean and refer to any personally identifiable information that we may collect from you</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Overview -->
+                    <div id="overview" class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-eye text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #6f42c1;">Overview</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>We commit to respecting privacy to your online personal data. We further recognize your need for appropriate protection and management of any personally identifiable information ("Personal Information") you share with us.</p>
+                                
+                                <p class="fw-bold">Information that is considered personal about you by us includes, but is not limited to:</p>
+                                
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Name</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Date of Birth (DOB)</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>E-mail Address</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Phone Number</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Class, Subject, Attempt Details</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Postal Address</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Student Registration No in ICSI</li>
+                                    <li class="list-group-item"><i class="fas fa-check text-success me-2"></i>Password</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification of Changes -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #fd7e14 0%, #e56b0a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-bell text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #fd7e14;">Notification of Modifications</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>We reserve the right to change the Terms and Privacy Policy from time to time as we deem fit, without any intimation to you, and your continued use of the site will signify your acceptance of any amendment to these terms.</p>
+                                
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    You are advised to re-read the Terms of Service on a regular basis. Should it be that you do not accept any of the modifications or amendments to the Terms, you may terminate your use of this Website immediately.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Information We Collect -->
+                    <div id="information" class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #20c997 0%, #16a085 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-database text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #20c997;">Information We Collect</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>Our Platform's online requisition form requires users to give us contact information and demographic information. We collect and use such information from you that we consider necessary for achieving a seamless, efficient and safe experience, customized to your needs.</p>
+                                
+                                <h5 class="fw-bold mb-3 mt-4">We collect information for the following purposes:</h5>
+                                
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start p-3 bg-light rounded-3 h-100">
+                                            <i class="fas fa-cog text-success me-3 mt-1"></i>
+                                            <span>To enable the provision of services opted for by you</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start p-3 bg-light rounded-3 h-100">
+                                            <i class="fas fa-comments text-success me-3 mt-1"></i>
+                                            <span>To communicate necessary account and service related information</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start p-3 bg-light rounded-3 h-100">
+                                            <i class="fas fa-headset text-success me-3 mt-1"></i>
+                                            <span>To allow you to receive quality customer care services</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start p-3 bg-light rounded-3 h-100">
+                                            <i class="fas fa-shield-alt text-success me-3 mt-1"></i>
+                                            <span>To undertake necessary fraud prevention and security checks</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start p-3 bg-light rounded-3 h-100">
+                                            <i class="fas fa-balance-scale text-success me-3 mt-1"></i>
+                                            <span>To comply with applicable laws, rules and regulations</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start p-3 bg-light rounded-3 h-100">
+                                            <i class="fas fa-tag text-success me-3 mt-1"></i>
+                                            <span>To provide you with information on products and offers</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How Information is Collected -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-question-circle text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #0dcaf0;">How Information is Collected</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3 d-flex align-items-start">
+                                        <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                        <span>Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</span>
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-start">
+                                        <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                        <span>We will collect and use personal information solely with the objective of fulfilling those purposes specified by us.</span>
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-start">
+                                        <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                        <span>We will only retain personal information as long as necessary for the fulfilment of those purposes.</span>
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-start">
+                                        <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                        <span>We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</span>
+                                    </li>
+                                    <li class="d-flex align-items-start">
+                                        <i class="fas fa-check-circle text-info me-3 mt-1"></i>
+                                        <span>Personal data should be relevant to the purposes for which it is to be used, and should be accurate, complete, and up-to-date.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cookies -->
+                    <div id="cookies" class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-cookie-bite text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #ffc107;">Cookies</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>We use data collection devices such as "cookies" on certain pages of our Websites. "Cookies" are small files sited on your hard drive that assist us in providing customized services.</p>
+                                
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Third Party Cookies:</strong> Third party vendors including Google may use cookies to serve ads based on your visits to this Website. You may visit the Website of the third party and choose to opt out of the use of cookies for interest-based advertising.
+                                </div>
+                                
+                                <p class="mb-0">You may choose to opt-out of the DoubleClick cookie that Google and its partners use for interest-based advertising by visiting <strong>Ads Settings</strong>. You may also choose to opt out by visiting <strong>aboutads.info</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- External Links -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-external-link-alt text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0 text-danger">External Links on Website</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>The Website may include hyperlinks to other web sites or content or resources. We have no control over any Websites or resources, which are provided by companies or persons other than us.</p>
+                                
+                                <div class="alert alert-danger" role="alert">
+                                    <i class="fas fa-exclamation-circle me-2"></i>
+                                    You acknowledge and agree that We are not liable for any loss or damage which may be incurred by you as a result of the availability of those external sites or resources, or as a result of any reliance placed by you on the completeness, accuracy or existence of any advertising, products or other materials on, or available from, such Websites or resources.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Our Use of Information -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-cogs text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #6f42c1;">Our Use of Your Information</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>Your contact information is also used to contact you when necessary. We use your IP address to help diagnose problems with our server, and to administer our Website.</p>
+                                
+                                <p>We may release your personal information to a third-party in order to comply with a Court Order or other similar legal procedure, or when we believe in good faith that such disclosure is necessary to:</p>
+                                
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fas fa-gavel text-danger me-2"></i>Comply with the law</li>
+                                    <li class="list-group-item"><i class="fas fa-shield-alt text-danger me-2"></i>Prevent imminent physical harm or financial loss</li>
+                                    <li class="list-group-item"><i class="fas fa-search text-danger me-2"></i>Investigate or take action regarding illegal activities</li>
+                                    <li class="list-group-item"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Suspected fraud or violations of Terms of Use</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Confidentiality -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-user-lock text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #1ab79c;">Confidentiality</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>You further acknowledge that the Website may contain information which is designated confidential by us and that you shall not disclose such information without our prior written consent.</p>
+                                
+                                <div class="alert alert-success" role="alert">
+                                    <i class="fas fa-lock me-2"></i>
+                                    Your information is regarded as confidential and therefore will not be divulged to any third party, unless legally required to do so to the appropriate authorities. We will not sell, share, or rent your personal information to any third party or use your e-mail address for unsolicited mail.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Disclosure Section -->
+                    <div id="disclosure" class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #fd7e14 0%, #e56b0a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-share-alt text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #fd7e14;">Our Disclosure of Your Information</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>Due to the existing regulatory environment, we cannot ensure that all of your private communications and other personally identifiable information will never be disclosed in ways not otherwise described in this Privacy Policy.</p>
+                                
+                                <p class="fw-bold">As a matter of policy, we do not sell or rent any personally identifiable information about you to any third party.</p>
+                                
+                                <p>However, your personally identifiable information may be disclosed in the following ways:</p>
+                                
+                                <div class="row g-3 mt-2">
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded-3 h-100">
+                                            <h6 class="fw-bold mb-2" style="color: #fd7e14;">External Service Providers</h6>
+                                            <p class="small text-muted mb-0">If you choose to use optional services, their use of your information is governed by their privacy policy.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="p-3 border rounded-3 h-100">
+                                            <h6 class="fw-bold mb-2" style="color: #fd7e14;">Other Corporate Entities</h6>
+                                            <p class="small text-muted mb-0">We share data with our parent and/or subsidiaries committed to serving your online needs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Control of Password -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-key text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0 text-danger">Control of Your Password</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>When you sign up to become a Registered User, you will be asked to choose a password. You are entirely responsible for maintaining the confidentiality of your password.</p>
+                                
+                                <div class="alert alert-danger" role="alert">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    If you lose control of your password, you may lose substantial control over your personally identifiable information and may be subject to legally binding actions taken on your behalf. Therefore, if your password has been compromised for any reason, you should immediately change your password.
+                                </div>
+                                
+                                <p class="mb-0">You agree to notify us immediately if you suspect any consistent unauthorized use of your account or access to your password even after changing it.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security -->
+                    <div id="security" class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #20c997 0%, #16a085 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-shield-alt text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #20c997;">Security</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>We treat data as an asset that must be protected against loss and unauthorized access. We employ many different security techniques to protect such data from unauthorized access by users/members inside and outside the company.</p>
+                                
+                                <div class="alert alert-info" role="alert">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    We do not recommend transfer of sensitive information (such as credit card number) and bank account details via the Site to other Users. Users are recommended to do so offline, on the phone or via personal emails.
+                                </div>
+                                
+                                <p>We follow generally accepted industry standards to protect the personal information submitted to us, both during transmission and once we receive it. However, "perfect security" does not exist on the Internet. You therefore agree that any security breaches beyond the control of our standard security procedures are at your sole risk and discretion.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Disclaimer -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #6c757d 0%, #495057 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-exclamation-circle text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0 text-secondary">Disclaimer</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <p>We cannot ensure that all of your private communications and other personal information (including sensitive information like credit card information and bank account number) will never be disclosed in ways not otherwise described in this Privacy Policy.</p>
+                                
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Although we are committed to protecting your privacy, we do not promise, and you should not expect, that your personal information will always remain private. As a user of the Site, you understand and agree that you assume all responsibility and risk for your use of the Site.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Questions -->
+                    <div class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-question-circle text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0" style="color: #0dcaf0;">Questions and Suggestions</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" style="border-radius: 15px;">
+                            <div class="card-body p-4 text-center">
+                                <p class="mb-3">If you have any questions or concerns regarding this privacy policy, you should contact us:</p>
+                                <a href="mailto:support@mycsmtp.com" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%); border: none;">
+                                    <i class="fas fa-envelope me-2"></i>support@mycsmtp.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Refund and Cancellation Policy -->
+                    <div id="refund" class="mb-5">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="icon-box me-3" style="width: 50px; height: 50px; background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-undo text-white fs-4"></i>
+                            </div>
+                            <h2 class="h3 fw-bold mb-0 text-danger">Refund and Cancellation Policy</h2>
+                        </div>
+                        
+                        <div class="card border-0 shadow-lg" style="border-radius: 15px; border-left: 5px solid #dc3545 !important;">
+                            <div class="card-body p-4 p-md-5">
+                                
+                                <div class="mb-4">
+                                    <h4 class="h5 fw-bold mb-3" style="color: #dc3545;">
+                                        <i class="fas fa-file-alt me-2"></i>For Digital Products (Test Series)
+                                    </h4>
+                                    <div class="alert alert-warning" role="alert">
+                                        <p class="mb-0">As our website offers digital products available for immediate download or scheduled date download, <strong>all sales of digital products are final and no refunds are provided under any circumstances.</strong> Once payment transaction is completed and download access links are provided, digital product purchases cannot be canceled or refunded.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h4 class="h5 fw-bold mb-3" style="color: #dc3545;">
+                                        <i class="fas fa-chalkboard-teacher me-2"></i>For Services (Mentorship Program)
+                                    </h4>
+                                    <div class="alert alert-warning" role="alert">
+                                        <p class="mb-0">No refunds will be provided for any services purchased through our website under any circumstances. This includes dissatisfaction with services rendered. All services sales are final.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h4 class="h5 fw-bold mb-3" style="color: #dc3545;">
+                                        <i class="fas fa-paint-brush me-2"></i>For Custom Orders
+                                    </h4>
+                                    <div class="alert alert-warning" role="alert">
+                                        <p class="mb-0">Custom and personalized orders cannot be canceled or refunded after order confirmation due to the unique nature of the products. Please review and confirm all details of your custom order carefully prior to final confirmation and payment.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-danger" role="alert">
+                                    <i class="fas fa-exclamation-circle me-2"></i>
+                                    <strong>Important:</strong> Contact us at <strong>support@mycsmtp.com</strong> with any other questions about our no refund policy. By making any purchase through our website, you accept this policy. We appreciate your understanding that due to the nature of our products and services, no refunds are provided whatsoever. All sales are final.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    /* Smooth Scroll */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Icon Box Animation */
+    .icon-box {
+        transition: all 0.3s ease;
+    }
+    
+    .icon-box:hover {
+        transform: scale(1.1) rotate(5deg);
+    }
+    
+    /* Card Hover Effects */
+    .card {
+        transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* List Group Items */
+    .list-group-item {
+        border-left: none;
+        border-right: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .list-group-item:first-child {
+        border-top: none;
+    }
+    
+    .list-group-item:last-child {
+        border-bottom: none;
+    }
+    
+    /* Alert Styles */
+    .alert {
+        border-radius: 10px;
+    }
+    
+    /* Navigation Buttons */
+    .btn-outline-primary {
+        color: #6f42c1;
+        border-color: #6f42c1;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-outline-primary:hover {
+        background-color: #6f42c1;
+        border-color: #6f42c1;
+        color: white;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .display-4 {
+            font-size: 2rem;
+        }
+        
+        .sticky-top {
+            position: relative !important;
+        }
+        
+        .card-body {
+            padding: 1.5rem !important;
+        }
+    }
+    
+    /* Focus Styles */
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid #6f42c1;
+        outline-offset: 2px;
+    }
+</style>
+
 <?= $this->endSection() ?>

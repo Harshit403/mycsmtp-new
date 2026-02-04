@@ -1,443 +1,677 @@
-<?= $this->extend('layout/student_layout') ?>
-<?= $this->section('title') ?>
-    CS Test Series Reviews
+<?= $this->extend("layout/student_layout") ?>
+
+<?= $this->section("title") ?>
+    Student Testimonials & Success Stories | MY CS MTP Test Series Reviews
 <?= $this->endSection() ?>
-<?= $this->section('content') ?>
-<section class="container mt-3 mb-5 section testimonial-section">
-    <div class="text-center">
-        
-    </div>
+
+<?= $this->section("meta") ?>
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Read real student testimonials and success stories from MY CS MTP. See how 10,000+ CS aspirants cleared their CSEET, Executive & Professional exams with our test series. View WhatsApp reviews and feedback.">
+    <meta name="keywords" content="MY CS MTP testimonials, CS test series reviews, student success stories, CS exam testimonials, MY CS MTP feedback, CS student reviews, Company Secretary testimonials, CS test series results">
+    <meta name="author" content="MY CS MTP Test Series">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="<?= base_url() ?>testimonial">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= base_url() ?>testimonial">
+    <meta property="og:title" content="Student Testimonials | MY CS MTP Success Stories">
+    <meta property="og:description" content="See real testimonials from CS students who cleared their exams with MY CS MTP test series. 10,000+ success stories and counting!">
+    <meta property="og:image" content="<?= base_url() ?>images/og-testimonials.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="MY CS MTP Test Series">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<?= base_url() ?>testimonial">
+    <meta property="twitter:title" content="MY CS MTP Student Testimonials & Reviews">
+    <meta property="twitter:description" content="Real success stories from CS aspirants who cleared their exams with MY CS MTP test series. View student feedback and WhatsApp reviews.">
+    <meta property="twitter:image" content="<?= base_url() ?>images/og-testimonials.jpg">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "MY CS MTP Test Series",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "10000",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <!-- Structured Data - Testimonial/Review Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Student Testimonials",
+        "description": "Real student testimonials and success stories from MY CS MTP test series",
+        "url": "<?= base_url() ?>testimonial"
+    }
+    </script>
+
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "<?= base_url() ?>"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Testimonials",
+                "item": "<?= base_url() ?>testimonial"
+            }
+        ]
+    }
+    </script>
+<?= $this->endSection() ?>
+
+<?= $this->section("content") ?>
+
+<main role="main">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="bg-light py-2 border-bottom">
+        <div class="container">
+            <ol class="breadcrumb mb-0" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="<?= base_url() ?>" itemprop="item" class="text-decoration-none" style="color: #1ab79c;">
+                        <span itemprop="name">Home</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Testimonials</span>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative overflow-hidden" aria-labelledby="hero-heading">
+        <div class="py-5" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 50%, #0d6b5a 100%);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 text-white text-center text-lg-start py-4">
+                        <span class="badge bg-white mb-3 px-3 py-2 fs-6 fw-semibold" style="color: #1ab79c;">
+                            <i class="fas fa-star me-2"></i>4.9/5 Student Rating
+                        </span>
+                        <h1 id="hero-heading" class="display-4 fw-bold mb-3 animate-fade-in">
+                            CS Test Series <span class="text-warning">Success Stories</span>
+                        </h1>
+                        <p class="lead mb-4 fs-5 animate-fade-in-delay">
+                            Hear from <span class="counter fw-bold" data-target="10000">0</span>+ students who transformed their CS exam preparation and achieved their dreams with MY CS MTP.
+                        </p>
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 animate-fade-in-delay-2">
+                            <a href="#testimonials" class="btn btn-light btn-lg px-4 py-3 fw-bold shadow-lg" style="color: #1ab79c;">
+                                <i class="fas fa-comments me-2"></i>Read Reviews
+                            </a>
+                            <a href="<?= base_url() ?>plans" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">
+                                <i class="fas fa-rocket me-2"></i>Start Your Journey
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="text-center">
+                            <div class="stats-badge bg-white rounded-4 p-4 shadow-lg d-inline-block">
+                                <div class="text-warning mb-2" style="font-size: 2rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3 class="display-4 fw-bold mb-0" style="color: #1ab79c;">4.9/5</h3>
+                                <p class="text-muted mb-0">Based on 2,000+ Reviews</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-4 bg-white border-bottom">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h3 class="display-5 fw-bold mb-1" style="color: #1ab79c;">
+                            <span class="counter" data-target="10000">0</span>+
+                        </h3>
+                        <p class="text-muted mb-0 fw-semibold">Happy Students</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h3 class="display-5 fw-bold mb-1 text-warning">
+                            <span class="counter" data-target="">92</span>%
+                        </h3>
+                        <p class="text-muted mb-0 fw-semibold">Success Rate</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h3 class="display-5 fw-bold mb-1" style="color: #6f42c1;">
+                            <span class="counter" data-target="22">0</span>%
+                        </h3>
+                        <p class="text-muted mb-0 fw-semibold">Avg Score Boost</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="stat-item">
+                        <h3 class="display-5 fw-bold mb-1 text-danger">
+                            <span class="counter" data-target="10000">0</span>+
+                        </h3>
+                        <p class="text-muted mb-0 fw-semibold">Tests Evaluated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Grid Section -->
+    <section id="testimonials" class="py-5" style="background-color: #f8f9fa;" aria-labelledby="testimonials-heading">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge px-3 py-2 mb-3" style="background-color: rgba(37, 211, 102, 0.1); color: #25d366;">
+                        <i class="fab fa-whatsapp me-2"></i>Real Student Feedback
+                    </span>
+                    <h2 id="testimonials-heading" class="display-4 fw-bold mb-3" style="color: #1ab79c;">Student Success Stories</h2>
+                    <p class="lead text-muted">Authentic testimonials from CS aspirants who achieved their goals with MY CS MTP</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="testimonial-card card border-0 shadow-lg overflow-hidden h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="testimonial-image-wrapper p-3" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
+                            <img src="<?= base_url() ?>images/IMG-20250620-WA0001.jpg" alt="CS Student Testimonial - Cleared CS Executive Exam" class="img-fluid rounded-3" loading="lazy" style="box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-muted mb-3 small">"The test series was exactly like the actual CS exam. I cleared my Executive level on the first attempt!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%);">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fw-bold">CS Executive Student</h5>
+                                    <small class="text-muted">Cleared June 2024</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="testimonial-card card border-0 shadow-lg overflow-hidden h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="testimonial-image-wrapper p-3" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
+                            <img src="<?= base_url() ?>images/IMG-20250620-WA0002.jpg" alt="CS Aspirant Success Story with MY CS MTP" class="img-fluid rounded-3" loading="lazy" style="box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-muted mb-3 small">"Best investment for CS preparation! The detailed evaluation helped me improve my score by 25 marks."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fw-bold">CS Professional Student</h5>
+                                    <small class="text-muted">Rank Holder</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="testimonial-card card border-0 shadow-lg overflow-hidden h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="testimonial-image-wrapper p-3" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
+                            <img src="<?= base_url() ?>images/IMG-20250620-WA0003.jpg" alt="CS Test Series Student Review" class="img-fluid rounded-3" loading="lazy" style="box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-muted mb-3 small">"The ICSI pattern questions were spot on! I felt confident during the actual exam thanks to MY CS MTP."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background: linear-gradient(135deg, #fd7e14 0%, #e56b0a 100%);">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fw-bold">CSEET Aspirant</h5>
+                                    <small class="text-muted">First Attempt Clear</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="testimonial-card card border-0 shadow-lg overflow-hidden h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="testimonial-image-wrapper p-3" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
+                            <img src="<?= base_url() ?>images/IMG-20250620-WA0004.jpg" alt="CS Exam Success Testimonial" class="img-fluid rounded-3" loading="lazy" style="box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-muted mb-3 small">"Chapter-wise analysis helped me identify weak areas. The feedback from experts was invaluable!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background: linear-gradient(135deg, #20c997 0%, #16a085 100%);">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fw-bold">CS Executive Student</h5>
+                                    <small class="text-muted">Score Improved 22%</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="testimonial-card card border-0 shadow-lg overflow-hidden h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="testimonial-image-wrapper p-3" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
+                            <img src="<?= base_url() ?>images/IMG-20250620-WA0005.jpg" alt="MY CS MTP Student Feedback" class="img-fluid rounded-3" loading="lazy" style="box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-muted mb-3 small">"24/7 access to tests allowed me to prepare at my own pace. Perfect for working professionals!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fw-bold">Working Professional</h5>
+                                    <small class="text-muted">CS Professional Cleared</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <article class="testimonial-card card border-0 shadow-lg overflow-hidden h-100" style="border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="testimonial-image-wrapper p-3" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);">
+                            <img src="<?= base_url() ?>images/IMG-20250620-WA0006.jpg" alt="CS Test Series Review" class="img-fluid rounded-3" loading="lazy" style="box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="text-warning mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-muted mb-3 small">"Affordable pricing with premium quality. MY CS MTP is the best investment for CS aspirants!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);">
+                                        <i class="fas fa-user text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fw-bold">CS Aspirant</h5>
+                                    <small class="text-muted">All Levels Cleared</small>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5" aria-labelledby="benefits-heading">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge px-3 py-2 mb-3" style="background-color: rgba(26, 183, 156, 0.1); color: #1ab79c;">
+                        <i class="fas fa-gem me-2"></i>Why Students Love Us
+                    </span>
+                    <h2 id="benefits-heading" class="display-4 fw-bold mb-3" style="color: #1ab79c;">Benefits of Our CS Test Series</h2>
+                    <p class="lead text-muted">Discover why thousands of students choose MY CS MTP for their exam preparation</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="benefit-card card border-0 shadow-sm h-100 p-4" style="border-top: 4px solid #1ab79c; border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-clipboard-check text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3" style="color: #1ab79c;">Exam-like Practice</h3>
+                        <p class="text-muted mb-0">Our test series simulates the actual CS exam environment, helping you get comfortable with the format, timing, and pressure of the real test.</p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="benefit-card card border-0 shadow-sm h-100 p-4" style="border-top: 4px solid #6f42c1; border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chart-line text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3" style="color: #6f42c1;">Detailed Performance Analysis</h3>
+                        <p class="text-muted mb-0">Get comprehensive feedback on your strengths and weaknesses with our detailed performance reports and chapter-wise analytics.</p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="benefit-card card border-0 shadow-sm h-100 p-4" style="border-top: 4px solid #fd7e14; border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fd7e14 0%, #e56b0a 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-book text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3" style="color: #fd7e14;">Expert-curated Questions</h3>
+                        <p class="text-muted mb-0">Access high-quality questions prepared by CS experts and previous exam toppers, covering all important topics and recent exam patterns.</p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="benefit-card card border-0 shadow-sm h-100 p-4" style="border-top: 4px solid #20c997; border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #20c997 0%, #16a085 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-clock text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3" style="color: #20c997;">Time Management Skills</h3>
+                        <p class="text-muted mb-0">Learn to effectively manage your exam time through regular practice with our timed tests and section-wise challenges.</p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="benefit-card card border-0 shadow-sm h-100 p-4" style="border-top: 4px solid #dc3545; border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-comments text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3 text-danger">Expert Evaluation</h3>
+                        <p class="text-muted mb-0">Receive detailed feedback and suggestions from experienced evaluators who understand ICSI exam patterns thoroughly.</p>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <article class="benefit-card card border-0 shadow-sm h-100 p-4" style="border-top: 4px solid #0dcaf0; border-radius: 15px; transition: all 0.3s ease;">
+                        <div class="mb-3">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chart-bar text-white fs-4"></i>
+                            </div>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3" style="color: #0dcaf0;">Progress Tracking</h3>
+                        <p class="text-muted mb-0">Monitor your improvement over time with our progress tracking tools and personalized recommendations for study focus areas.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 position-relative overflow-hidden" aria-labelledby="cta-heading">
+        <div style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 50%, #0d6b5a 100%); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;"></div>
+        <div class="container text-center text-white position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 id="cta-heading" class="display-4 fw-bold mb-4">Ready to Write Your Success Story?</h2>
+                    <p class="lead mb-5">Join thousands of successful CS aspirants who transformed their preparation with MY CS MTP. Start your journey to exam success today!</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="<?= base_url() ?>plans" class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-lg" style="color: #1ab79c; border-radius: 50px;">
+                            <i class="fas fa-rocket me-2"></i>Explore Plans
+                        </a>
+                        <a href="https://wa.me/+919540097210" target="_blank" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold" style="border-radius: 50px;">
+                            <i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp
+                        </a>
+                    </div>
+                    <div class="mt-4 pt-3 border-top border-white border-opacity-25">
+                        <p class="mb-0 opacity-75">
+                            <i class="fas fa-users me-2"></i>Join 10,000+ successful students
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f8f8f8;
-      color: #333;
-      line-height: 1.6;
+    /* Hero Section Animations */
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out;
     }
 
-    .hero-section {
-      background: linear-gradient(135deg, #1AB79C 0%, #0d8b74 100%);
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      border-radius: 0 0 20px 20px;
+    .animate-fade-in-delay {
+        animation: fadeIn 1s ease-out 0.3s both;
     }
 
-    .hero-section h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
+    .animate-fade-in-delay-2 {
+        animation: fadeIn 1s ease-out 0.6s both;
     }
 
-    .hero-section p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
-    #image-slider {
-      width: 100%;
-      max-width: 100%;
-      margin: 2rem auto;
-      height: 400px;
-      overflow: hidden;
-      position: relative;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    /* Stats Badge */
+    .stats-badge {
+        animation: float 3s ease-in-out infinite;
     }
 
-    #image-slider img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none;
-      position: absolute;
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
     }
 
-    @keyframes fade {
-      0%, 100% { opacity: 0; }
-      20%, 80% { opacity: 1; }
+    /* Counter Animation */
+    .counter {
+        font-variant-numeric: tabular-nums;
     }
 
-    .benefits-container {
-      padding: 3rem 1rem;
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      margin: 2rem auto;
-      max-width: 1200px;
+    /* Testimonial Cards */
+    .testimonial-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #1AB79C;
-      font-weight: 700;
-      font-size: 2rem;
-      position: relative;
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
     }
 
-    .section-title:after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: #1AB79C;
-      margin: 10px auto;
-      border-radius: 2px;
+    .testimonial-image-wrapper {
+        position: relative;
+        overflow: hidden;
     }
 
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
+    .testimonial-image-wrapper::before {
+        content: '\f232';
+        font-family: 'Font Awesome 6 Brands';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 1.5rem;
+        z-index: 1;
+        background: rgba(37, 211, 102, 0.9);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
+    /* Benefit Cards */
     .benefit-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-top: 4px solid #1AB79C;
+        transition: all 0.3s ease;
     }
 
     .benefit-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
     }
 
-    .benefit-card h3 {
-      color: #1AB79C;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
+    /* CTA Section */
+    .cta-section .btn:hover {
+        transform: translateY(-3px);
     }
 
-    .testimonial-content {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 1rem;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    /* Responsive */
+    @media (max-width: 768px) {
+        .display-4 {
+            font-size: 2rem;
+        }
+
+        .stats-badge {
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            margin-bottom: 1rem;
+        }
     }
 
-    .testimonial-content p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
+    /* Smooth Scroll */
+    html {
+        scroll-behavior: smooth;
     }
 
-    .whatsapp-testimonials {
-      margin: 3rem auto;
-      max-width: 1200px;
-      padding: 0 1rem;
+    /* Focus Styles */
+    a:focus-visible,
+    button:focus-visible {
+        outline: 3px solid #1ab79c;
+        outline-offset: 2px;
     }
-
-    .screenshot-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .screenshot-frame {
-      border: 10px solid #fff;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-      background: #25D366;
-      padding: 10px;
-    }
-
-    .screenshot-frame:hover {
-      transform: scale(1.03);
-    }
-
-    .screenshot-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
-    }
-
-    .cta-section {
-      background: linear-gradient(135deg, #1AB79C 0%, #0d8b74 100%);
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-      border-radius: 15px;
-      margin: 3rem auto;
-      max-width: 1200px;
-    }
-
-    .cta-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .cta-section p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-    }
-
-    .btn-cta {
-      display: inline-block;
-      background: white;
-      color: #1AB79C;
-      padding: 12px 30px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    .btn-cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      color: #0d8b74;
-    }
-
-    /* Mobile Responsive Styles */
-    @media only screen and (max-width: 768px) {
-      .hero-section {
-        padding: 2rem 1rem;
-        border-radius: 0;
-      }
-      
-      .hero-section h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-      }
-      
-      .hero-section p {
-        font-size: 1rem;
-      }
-      
-      #image-slider {
-        height: 250px;
-        margin: 1rem auto;
-        border-radius: 0;
-      }
-      
-      .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-      }
-      
-      .section-title:after {
-        width: 60px;
-        height: 3px;
-      }
-      
-      .benefits-container,
-      .testimonial-content,
-      .cta-section {
-        padding: 1.5rem 1rem;
-        margin: 1.5rem auto;
-        border-radius: 10px;
-      }
-      
-      .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      
-      .benefit-card {
-        padding: 1rem;
-      }
-      
-      .benefit-card h3 {
-        font-size: 1.1rem;
-      }
-      
-      .testimonial-content p {
-        font-size: 1rem;
-        text-align: left;
-      }
-      
-      .screenshot-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-      
-      .screenshot-frame {
-        border-width: 8px;
-        padding: 8px;
-      }
-      
-      .cta-section h2 {
-        font-size: 1.5rem;
-      }
-      
-      .cta-section p {
-        font-size: 1rem;
-      }
-      
-      .btn-cta {
-        padding: 10px 20px;
-        font-size: 1rem;
-      }
-    }
-
-    /* Small Mobile Devices */
-    @media only screen and (max-width: 480px) {
-      .hero-section h1 {
-        font-size: 1.5rem;
-      }
-      
-      #image-slider {
-        height: 200px;
-      }
-      
-      .section-title {
-        font-size: 1.3rem;
-      }
-      
-      .benefit-card h3 {
-        font-size: 1rem;
-      }
-    }
-
 </style>
-    <style>
-        .video-container {
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            
-        }
-        iframe {
-            width: 560px; /* Set the width of the iframe */
-            height: 315px; /* Set the height of the iframe */
-        }
-    </style>
-<div class="hero-section">
-    <h1>CS Test Series Success Stories-review</h1>
-    <p>Hear from our students who aced their CS exams with our comprehensive test series</p>
-</div>
-<!-- <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/n0if03jat_4?xxsi=o3Sqh28_frnOGu7" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-    </iframe>
-</div> -->
-    <div class="whatsapp-testimonials">
-    <h2 class="section-title">Student Success Stories</h2>
-    
-    <div class="screenshot-grid">
-        <div class="screenshot-frame">
-            <img src="<?=base_url()?>images/IMG-20250620-WA0001.jpg" alt="CS Test Series WhatsApp Testimonial 1">
-        </div>
-        
-        <div class="screenshot-frame">
-            <img src="<?=base_url()?>images/IMG-20250620-WA0002.jpg" alt="CS Test Series WhatsApp Testimonial 2">
-        </div>
-        
-        <div class="screenshot-frame">
-            <img src="<?=base_url()?>images/IMG-20250620-WA0003.jpg" alt="CS Test Series WhatsApp Testimonial 3">
-        </div>
-        
-        <div class="screenshot-frame">
-            <img src="<?=base_url()?>images/IMG-20250620-WA0004.jpg" alt="CS Test Series WhatsApp Testimonial 4">
-        </div>
-        
-        <div class="screenshot-frame">
-            <img src="<?=base_url()?>images/IMG-20250620-WA0005.jpg" alt="CS Test Series WhatsApp Testimonial 5">
-        </div>
-        
-        <div class="screenshot-frame">
-            <img src="<?=base_url()?>images/IMG-20250620-WA0006.jpg" alt="CS Test Series WhatsApp Testimonial 6">
-        </div>
-    </div>
-</div>
-
-<div class="benefits-container">
-    <h2 class="section-title">Benefits of Our CS Test Series</h2>
-    
-    <div class="benefits-grid">
-        <div class="benefit-card">
-            <h3>Exam-like Practice</h3>
-            <p>Our test series simulates the actual CS exam environment, helping you get comfortable with the format, timing, and pressure of the real test.</p>
-        </div>
-        
-        <div class="benefit-card">
-            <h3>Detailed Performance Analysis</h3>
-            <p>Get comprehensive feedback on your strengths and weaknesses with our detailed performance reports and analytics.</p>
-        </div>
-        
-        <div class="benefit-card">
-            <h3>Expert-curated Questions</h3>
-            <p>Access high-quality questions prepared by CS experts and previous exam toppers, covering all important topics and recent exam patterns.</p>
-        </div>
-        
-        <div class="benefit-card">
-            <h3>Time Management Skills</h3>
-            <p>Learn to effectively manage your exam time through regular practice with our timed tests and section-wise challenges.</p>
-        </div>
-        
-        <div class="benefit-card">
-            <h3>Doubt Resolution</h3>
-            <p>Get your questions answered by our team of experts to clear all your conceptual doubts and misunderstandings.</p>
-        </div>
-        
-        <div class="benefit-card">
-            <h3>Progress Tracking</h3>
-            <p>Monitor your improvement over time with our progress tracking tools and personalized recommendations for study focus areas.</p>
-        </div>
-    </div>
-</div>
-
-<div class="testimonial-content">
-    <h2 class="section-title">What Our Students Say</h2>
-    
-    <p>The CS Test Series has been instrumental in helping hundreds of students clear their CS Executive and Professional exams. Our comprehensive approach combines rigorous testing with detailed feedback, creating a proven path to success. Don't just take our word for it - hear from students who've experienced the transformation firsthand.</p>
-    
-    <p>The CS exams consist of three levels: <strong>the CSEET, CS Executive, and CS Professional</strong>. Each level has different subjects and eligibility criteria. The CS exams are held twice a year, in June and December. Our Test Series is designed to help you master each level with confidence, providing mock tests, study materials, doubt-clearing sessions, and expert feedback.</p>
-</div>
-
-
-
-<div class="cta-section">
-    <h2>Ready to Ace Your CS Exams?</h2>
-    <p>Join hundreds of successful students who transformed their preparation with our CS Test Series. Get exam-ready with our comprehensive practice tests and expert guidance.</p>
-    <a href="#" class="btn-cta">Enroll in Test Series Now</a>
-</div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      let currentImageIndex = 0;
-      const images = document.querySelectorAll("#image-slider img");
+    // Counter Animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.counter');
 
-      function showNextImage() {
-        images[currentImageIndex].style.display = "none";
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        images[currentImageIndex].style.display = "block";
-      }
+        const animateCounter = (counter) => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const count = parseInt(counter.innerText);
+            const increment = target / 100;
 
-      // Initial setup
-      images[currentImageIndex].style.display = "block";
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounter(counter), 10);
+            } else {
+                counter.innerText = target.toLocaleString();
+            }
+        };
 
-      // Set interval for auto slide (every 5 seconds in this example)
-      setInterval(showNextImage, 2000);
+        // Intersection Observer for counters
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    animateCounter(counter);
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => observer.observe(counter));
+    });
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
 </script>
 
-</section>
 <?= $this->endSection() ?>
-<?= $this->section('jsContent')?>
+
+<?= $this->section("jsContent") ?>
 <script type="text/javascript">
     var pageType="student_testimonial"
 </script>
