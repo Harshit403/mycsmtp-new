@@ -142,7 +142,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
     "description": "India's #1 CS Test Series for CS Executive and CS Professional exams with expert evaluation and ICSI pattern questions",
     "brand": {
         "@type": "Brand",
-        "name": "My CS MTP"
+        "name": "My CS MTP Test Series"
     },
     "aggregateRating": {
         "@type": "AggregateRating",
