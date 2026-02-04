@@ -35,7 +35,8 @@
         .auth-footer a:hover{text-decoration:underline}
         .terms{font-size:9px;color:#999;text-align:center;margin-bottom:8px}
         .terms a{color:#777}
-        .cf-turnstile{margin:0 0 10px;display:flex;justify-content:center}
+        .cf-turnstile{margin:0 0 10px;justify-content:center;max-width:100%}
+        .cf-turnstile iframe{width:100%!important;max-width:100%;height:auto!important}
         @media(max-width:320px){.auth-box{max-width:100%}}
     </style>
 </head>
@@ -87,7 +88,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Mobile</label>
-                        <input type="tel" class="form-control" name="mobile_no" required placeholder="Mobile" maxlength="10">
+                        <input type="tel" class="form-control" name="mobile_no" required placeholder="Mobile">
                     </div>
                     <div class="form-group">
                         <label class="form-label">City</label>
@@ -113,7 +114,9 @@
                             <button type="button" class="pwd-toggle"><i class="fas fa-eye"></i></button>
                         </div>
                     </div>
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAAARPAQYMac4ULvRa" data-callback="onTurnstileSuccess"></div>
+                    <div class="form-group">
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAAARPAQYMac4ULvRa" data-callback="onTurnstileSuccess"></div>
+                    </div>
                     <p class="terms">By signing up, you agree to <a href="<?=base_url()?>terms-and-conditions">Terms</a> & <a href="<?=base_url()?>privacy-policy">Privacy</a></p>
                     <button type="button" class="btn-login signUpBtn" disabled>Create Account</button>
                 </form>
