@@ -104,25 +104,31 @@ define("APP_NAME", "MY CS MTP");
 // define('SMTP_PORT',  587);
 // define('FROM_NAME', 'donotreply@mycsmtp.com');//Enter your email from name
 
-// Email Configuration - Use environment variables
-define("EMAIL_ID", $_ENV['EMAIL_ID'] ?? ''); //enter your email address
-define("EMAIL_PASSWORD", $_ENV['EMAIL_PASSWORD'] ?? ''); //enter your password
-define("SMTP_HOST", $_ENV['SMTP_HOST'] ?? 'smtp.gmail.com');
-define("SMTP_PORT", $_ENV['SMTP_PORT'] ?? 587);
-define("FROM_NAME", $_ENV['FROM_NAME'] ?? '');
+define("EMAIL_ID", "mycsmtp.com@gmail.com"); //enter your email address
+define("EMAIL_PASSWORD", "hjqillbkgguomvje"); //enter your password
+define("SMTP_HOST", "smtp.googlemail.com");
+define("SMTP_PORT", 587);
+define("FROM_NAME", "mycsmtp.com@gmail.com");
 
-// UPI Payment Configuration - Use environment variables
-define("UPI_ID", $_ENV['UPI_ID'] ?? ''); //enter your UPI ID
-define("UPI_AC_NAME", $_ENV['UPI_AC_NAME'] ?? ''); //enter your UPI ACCOUNT NAME
+// UPI PAYMENT TAKEN HANDLED
+define("UPI_ID", "anks.its@okicici"); //enter your UPI ID
+define("UPI_AC_NAME", "MY CS MTP"); //enter your UPI ACCOUNT NAME
 
-define("EXAM_DATE", $_ENV['EXAM_DATE'] ?? "2026-06-01");
+define("EXAM_DATE", "2026-06-01");
 
-// Cashfree payment info - Use environment variables
-define("SERVER_URL", $_ENV['CASHFREE_SERVER_URL'] ?? 'https://sandbox.cashfree.com');
-define("CLIENT_ID", $_ENV['CASHFREE_CLIENT_ID'] ?? '');
-define("SECRET_KEY", $_ENV['CASHFREE_SECRET_KEY'] ?? '');
-define("API_VERSION", $_ENV['CASHFREE_API_VERSION'] ?? '2023-08-01');
-define("CASHFREE_MODE", $_ENV['CASHFREE_MODE'] ?? 'sandbox');
+// Cashfree payment info test
+// define("SERVER_URL", "https://sandbox.cashfree.com");
+// define("CLIENT_ID", "TEST102720515bc4bf412a308d5db20d15027201");
+// define("SECRET_KEY", "cfsk_ma_test_aa9a83e2f082dfe28190fa75ad6a98bf_c620806f");
+// define("API_VERSION", "2023-08-01");
+// define("CASHFREE_MODE", "sandbox");
 
-// Gateway Configuration
-define("PAYMENTGATEWAY", $_ENV['PAYMENTGATEWAY'] ?? "CASHFREE");
+// Cashfree payment info prod
+define('SERVER_URL', 'https://api.cashfree.com');
+define('CLIENT_ID', '7299161820a2a8db2fb34e593e619927');
+define('SECRET_KEY', 'cfsk_ma_prod_969dc5231ba591f2f6167dc2c15ed4bf_4c81e390');
+define('API_VERSION', '2023-08-01');
+
+// gateway
+// define('PAYMENTGATEWAY', 'PHONEPE');
+define("PAYMENTGATEWAY", "CASHFREE");
