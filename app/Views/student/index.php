@@ -1733,7 +1733,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series - My CS 
                         <a href="<?= base_url(
                             "level/type/" . $level["level_id"],
                         ) ?>" class="level-btn">
-                            View Details <i class="fas fa-arrow-right"></i>
+                            View Plans <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 <?php endforeach; ?>
@@ -1744,7 +1744,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series - My CS 
             <a href="<?= base_url(
                 "level-list",
             ) ?>" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%); border: none; padding: 12px 30px; border-radius: 8px; color: white; text-decoration: none; display: inline-block; font-weight: 600;">
-                <i class="fas fa-th-large me-2"></i>View All Levels
+                <i class="fas fa-th-large me-2"></i>View All Courses 
             </a>
         </div>
     </div>
@@ -2132,7 +2132,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series - My CS 
 
             <div class="seo-about">
                 <h2>About My CS MTP - Leading CS Test Series Provider</h2>
-                <p>My CS MTP is India's premier destination for <strong>CS Test Series, CS Executive Test Series, and CS Professional Test Series</strong>. We have helped over 50,000+ students clear their Company Secretary exams with our comprehensive test series.</p>
+                <p>My CS MTP is India's premier destination for <strong>CS Test Series, CS Executive Test Series, and CS Professional Test Series</strong>. We have helped thousands students clear their Company Secretary exams with our comprehensive test series.</p>
                 <p>Our <strong>online CS Test Series</strong> platform offers the perfect blend of practice, evaluation, and guidance. Whether you are preparing for CS Executive or CS Professional exams, our test series provides everything you need to succeed.</p>
                 <p>Choose from our flexible packages: <strong>CSEET Test Series, CS Executive Test Series, and CS Professional Test Series</strong>. Each package is designed to meet specific exam requirements and help you achieve your dream of becoming a Company Secretary.</p>
             </div>
