@@ -4,11 +4,11 @@ Allow: /blogs
 Allow: /blog/
 Allow: /images/
 Allow: /assets/
+Allow: /sign-in/
 
 Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /login
-Disallow: /sign-in
 Disallow: /forgot-password
 Disallow: /api/
 Disallow: /assets/assetItems/schedule/
