@@ -1,11 +1,11 @@
 <?= $this->extend("layout/student_layout") ?>
 <?= $this->section("title") ?>
-CS Test Series | CS Executive Test Series | CS Professional Test Series - My CS MTP
+CS Test Series | CS Executive Test Series | CS Professional Test Series
 <?= $this->endSection() ?>
 <?= $this->section("seoSection") ?>
 <link rel="canonical" href="https://mycsmtp.com">
 <!-- Removed duplicate preconnects and fonts - already loaded in header -->
-<meta name="description" content="Join My CS MTP Test Series - India's #1 CS Test Series for CS Executive & CS Professional exams. Expert evaluation, ICSI pattern questions, detailed feedback. Best CS Executive Test Series & CS Professional Test Series online.">
+<meta name="description" content="Join My CS MTP Test Series - India's no. 1 CS Test Series for CS Executive & CS Professional exams.ICSI pattern questions,. Best CS Executive Test Series & CS Professional Test Series online.">
 <meta name="keywords" content="CS Test Series, CS Executive Test Series, CS Professional Test Series, My CS MTP, icsi test series, Company Secretary test series, online test series, cseet test series, cs exams preparation, cs online test series, cs executive mock tests, cs professional mock tests, best test series for cs executive, best test series for cs professional">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="My CS MTP">
