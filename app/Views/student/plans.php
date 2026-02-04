@@ -3,7 +3,7 @@
     CS Test Series Plans & Pricing 2026 | Best Company Secretary Exam Preparation
 <?= $this->endSection() ?>
 <?= $this->section("meta_description") ?>
-    Get the best CS Test Series for ICSI exams. Choose from Chapterwise, Detailed, or Full Syllabus plans starting at ₹199. Expert evaluation, All India Ranking, and performance analytics.
+    Get the best CS Test Series for ICSI exams. Choose from Chapterwise, Detailed, or Full Syllabus plans starting at ₹199. Expert evaluation, Ranking, and performance analytics.
 <?= $this->endSection() ?>
 <?= $this->section("meta_keywords") ?>
     CS Test Series, Company Secretary Test Series, ICSI Exam Preparation, CS Executive Test Series, CS Foundation Test Series, CS Professional Test Series, Online Mock Tests
@@ -12,7 +12,7 @@
     CS Test Series Plans & Pricing | Best Company Secretary Exam Preparation
 <?= $this->endSection() ?>
 <?= $this->section("og_description") ?>
-    Join thousands of successful CS students with our expert-evaluated test series. Multiple plans starting at ₹199 with detailed feedback and All India Rankings.
+    Join thousands of successful CS students with our expert-evaluated test series. Multiple plans starting at ₹199 with detailed feedback and  Rankings.
 <?= $this->endSection() ?>
 <?= $this->section("content") ?>
     <!-- SEO Hidden Content -->
