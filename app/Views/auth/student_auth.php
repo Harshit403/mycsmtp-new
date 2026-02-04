@@ -144,6 +144,50 @@
                 p.attr('type',p.attr('type')==='password'?'text':'password');
                 i.toggleClass('fa-eye fa-eye-slash');
             });
+
+            // Function to resize Turnstile widget
+            function resizeTurnstileWidget() {
+                // Wait for the iframe to be inserted into the DOM
+                const observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        mutation.addedNodes.forEach(function(node) {
+                            if (node.nodeType === 1 && node.tagName === 'IFRAME' &&
+                                node.src && node.src.includes('challenges.cloudflare.com')) {
+                                // Apply strict sizing to the iframe
+                                node.style.width = '150px';  // Reduced width
+                                node.style.height = '65px';  // Reduced height
+                                node.style.maxWidth = '100%';
+                                node.style.transform = 'scale(0.5)';
+                                node.style.transformOrigin = 'top left';
+                                node.style.borderRadius = '4px';
+                                node.style.overflow = 'hidden';
+
+                                // Also adjust the parent container
+                                if (node.parentNode) {
+                                    node.parentNode.style.width = 'fit-content';
+                                    node.parentNode.style.display = 'flex';
+                                    node.parentNode.style.justifyContent = 'center';
+                                }
+
+                                // Disconnect observer after processing the iframe
+                                observer.disconnect();
+                            }
+                        });
+                    });
+                });
+
+                // Start observing the cf-turnstile container
+                const turnstileContainer = document.querySelector('.cf-turnstile');
+                if (turnstileContainer) {
+                    observer.observe(turnstileContainer, {
+                        childList: true,
+                        subtree: true
+                    });
+                }
+            }
+
+            // Call the resize function after a short delay to ensure Turnstile is loaded
+            setTimeout(resizeTurnstileWidget, 1000);
         });
     </script>
     <script src="<?=base_url()?>assets/js/custom_js/student_auth.js?v=1.0.6"></script>
