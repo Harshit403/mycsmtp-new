@@ -200,7 +200,7 @@
                             </div>
                             <div class="timeline-content">
                                 <h4 class="h5 fw-bold mb-2" style="color: #6f42c1;">2022 - Methodology Development</h4>
-                                <p class="text-muted mb-0">Developed our unique 4-layer evaluation system that became our hallmark in CS education.</p>
+                                <p class="text-muted mb-0">Developed our unique evaluation system that became our hallmark in CS education.</p>
                             </div>
                         </div>
                         
@@ -224,7 +224,7 @@
                             </div>
                             <div class="timeline-content">
                                 <h4 class="h5 fw-bold mb-2" style="color: #20c997;">2024-2025 - Industry Leader</h4>
-                                <p class="text-muted mb-0">Recognized as one of India's leading CS test series providers with 15,000+ success stories.</p>
+                                <p class="text-muted mb-0">Recognized as one of India's leading CS test series provider.</p>
                             </div>
                         </div>
                     </div>
@@ -393,9 +393,9 @@
                 <div class="col-6 col-md-3">
                     <div class="impact-card p-4 rounded-4 bg-white bg-opacity-10">
                         <div class="display-3 fw-bold mb-2 text-white">
-                            <span class="counter" data-target="78">0</span>%
+                            <span class="counter" data-target="99">0</span>%
                         </div>
-                        <p class="mb-0 text-white fw-semibold">Success Rate</p>
+                        <p class="mb-0 text-white fw-semibold">Satisfaction Rate</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
