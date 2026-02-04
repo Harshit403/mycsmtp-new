@@ -770,7 +770,7 @@
                     <input type="text" class="form-control" name="student_name" value="<?= htmlspecialchars($studentDetails['student_name'] ?? '') ?>" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Billing Address (City)</label>
+                    <label class="form-label">Billing Address</label>
                     <input type="text" class="form-control" name="city_name" value="<?= htmlspecialchars($studentDetails['city_name'] ?? '') ?>" required>
                 </div>
                 <div class="form-group">
