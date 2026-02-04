@@ -27,7 +27,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mycsmtp.com/">
-<meta property="og:title" content="CS Test Series 2026 | CS Executive & CS Professional - My CS MTP">
+<meta property="og:title" content="CS Test Series 2026 | CS Executive & CS Professional - My CS MTP Test series">
 <meta property="og:description" content="India's most trusted CS Test Series for CS Executive & CS Professional exams. Expert evaluation, ICSI pattern questions, detailed feedback. Start your preparation today!">
 <meta property="og:image" content="https://mycsmtp.com/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -1344,7 +1344,9 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>Best CS Test Series for CS Executive & CS Professional | My CS MTP</h1>
+            <h1>My CS MTP Test Series</h1>
+<h2>CS Test series for CS Executive & CS Professional </h2>
+
             <p>Get access to the most comprehensive CS test series designed by experts to match the Latest ICSI exam pattern and relevant amendments.</p>
 
             <div class="hero-buttons">
