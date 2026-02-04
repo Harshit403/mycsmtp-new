@@ -646,7 +646,7 @@
                     <div class="billing-address-section">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
                             <i class="fas fa-map-marker-alt" style="color: #64748b;"></i>
-                            <span style="font-size: 14px; font-weight: 600; color: #0f172a;">Shipping Address</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #0f172a;">Billing Address</span>
                         </div>
                         <div style="font-size: 13px; color: #475569; line-height: 1.5;">
                             <div style="font-weight: 500; color: #0f172a; margin-bottom: 2px;"><?= htmlspecialchars($studentDetails['student_name'] ?? 'User') ?></div>
