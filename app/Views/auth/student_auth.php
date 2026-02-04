@@ -35,7 +35,7 @@
         .auth-footer a:hover{text-decoration:underline}
         .terms{font-size:9px;color:#999;text-align:center;margin-bottom:8px}
         .terms a{color:#777}
-        .cf-turnstile{margin:0 0 10px;justify-content:center;max-width:100%}
+        .cf-turnstile{margin:0 0 10px;justify-content:center;max-width:50%; width: 80%;}
         .cf-turnstile iframe{width:100%!important;max-width:100%;height:auto!important}
         @media(max-width:320px){.auth-box{max-width:100%}}
     </style>
