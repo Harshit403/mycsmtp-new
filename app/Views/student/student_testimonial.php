@@ -140,7 +140,7 @@
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <h3 class="display-4 fw-bold mb-0" style="color: #1ab79c;">4.9/5</h3>
-                                <p class="text-muted mb-0">Based on 2,000+ Reviews</p>
+                                <p class="text-muted mb-0">Based on Students Rating</p>
                             </div>
                         </div>
                     </div>
