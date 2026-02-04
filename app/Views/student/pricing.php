@@ -3,7 +3,7 @@
     CS Test Series Pricing Plans 2026 | Affordable ICSI Exam Preparation Packages
 <?= $this->endSection() ?>
 <?= $this->section("meta_description") ?>
-    Get affordable CS Test Series for ICSI exams starting at ₹119. Chapterwise, Detailed & Full Syllabus plans with expert evaluation, All India Rankings & performance analytics.
+    Get affordable CS Test Series for ICSI exams starting at ₹119. Chapterwise, Detailed & Full Syllabus plans with expert evaluation,  & performance analytics.
 <?= $this->endSection() ?>
 <?= $this->section("meta_keywords") ?>
     CS Test Series pricing, CS Executive test series price, CS Professional mock test cost, ICSI exam preparation packages, CS test series plans
@@ -999,7 +999,7 @@
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
                     <h3>Fast Turnaround</h3>
-                    <p>Get your evaluated answer sheets within 48-72 hours. Our quick turnaround helps you learn from mistakes and improve continuously.</p>
+                    <p>Get your evaluated answer sheets within 48-72 working hours. Our quick turnaround helps you learn from mistakes and improve continuously.</p>
                 </div>
             </div>
         </div>
@@ -1169,7 +1169,7 @@
                 </p>
 
                 <p style="margin-bottom: 20px;">
-                    With over 50,000 students enrolled and a 92% success rate, our <strong>CS Test Series</strong> has established itself as a trusted name in CS exam preparation. Join thousands of successful candidates who have benefited from our expert-evaluated test series and take the first step towards your CS certification.
+                    With thousands of students enrolled and significant success rate, our <strong>CS Test Series</strong> has established itself as a trusted name in CS exam preparation. Join thousands of successful candidates who have benefited from our expert-evaluated test series and take the first step towards your CS certification.
                 </p>
             </div>
         </div>
