@@ -1,8 +1,8 @@
-<?= $this->extend('layout/student_layout') ?>
-<?= $this->section('title') ?>
+<?= $this->extend("layout/student_layout") ?>
+<?= $this->section("title") ?>
     Buy Courses - My CS MTP
 <?= $this->endSection() ?>
-<?= $this->section('content') ?>
+<?= $this->section("content") ?>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -305,13 +305,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <?php
-$levelName = !empty($levelInfo) ? $levelInfo->level_name : 'CS';
-$levelId = !empty($levelInfo) ? $levelInfo->level_id : '1';
+$levelName = !empty($levelInfo) ? $levelInfo->level_name : "CS";
+$levelId = !empty($levelInfo) ? $levelInfo->level_id : "1";
 ?>
 
 <div class="container">
     <!-- Back Link -->
-    <a href="<?=base_url()?>dashboard" class="back-link">
+    <a href="<?= base_url() ?>dashboard" class="back-link">
         <i class="fas fa-arrow-left"></i>
         Back to Dashboard
     </a>
@@ -329,61 +329,153 @@ $levelId = !empty($levelInfo) ? $levelInfo->level_id : '1';
     </div>
 
     <!-- Course Cards -->
-    <?php if(!empty($fetchedTypes)): ?>
+    <?php if (!empty($fetchedTypes)): ?>
         <div class="courses-grid">
             <?php foreach ($fetchedTypes as $type): ?>
                 <article class="course-card">
                     <div class="course-card-header">
-                        <?php if(!empty($type['batch_info'])): ?>
-                            <span class="course-badge"><?= htmlspecialchars($type['batch_info']) ?></span>
+                        <?php if (!empty($type["batch_info"])): ?>
+                            <span class="course-badge"><?= htmlspecialchars(
+                                $type["batch_info"],
+                            ) ?></span>
                         <?php endif; ?>
-                        <h3 class="course-name"><?= htmlspecialchars($type['type_name']) ?></h3>
+                        <h3 class="course-name"><?= htmlspecialchars(
+                            $type["type_name"],
+                        ) ?></h3>
                         <div class="course-level">
                             <i class="fas fa-layer-group"></i>
-                            <span><?= htmlspecialchars($type['level_name']) ?></span>
+                            <span><?= htmlspecialchars(
+                                $type["level_name"],
+                            ) ?></span>
                         </div>
                     </div>
                     <div class="course-body">
-                        <div class="course-description">
-                            <?php 
-                            $details = $type['type_more_details'] ?? '';
-                            $details = strip_tags($details);
-                            echo substr($details, 0, 150) . (strlen($details) > 150 ? '...' : '');
-                            ?>
-                        </div>
                         <div class="course-features">
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Chapter-wise Tests</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Detailed Evaluation</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>All India Ranking</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Performance Analytics</span>
-                            </div>
+                            <?php
+                            // Parse the type_more_details to extract features
+                            $more_details = $type["type_more_details"] ?? "";
+                            if (!empty($more_details)) {
+                                // First, try to extract from HTML list elements if present
+                                $features = [];
+                                // Check if content contains HTML list elements
+                                if (
+                                    strpos($more_details, "<li>") !== false ||
+                                    strpos($more_details, "<ul>") !== false ||
+                                    strpos($more_details, "<ol>") !== false
+                                ) {
+                                    // Extract list items from HTML
+                                    $dom = new DOMDocument();
+                                    libxml_use_internal_errors(true);
+                                    // Suppress warnings for malformed HTML
+                                    $dom->loadHTML(
+                                        '<?xml encoding="UTF-8">' .
+                                            $more_details,
+                                        LIBXML_HTML_NOIMPLIED |
+                                            LIBXML_HTML_NODEFDTD,
+                                    );
+                                    $list_items = $dom->getElementsByTagName(
+                                        "li",
+                                    );
+                                    foreach ($list_items as $li) {
+                                        $feature_text = trim($li->textContent);
+                                        if (!empty($feature_text)) {
+                                            $features[] = $feature_text;
+                                        }
+                                    }
+                                }
+                                // If no list items were found, fall back to text parsing
+                                if (empty($features)) {
+                                    // Strip HTML tags and split by common separators
+                                    $stripped_details = strip_tags(
+                                        $more_details,
+                                    ); // Split by common separators like new lines, semicolons, periods, etc.
+                                    $features = preg_split(
+                                        '/[\n\r;]+/',
+                                        $stripped_details,
+                                    );
+                                    // Filter out empty values and trim whitespace
+                                    $features = array_filter(
+                                        array_map("trim", $features),
+                                        function ($item) {
+                                            return !empty($item);
+                                        },
+                                    );
+                                }
+                                // Limit to first few features to avoid cluttering the card
+                                $features = array_slice($features, 0, 4);
+                                if (!empty($features)) {
+                                    foreach ($features as $feature) {
+                                        echo '<div class="feature-item">';
+                                        echo '<i class="fas fa-check-circle"></i>';
+                                        echo "<span>" .
+                                            htmlspecialchars(
+                                                $feature,
+                                                ENT_QUOTES,
+                                                "UTF-8",
+                                            ) .
+                                            "</span>";
+                                        echo "</div>";
+                                    }
+                                } else {
+                                    // If parsing didn't yield any features, show a generic message
+                                    echo '<div class="feature-item">';
+                                    echo '<i class="fas fa-info-circle"></i>';
+                                    echo "<span>Course features will be displayed here</span>";
+                                    echo "</div>";
+                                }
+                            } else {
+                                // Fallback to default features if no custom details are available
+                                $default_features = [
+                                    "Chapter-wise Tests",
+                                    "Detailed Evaluation",
+                                    "All India Ranking",
+                                    "Performance Analytics",
+                                ];
+                                foreach ($default_features as $feature) {
+                                    echo '<div class="feature-item">';
+                                    echo '<i class="fas fa-check-circle"></i>';
+                                    echo "<span>" .
+                                        htmlspecialchars(
+                                            $feature,
+                                            ENT_QUOTES,
+                                            "UTF-8",
+                                        ) .
+                                        "</span>";
+                                    echo "</div>";
+                                }
+                            }
+                            ?>
                         </div>
                         <div class="course-footer">
                             <div class="price-group">
-                                <?php if(isset($type['type_price']) || isset($type['price'])): ?>
-                                    <span class="current-price">₹<?= number_format($type['type_price'] ?? $type['price'] ?? 0) ?></span>
-                                    <span class="original-price">₹<?= number_format(($type['type_price'] ?? $type['price'] ?? 0) + 500) ?></span>
+                                <?php if (
+                                    isset($type["type_price"]) ||
+                                    isset($type["price"])
+                                ): ?>
+                                    <span class="current-price">₹<?= number_format(
+                                        $type["type_price"] ??
+                                            ($type["price"] ?? 0),
+                                    ) ?></span>
+                                    <span class="original-price">₹<?= number_format(
+                                        ($type["type_price"] ??
+                                            ($type["price"] ?? 0)) +
+                                            500,
+                                    ) ?></span>
                                 <?php endif; ?>
                             </div>
                             <div style="display: flex; gap: 10px;">
-                                <?php if(!empty($type['schedule_file'])): ?>
-                                    <a href="<?=base_url().$type['schedule_file']?>" target="_blank" class="buy-btn" style="background: var(--secondary); color: var(--text-primary);">
+                                <?php if (!empty($type["schedule_file"])): ?>
+                                    <a href="<?= base_url() .
+                                        $type[
+                                            "schedule_file"
+                                        ] ?>" target="_blank" class="buy-btn" style="background: var(--secondary); color: var(--text-primary);">
                                         <i class="fas fa-file-download"></i>
                                         Schedule
                                     </a>
                                 <?php endif; ?>
-                                <a href="<?=base_url()?>type/subject/<?=$type['type_id']?>" class="buy-btn">
+                                <a href="<?= base_url() ?>type/subject/<?= $type[
+    "type_id"
+] ?>" class="buy-btn">
                                     <i class="fas fa-shopping-cart"></i>
                                     Buy Now
                                 </a>
@@ -403,9 +495,9 @@ $levelId = !empty($levelInfo) ? $levelInfo->level_id : '1';
 </div>
 
 <?= $this->endSection() ?>
-<?= $this->section('jsContent') ?>
+<?= $this->section("jsContent") ?>
 <script type="text/javascript">
     var pageType = 'buy_courses';
 </script>
-<script src="<?=base_url()?>assets/js/custom_js/view.js"></script>
+<script src="<?= base_url() ?>assets/js/custom_js/view.js"></script>
 <?= $this->endSection() ?>
