@@ -2094,7 +2094,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
     <div class="container">
         <div class="seo-content-wrapper">
             <div class="seo-header">
-                <h1>Best CS Test Series for CS Executive & CS Professional Exams 2026</h1>
+                <h2>Best CS Test Series for CS Executive & CS Professional Exams 2026</h2>
                 <p class="seo-subtitle">India's #1 Online Platform for CS Test Series Preparation</p>
             </div>
 
