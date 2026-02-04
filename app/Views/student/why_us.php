@@ -148,7 +148,7 @@
                 "name": "What is the success rate of students using MY CS MTP?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Students using MY CS MTP test series achieve a 3:1 first-attempt success ratio, meaning they are 3 times more likely to clear CS exams on their first attempt. Over 10,000 students have successfully cleared their exams with our preparation methodology."
+                    "text": "Students using MY CS MTP test series achieve a significant first-attempt success ratio, meaning they are 3 times more likely to clear CS exams on their first attempt. Over 10,000 students have successfully cleared their exams with our preparation methodology."
                 }
             },
             {
@@ -248,7 +248,7 @@
                                         <i class="fas fa-medal text-warning fs-5"></i>
                                     </div>
                                     <div>
-                                        <span class="fw-bold fs-4 text-dark">3:1</span>
+                                        <span class="fw-bold fs-4 text-dark">3</span>
                                         <p class="mb-0 text-muted small">Success Ratio</p>
                                     </div>
                                 </div>
@@ -282,7 +282,7 @@
                             <i class="fas fa-graduation-cap fa-2x text-warning"></i>
                         </div>
                         <h2 class="display-4 fw-bold mb-2 text-warning">
-                            <span class="counter" data-target="8500">5000</span>+
+                            <span class="counter" data-target="8500">500</span>+
                         </h2>
                         <p class="text-muted mb-0 fw-semibold">Notes Available</p>
                     </div>
@@ -395,7 +395,7 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2"><i class="fas fa-check-circle me-2 text-danger"></i>24/7 test access</li>
                                 <li class="mb-2"><i class="fas fa-check-circle me-2 text-danger"></i>Self-paced learning</li>
-                                <li><i class="fas fa-check-circle me-2 text-danger"></i>Multiple attempts allowed</li>
+                                <li><i class="fas fa-check-circle me-2 text-danger"></i>Access till Exams</li>
                             </ul>
                         </div>
                     </article>
@@ -429,9 +429,9 @@
                                 </div>
                             </div>
                             <h3 class="h4 mb-3 fw-bold" style="color: #0dcaf0;">24/7 Expert Support</h3>
-                            <p class="text-muted mb-3">Get your doubts cleared anytime with our <strong>dedicated support team</strong>. We're here to help you succeed at every step of your journey.</p>
+                            <p class="text-muted mb-3">Get your Support available anytime with our <strong>dedicated support team</strong>. We're here to help you succeed at every step of your journey.</p>
                             <ul class="list-unstyled mb-0">
-                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #0dcaf0;"></i>24/7 doubt clearing</li>
+                                <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #0dcaf0;"></i>24/7 Technical Support</li>
                                 <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #0dcaf0;"></i>Quick response time</li>
                                 <li><i class="fas fa-check-circle me-2" style="color: #0dcaf0;"></i>Multiple support channels</li>
                             </ul>
@@ -473,7 +473,7 @@
                                 </div>
                             </div>
                             <div class="flex-grow-1">
-                                <h4 class="h5 mb-1 fw-bold text-dark">3:1 First-Attempt Success Ratio</h4>
+                                <h4 class="h5 mb-1 fw-bold text-dark">First-Attempt Success Ratio</h4>
                                 <p class="mb-0 text-muted">Students completing our program are <strong>3 times more likely</strong> to clear CS exams on their first attempt. Join the winners.</p>
                             </div>
                         </div>
@@ -630,7 +630,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <p class="text-muted mb-4">"Best investment for CS preparation! The chapter-wise analysis helped me focus on weak areas. My score improved by 25 points thanks to MY CS MTP."</p>
+                            <p class="text-muted mb-4">"Best investment for CS preparation! The chapter-wise analysis helped me focus on weak areas. My score improved by 25 Marks thanks to MY CS MTP."</p>
                             <div class="d-flex align-items-center">
                                 <img src="<?= base_url() ?>images/testimonial-3.jpg" alt="Amit Kumar - CS Exam Clearer" class="rounded-circle me-3" style="width: 50px; height: 50px; object-fit: cover;" loading="lazy">
                                 <div>
@@ -682,7 +682,7 @@
                             </h3>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-muted">
-                                    MY CS MTP helps in CS exam preparation through our comprehensive <strong>4-layer evaluation system</strong>: Content Accuracy Check, Presentation Analysis, Application Scoring, and Comparative Benchmarking. Students receive detailed feedback, chapter-wise analysis, improvement suggestions, and can track their progress over time.
+                                    MY CS MTP helps in CS exam preparation through our comprehensive <strong>-2 layer evaluation system</strong>: Content Accuracy Check, Presentation Analysis, Application Scoring, and Comparative Benchmarking. Students receive detailed feedback, chapter-wise analysis, improvement suggestions, and can track their progress over time.
                                 </div>
                             </div>
                         </div>
