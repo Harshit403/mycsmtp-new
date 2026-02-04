@@ -243,7 +243,7 @@ $(document).ready(function() {
                             return;
                         }
                         const cashfree = Cashfree({
-                            mode: cashfreeMode || "sandbox"
+                            mode: cashfreeMode || "production"
                         });
                         let checkoutOptions = {
                             paymentSessionId: response.payment_session_id,
