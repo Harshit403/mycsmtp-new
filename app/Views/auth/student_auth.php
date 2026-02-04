@@ -35,9 +35,9 @@
         .auth-footer a:hover{text-decoration:underline}
         .terms{font-size:9px;color:#999;text-align:center;margin-bottom:8px}
         .terms a{color:#777}
-        .cf-turnstile{margin:0 0 10px;justify-content:center;max-width:50%; width: 80%;}
-        .cf-turnstile{margin:0 0 10px;justify-content:center;max-width:70%;margin-left:auto;margin-right     │
-  │       :auto}  
+        .turnstile-container{width:50%;margin:0 auto 10px auto;position:relative;z-index:99999;background:white;overflow:hidden;border-radius:4px}
+        .cf-turnstile{margin:0;justify-content:center}
+        .cf-turnstile iframe{width:100%!important;max-width:200%;height:auto!important;transform:scale(0.7);transform-origin:0 0}
         @media(max-width:320px){.auth-box{max-width:100%}}
     </style>
 </head>
@@ -116,7 +116,9 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="cf-turnstile" data-sitekey="0x4AAAAAAARPAQYMac4ULvRa" data-callback="onTurnstileSuccess"></div>
+                        <div class="turnstile-container">
+                            <div class="cf-turnstile" data-sitekey="0x4AAAAAAARPAQYMac4ULvRa" data-callback="onTurnstileSuccess"></div>
+                        </div>
                     </div>
                     <p class="terms">By signing up, you agree to <a href="<?=base_url()?>terms-and-conditions">Terms</a> & <a href="<?=base_url()?>privacy-policy">Privacy</a></p>
                     <button type="button" class="btn-login signUpBtn" disabled>Create Account</button>
