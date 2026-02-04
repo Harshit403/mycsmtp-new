@@ -87,7 +87,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Mobile</label>
-                        <input type="tel" class="form-control" name="mobile_no" required placeholder="Mobile">
+                        <input type="tel" class="form-control" name="mobile_no" required placeholder="Mobile" maxlength="10">
                     </div>
                     <div class="form-group">
                         <label class="form-label">City</label>
