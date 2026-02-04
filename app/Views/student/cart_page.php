@@ -692,9 +692,7 @@
                                 <div class="promo-tag" style="margin-top: 10px;">
                                     <i class="fas fa-check-circle"></i>
                                     Code "<?= htmlspecialchars($cartItems[0]['promo_code_name']) ?>" applied
-                                    <?php if ($discountPercent > 0): ?>
-                                        (-<?= $discountPercent ?><?= $discountType == 'percent' ? '%' : '₹' ?>)
-                                    <?php endif; ?>
+                                
                                     <button id="removePromoBtn"><i class="fas fa-times"></i></button>
                                 </div>
                             <?php endif; ?>
