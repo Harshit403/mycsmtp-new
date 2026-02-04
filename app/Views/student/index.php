@@ -8,7 +8,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
 <meta name="description" content="Join My CS MTP Test Series - India's no. 1 CS Test Series for CS Executive & CS Professional exams.ICSI pattern questions,. Best CS Executive Test Series & CS Professional Test Series online.">
 <meta name="keywords" content="CS Test Series, CS Executive Test Series, CS Professional Test Series, My CS MTP, icsi test series, Company Secretary test series, online test series, cseet test series, cs exams preparation, cs online test series, cs executive mock tests, cs professional mock tests, best test series for cs executive, best test series for cs professional">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<meta name="author" content="My CS MTP">
+<meta name="author" content="My CS MTP Test Series">
 <meta name="publisher" content="My CS MTP Test Series">
 <meta name="language" content="English">
 <meta name="revisit-after" content="7 days">
