@@ -1,4 +1,4 @@
-# LLMs.TXT - AI Crawling Information for MY CS MTP Test Series
+# llms.txt — AI Crawling Information for MY CS MTP Test Series
 
 ## About This Site
 MY CS MTP Test Series is India's leading online platform for CS (Company Secretary) exam preparation, offering comprehensive mock tests for CSEET, CS Executive, and CS Professional programs as per the ICSI pattern.
