@@ -899,13 +899,7 @@ $metaKeywords = !empty($subjectNames)
             <div class="hero-content container-custom">
                 <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;" itemprop="category"><?= htmlspecialchars($levelName) ?> Test Series</div>
                 <h1 class="hero-title" id="hero-title" itemprop="name"><?= htmlspecialchars($levelName) ?> - <?= htmlspecialchars($typeName) ?> Subjects</h1>
-                <p class="hero-subtitle" itemprop="description">
-                    <?php if(!empty($subjectNames)): ?>
-                        Master <?= htmlspecialchars(implode(', ', $subjectNames)) ?> with our expert-crafted ICSI pattern practice tests. Detailed analytics, All India ranking & performance tracking.
-                    <?php else: ?>
-                        Comprehensive <?= htmlspecialchars($typeName) ?> test series with chapterwise tests, module tests & full mock exams. Expert-crafted questions as per ICSI pattern.
-                    <?php endif; ?>
-                </p>
+              
                 <div class="promo-badge" role="status" aria-live="polite">
                     <i class="fas fa-bolt"></i>
                     FLASH SALE! Use Code <strong>RESULT10</strong> for 10% Discount
