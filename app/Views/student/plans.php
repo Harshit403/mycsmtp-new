@@ -1,9 +1,9 @@
 <?= $this->extend("layout/student_layout") ?>
 <?= $this->section("title") ?>
-    CS Test Series Plans & Pricing 2026 | Best Company Secretary Exam Preparation
+    CS Test Series Plans & Pricing | Best Company Secretary Exam Preparation
 <?= $this->endSection() ?>
 <?= $this->section("meta_description") ?>
-    Get the best CS Test Series for ICSI exams. Choose from Chapterwise, Detailed, or Full Syllabus plans starting at ₹199. Expert evaluation, Ranking, and performance analytics.
+    Get the best CS Test Series for ICSI exams. Choose from Chapterwise, Detailed, or Full Syllabus plans starting at ₹199. Expert evaluation, All India Ranking, and performance analytics.
 <?= $this->endSection() ?>
 <?= $this->section("meta_keywords") ?>
     CS Test Series, Company Secretary Test Series, ICSI Exam Preparation, CS Executive Test Series, CS Foundation Test Series, CS Professional Test Series, Online Mock Tests
@@ -12,7 +12,7 @@
     CS Test Series Plans & Pricing | Best Company Secretary Exam Preparation
 <?= $this->endSection() ?>
 <?= $this->section("og_description") ?>
-    Join thousands of successful CS students with our expert-evaluated test series. Multiple plans starting at ₹199 with detailed feedback and  Rankings.
+    Join thousands of successful CS students with our expert-evaluated test series. Multiple plans starting at ₹199 with detailed feedback and All India Rankings.
 <?= $this->endSection() ?>
 <?= $this->section("content") ?>
     <!-- SEO Hidden Content -->
@@ -1133,7 +1133,7 @@
                         <div class="testimonial-avatar">AK</div>
                         <div class="testimonial-info">
                             <h4>Ananya Kumar</h4>
-                            <p>CS Executive</p>
+                            <p>CS Executive - Rank 12</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">
@@ -1143,14 +1143,14 @@
                         <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="testimonial-text">"The detailed feedback from evaluators helped me understand exactly where I was losing marks. The Ranking among students kept me motivated throughout my preparation."</p>
+                    <p class="testimonial-text">"The detailed feedback from evaluators helped me understand exactly where I was losing marks. The All India Rankings kept me motivated throughout my preparation."</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">RP</div>
                         <div class="testimonial-info">
                             <h4>Rahul Patel</h4>
-                            <p>CS Professional</p>
+                            <p>CS Professional - All India Rank 5</p>
                         </div>
                     </div>
                     <div class="testimonial-rating">
@@ -1177,7 +1177,7 @@
                         <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                     </div>
-                    <p class="testimonial-text">"As a CSEET student, I was nervous about the exam. The chapterwise tests helped me build strong fundamentals and the MCQ techniques were invaluable."</p>
+                    <p class="testimonial-text">"As a foundation student, I was nervous about the exam. The chapterwise tests helped me build strong fundamentals and the MCQ techniques were invaluable."</p>
                 </div>
             </div>
         </div>
