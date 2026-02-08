@@ -5,7 +5,7 @@ CS Test Series | Best CS Executive & CS Professional Test Series India
 <?= $this->section("seoSection") ?>
 <link rel="canonical" href="https://mycsmtp.com">
 <!-- Removed duplicate preconnects and fonts - already loaded in header -->
-<meta name="description" content="India's #1 CS Test Series platform. Best CS Executive Test Series & CS Professional Test Series with expert evaluation, ICSI pattern questions, detailed feedback. Start your CS exam preparation today!">
+<meta name="description" content="India's No. CS Test Series platform. Best CS Executive Test Series & CS Professional Test Series with expert evaluation, ICSI pattern questions, detailed feedback. Start your CS exam preparation today!">
 <meta name="keywords" content="CS test series, CS Executive test series, CS Professional test series, CSEET test series, ICSI exams, Company secretary, CS exam preparation, CS mock test, ICSI mock test, CS online test series, Best cs test series, Company secretary test series, CS exam practice, mock tests for CS">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="My CS MTP Test Series">
@@ -22,7 +22,7 @@ CS Test Series | Best CS Executive & CS Professional Test Series India
 <meta name="msapplication-TileColor" content="#059669">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="My CS MTP Test Series">
+<meta name="apple-mobile-web-app-title" content="My CS Test Series">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
