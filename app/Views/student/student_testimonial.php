@@ -1,12 +1,12 @@
 <?= $this->extend("layout/student_layout") ?>
 
 <?= $this->section("title") ?>
-    Student Testimonials & Success Stories | MY CS MTP Test Series Reviews
+    CS Test Series Reviews
 <?= $this->endSection() ?>
 
 <?= $this->section("meta") ?>
     <!-- Primary Meta Tags -->
-    <meta name="description" content="Read real student testimonials and success stories from MY CS MTP. See how 10,000+ CS aspirants cleared their CSEET, Executive & Professional exams with our test series. View WhatsApp reviews and feedback.">
+    <meta name="description" content="Read real student reviews and success stories from MY CS MTP. See how thousands of CS aspirants cleared their CSEET, Executive & Professional exams with our test series. View WhatsApp reviews and feedback.">
     <meta name="keywords" content="MY CS MTP testimonials, CS test series reviews, student success stories, CS exam testimonials, MY CS MTP feedback, CS student reviews, Company Secretary testimonials, CS test series results">
     <meta name="author" content="MY CS MTP Test Series">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -19,7 +19,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= base_url() ?>testimonial">
-    <meta property="og:title" content="Student Testimonials | MY CS MTP Success Stories">
+    <meta property="og:title" content="Student Testimonials | CS Test serie Reviews">
     <meta property="og:description" content="See real testimonials from CS students who cleared their exams with MY CS MTP test series. 10,000+ success stories and counting!">
     <meta property="og:image" content="<?= base_url() ?>images/og-testimonials.jpg">
     <meta property="og:image:width" content="1200">
