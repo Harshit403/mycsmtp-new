@@ -1,12 +1,12 @@
 <?= $this->extend("layout/student_layout") ?>
 <?= $this->section("title") ?>
-CS Test Series | CS Executive Test Series | CS Professional Test Series
+CS Test Series | Best CS Executive & CS Professional Test Series India
 <?= $this->endSection() ?>
 <?= $this->section("seoSection") ?>
 <link rel="canonical" href="https://mycsmtp.com">
 <!-- Removed duplicate preconnects and fonts - already loaded in header -->
-<meta name="description" content="Join My CS MTP Test Series - India's no. 1 CS Test Series for CS Executive & CS Professional exams.ICSI pattern questions,. Best CS Executive Test Series & CS Professional Test Series online.">
-<meta name="keywords" content="CS Test Series, CS Executive Test Series, CS Professional Test Series, My CS MTP, icsi test series, Company Secretary test series, online test series, cseet test series, cs exams preparation, cs online test series, cs executive mock tests, cs professional mock tests, best test series for cs executive, best test series for cs professional">
+<meta name="description" content="India's #1 CS Test Series platform. Best CS Executive Test Series & CS Professional Test Series with expert evaluation, ICSI pattern questions, detailed feedback. Start your CS exam preparation today!">
+<meta name="keywords" content="CS test series, CS Executive test series, CS Professional test series, CSEET test series, ICSI exams, Company secretary, CS exam preparation, CS mock test, ICSI mock test, CS online test series, Best cs test series, Company secretary test series, CS exam practice, mock tests for CS">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="My CS MTP Test Series">
 <meta name="publisher" content="My CS MTP Test Series">
@@ -27,8 +27,8 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mycsmtp.com/">
-<meta property="og:title" content="CS Test Series 2026 | CS Executive & CS Professional - My CS MTP Test series">
-<meta property="og:description" content="India's most trusted CS Test Series for CS Executive & CS Professional exams. Expert evaluation, ICSI pattern questions, detailed feedback. Start your preparation today!">
+<meta property="og:title" content="CS Test Series | Best CS Executive & CS Professional Test Series India">
+<meta property="og:description" content="India's #1 CS Test Series platform. Best CS Executive Test Series & CS Professional Test Series with expert evaluation, ICSI pattern questions, detailed feedback. Start your CS exam preparation today!">
 <meta property="og:image" content="https://mycsmtp.com/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -40,8 +40,8 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://mycsmtp.com/">
-<meta property="twitter:title" content="CS Test Series 2026 | CS Executive & CS Professional - My CS MTP">
-<meta property="twitter:description" content="India's most trusted CS Test Series for CS Executive & CS Professional exams. Expert evaluation, ICSI pattern questions, detailed feedback.">
+<meta property="twitter:title" content="CS Test Series | Best CS Executive & CS Professional Test Series India">
+<meta property="twitter:description" content="India's #1 CS Test Series platform. Best CS Executive Test Series & CS Professional Test Series with expert evaluation, ICSI pattern questions, detailed feedback.">
 <meta property="twitter:image" content="https://mycsmtp.com/images/og-image.jpg">
 <meta property="twitter:image:alt" content="My CS MTP Test Series - CS Executive and CS Professional Online Test Series">
 <meta name="twitter:site" content="@mycsmtp">
@@ -55,7 +55,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
     "name": "My CS MTP Test Series",
     "url": "https://mycsmtp.com",
     "logo": "https://mycsmtp.com/images/logo-min.png",
-    "description": "India's most trusted CS Test Series platform for CS Executive and CS Professional exams",
+    "description": "India's #1 CS Test Series platform offering the best CS Executive Test Series and CS Professional Test Series for ICSI exam preparation",
     "sameAs": [
         "https://www.facebook.com/mycsmtp",
         "https://twitter.com/mycsmtp",
@@ -96,7 +96,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
     "name": "My CS MTP Test Series",
     "url": "https://mycsmtp.com",
     "logo": "https://mycsmtp.com/images/logo-min.png",
-    "description": "Premium CS Test Series for CS Executive and CS Professional exam preparation with expert evaluation and ICSI pattern questions",
+    "description": "India's #1 CS Test Series platform offering the best CS Executive Test Series and CS Professional Test Series for ICSI exam preparation with expert evaluation and ICSI pattern questions",
     "address": {
         "@type": "PostalAddress",
         "addressCountry": "IN"
@@ -116,7 +116,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
                 "itemOffered": {
                     "@type": "Course",
                     "name": "CS Executive Test Series",
-                    "description": "Comprehensive test series for CS Executive level preparation"
+                    "description": "Best CS Executive Test Series with expert evaluation and ICSI pattern questions for exam preparation"
                 }
             },
             {
@@ -124,7 +124,15 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
                 "itemOffered": {
                     "@type": "Course",
                     "name": "CS Professional Test Series",
-                    "description": "Advanced test series for CS Professional level preparation"
+                    "description": "Best CS Professional Test Series with comprehensive evaluation and expert guidance for exam success"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Course",
+                    "name": "CSEET Test Series",
+                    "description": "Best CSEET Test Series for foundation level CS exam preparation"
                 }
             }
         ]
@@ -139,7 +147,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
     "@type": "Product",
     "name": "My CS MTP Test Series",
     "image": "https://mycsmtp.com/images/og-image.jpg",
-    "description": "India's #1 CS Test Series for CS Executive and CS Professional exams with expert evaluation and ICSI pattern questions",
+    "description": "India's #1 CS Test Series platform offering the best CS Executive Test Series and CS Professional Test Series for ICSI exam preparation with expert evaluation and ICSI pattern questions",
     "brand": {
         "@type": "Brand",
         "name": "My CS MTP Test Series"
@@ -183,26 +191,26 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
     "mainEntity": [
         {
             "@type": "Question",
-            "name": "Why Should I Choose MY CS MTP?",
+            "name": "Why Choose Our CS Test Series for CS Executive and CS Professional Exams?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "At MY CS MTP, we're dedicated to being your ultimate partner on the path to academic excellence. Our test series features expert crafted papers, wide topic coverage, real exam simulation, improvement ideas, flexibility, and expert guidance."
+                "text": "Our CS Test Series platform offers the best CS Executive Test Series and CS Professional Test Series with expert crafted papers, wide topic coverage, real exam simulation, improvement ideas, flexibility, and expert guidance for ICSI exam preparation."
             }
         },
         {
             "@type": "Question",
-            "name": "How many times can I submit answersheets for evaluation?",
+            "name": "What Makes Our CS Executive Test Series the Best Option?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "You will get access to submit answersheet only one time per test."
+                "text": "Our CS Executive Test Series features ICSI pattern questions, expert evaluation, detailed feedback, and comprehensive study material to help you excel in your CS Executive exam."
             }
         },
         {
             "@type": "Question",
-            "name": "After how much time will I get evaluated answersheets?",
+            "name": "How Does Our CS Professional Test Series Help with Exam Preparation?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "You'll get evaluated answersheet within 2-3 working days, but in unusual circumstances it may delay."
+                "text": "Our CS Professional Test Series provides advanced mock tests, detailed performance analysis, and expert guidance to prepare you for the challenges of the CS Professional exam."
             }
         },
         {
@@ -1344,10 +1352,10 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
 <section class="hero">
     <div class="container">
         <div class="hero-content">
-            <h1>My CS MTP Test Series</h1>
-<h2>CS Test series for CS Executive & CS Professional </h2>
+            <h1>India's #1 CS Test Series Platform</h1>
+<h2>Best CS Executive Test Series & CS Professional Test Series</h2>
 
-            <p>Get access to the most comprehensive CS test series designed by experts to match the Latest ICSI exam pattern and relevant amendments.</p>
+            <p>Get access to India's most comprehensive CS test series designed by experts to match the Latest ICSI exam pattern and relevant amendments. Best CS Executive Test Series and CS Professional Test Series for your exam preparation.</p>
 
             <div class="hero-buttons">
                 <a href="<?= base_url() ?>register" class="btn btn-primary">
@@ -1372,19 +1380,19 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
                     <div class="hero-feature-icon">
                         <i class="fas fa-check"></i>
                     </div>
-                    <span>Unique & Amended Questions as per ICSI pattern</span>
+                    <span>Unique & Amended Questions as per ICSI pattern for CS Executive and CS Professional exams</span>
                 </div>
                 <div class="hero-feature">
                     <div class="hero-feature-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <span>Detailed Performance feedback & Tracking</span>
+                    <span>Detailed Performance feedback & Tracking for CS Test Series</span>
                 </div>
                 <div class="hero-feature">
                     <div class="hero-feature-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <span>Expert Feedback & Presentation Tips</span>
+                    <span>Expert Feedback & Presentation Tips for CS Executive and CS Professional</span>
                 </div>
             </div>
         </div>
@@ -1720,8 +1728,8 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
 <section class="levels-section" id="levels-section">
     <div class="container">
         <div class="section-title">
-            <h2>Choose Your Level</h2>
-            <p>Select the exam level that matches your preparation stage</p>
+            <h2>CS Test Series by Exam Level</h2>
+            <p>Choose the right CS test series for your CS Executive or CS Professional exam preparation</p>
         </div>
 
         <div class="levels-grid">
@@ -1735,7 +1743,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
                         <a href="<?= base_url(
                             "level/type/" . $level["level_id"],
                         ) ?>" class="level-btn">
-                            View Plans <i class="fas fa-arrow-right"></i>
+                            View Test Series <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 <?php endforeach; ?>
@@ -1746,7 +1754,7 @@ CS Test Series | CS Executive Test Series | CS Professional Test Series
             <a href="<?= base_url(
                 "level-list",
             ) ?>" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #1ab79c 0%, #128f7a 100%); border: none; padding: 12px 30px; border-radius: 8px; color: white; text-decoration: none; display: inline-block; font-weight: 600;">
-                <i class="fas fa-th-large me-2"></i>View All Courses 
+                <i class="fas fa-th-large me-2"></i>View All CS Test Series
             </a>
         </div>
     </div>
