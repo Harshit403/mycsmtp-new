@@ -899,7 +899,6 @@ $metaKeywords = !empty($subjectNames)
             <div class="hero-content container-custom">
                 <div style="font-size: 0.9rem; opacity: 0.9; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;" itemprop="category"><?= htmlspecialchars($levelName) ?> Test Series</div>
                 <h1 class="hero-title" id="hero-title" itemprop="name"><?= htmlspecialchars($levelName) ?> - <?= htmlspecialchars($typeName) ?> Subjects</h1>
-              
                 <div class="promo-badge" role="status" aria-live="polite">
                     <i class="fas fa-bolt"></i>
                     FLASH SALE! Use Code <strong>RESULT10</strong> for 10% Discount
