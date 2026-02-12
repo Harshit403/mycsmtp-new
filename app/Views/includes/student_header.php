@@ -30,7 +30,7 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
     
-    <title>MY CS TEST SERIES</title>
+    <title>MY CS MTP TEST SERIES</title>
     
     <!-- Critical CSS - Bootstrap from CDN with cache benefits (152KB -> ~20KB used) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
